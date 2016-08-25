@@ -1,0 +1,20 @@
+
+---------------ATIVIDADES-----------------
+
+ARTUR---FAZENDO
+TELA DE LOGIN ok
+CASASTRO COM VALIDAÇÃO DE CADA CAMPO --CPF --EMAIL --SENHA (evitando incosistencias no banco) ok
+listagem com buscas e filtros para relatório OK
+
+COMPLENATNDO O REALIZAR DENUNCIA
+
+COMPLETANDO O BANCO DE DADOS
+
+OBS( segue  a pasta do banco)
+
+
+EDUARDO--A FAZER
+
+
+--incrementar gerador de pdf no relatorio
+--completar o codigo do enviar email da tela de recuperação de senha(emil do gmail ja foi criado e segue em bloco de notas)
