@@ -58,7 +58,8 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[1]="bevindo.php";
 	$pag[2]="listar_usuario.php";
 	$pag[3]="cadastrar_usuario.php";
-		
+	$pag[4]="editar_usuario.php";
+	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}
 		include$pag[$link];
