@@ -1,33 +1,4 @@
-<?php
-session_start();
-include_once("../seguranca.php");
-include("../conexao.php");
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Inicio-Techelp">
-    <meta name="author" content="Artur">
-    <link rel="icon" href="imagens/favicon.ico">
 
-    <title>Inicio-Techelp</title>
-
-    
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="../theme.css" rel="stylesheet">
-    <script src="../js/ie-emulation-modes-warning.js"></script>
-</head>
-  <body class="fundo">
-
-<?php
-	include_once("../menu_admin.php");
-	
-  ?>
 <?php
 $id = $_POST['id'];
 $nome = $_POST['nome'];
@@ -63,11 +34,9 @@ tipousuario = '$tipousuario', modificado = NOW()  WHERE id = '$id' ";
 		}
 	  ?>
 	  </h1>
-				                <form class="form-signin" action="../index.php?link=4">
-								 <input class="btn btn-lg btn-primary btn-block" type = "submit" value="Voltar" />
-								
-								</p>
-								
+		 <a  class="form-signin" href="index.php?link=2"><input class="btn btn-lg btn-primary btn-block" type = "button" value="Voltar" /></a>
+		
+											
  
     
 	  
@@ -78,12 +47,3 @@ tipousuario = '$tipousuario', modificado = NOW()  WHERE id = '$id' ";
         </div>
        
     </div> <!-- /container -->
-
-
-    <script src="js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>

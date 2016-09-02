@@ -59,6 +59,8 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[2]="listar_usuario.php";
 	$pag[3]="cadastrar_usuario.php";
 	$pag[4]="editar_usuario.php";
+	$pag[5]="processa/proc_edita_usuario.php";
+	$pag[6]="processa/cad_usuario.php";
 	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}
