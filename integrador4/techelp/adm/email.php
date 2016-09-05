@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +37,7 @@ session_start();
         <div class="checkbox">
          </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
-		<a class="fontlink"href="login.php">Voltar</a>
+		<a class="btn btn-lg btn-block"href="login.php">Voltar</a>
       </form>
 
     </div> <!-- /container -->

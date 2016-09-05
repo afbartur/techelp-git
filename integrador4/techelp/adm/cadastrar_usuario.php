@@ -1,7 +1,7 @@
 ﻿
-        <h1 class="text-center">Cadastrar Usuários</h1>
+        <h1 class="text-center">Cadastrar Usuário</h1>
 								
-			<form class="fume" method="POST" action="processa/cad_usuario.php">
+			<form class="fume" method="POST" action="index.php?link=6">
   <div class="form-group">
     <label >Nome</label>
     <input type="text" class="form-control" required name="nome" placeholder="Nome">
@@ -102,7 +102,7 @@ function cpf_mask(v){
 	return v
 }
 </script>
-<input class="form-control type="text" name="cpf" id="cpf" 
+<input placeholder="CPF" class="form-control type="text" name="cpf" id="cpf" 
 onblur="javascript: validarCPF(this.value);" 
 onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
     
@@ -128,7 +128,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
   </script>
   <div class="form-group">
     <label >Tipo de Usuário</label>
-    <select class="btn btn-default form-control" name="tipousuario" required>
+    <select class="btn btn-lg btn-primary btn-block" name="tipousuario" required>
 											<option >Selecione</option>
 											<option value="1" >Administrador</option>
 											<option value="2" >Professor</option>
@@ -140,13 +140,13 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
   
   
   
-  <input type="submit" value="Salvar"class="btn btn-default form-control"></input>
+  <input type="submit" value="Salvar"class="btn btn-lg btn-primary btn-block"></input><br>
  
-
-</form>
-<a href="index.php?link=2"> <button type="submit"  class="btn btn-default form-control">Pesquisar</button></a>
+<a href="index.php?link=2"> <button type="button"  class="btn btn-lg btn-primary btn-block">Pesquisar</button></a>
 <br>		
-<a href="index.php"><button  type="submit" class="btn btn-default form-control">Voltar</button></a>
+<a href="index.php"><button  type="button" class="btn btn-lg btn-primary btn-block">Voltar</button></a>
+</form>
+
 
        
         

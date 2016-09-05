@@ -51,20 +51,27 @@
             </thead>
             <tbody>
 			
-			<?php
-			while($linhas= mysql_fetch_array($resultado)){
-				
-				
-				
-				echo "<tr>";
-				echo"<td>".$linhas['id'] ."</td>";
-				echo"<td>".$linhas['nome'] ."</td>";
-				echo"<td>".$linhas['email'] ."</td>";
-				echo"<td>".$linhas['cpf'] ."</td>";
-				echo"<td>".$linhas['tipousuario'] ."</td>";
-				echo"<td><a href=''><button type='buton' class='btn btn-sm btn-default'>Visualizar Completo</button></a>-<a href=''><button type='buton' class='btn btn-sm btn-default'>Editar</button></a>- <a href=''><button type='buton' class='btn btn-sm btn-default'>Excluir</button></a></td>";
-				echo "</tr>";
-			}
+	<?php
+	while($linhas= mysql_fetch_array($resultado)){
+		
+		
+		
+		echo "<tr>";
+		echo"<td>".$linhas['id'] ."</td>";
+		echo"<td>".$linhas['nome'] ."</td>";
+		echo"<td>".$linhas['email'] ."</td>";
+		echo"<td>".$linhas['cpf'] ."</td>";
+		echo"<td>".$linhas['tipousuario'] ."</td>";
+		
+		?>
+		<td><a href=''><button type='buton' class='btn btn-lg btn-primary float-right'>Visualizar Completo
+		</button></a>-<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn btn-lg btn-primary float-right'>Editar
+		</button></a>- <a href=''><button type='buton' class='btn btn-lg btn-primary float-right'>Excluir</button></a>
+		</td>
+		<?php
+		
+		echo "</tr>";
+	}
 			?>
               
              </tbody>

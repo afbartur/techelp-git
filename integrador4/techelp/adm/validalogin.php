@@ -40,9 +40,10 @@ if(empty($resultado)){
 		header ("Location: professor.php");
 		
 	}else{
+		
 		header ("Location: usuario.php");
+		
 	}
-	
 	
 }
 

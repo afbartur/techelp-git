@@ -12,9 +12,9 @@
         </div>
         <div class="navbar-header">
           
-          <a  href="index.php"><img src="imagens/favicon.ico"></img></a>
+          <a  class="btn btn-lg btn-block" href="index.php"><img src="imagens/favicon.ico"></img></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse fontemenu">
           <ul class="nav navbar-nav">
             <li><a href="index.php">Início</a></li>
 			<li class="dropdown">

@@ -75,7 +75,10 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	</div>
 </div>
 	
-<footer class="rodape">
+<footer class="text-center fume">
+<p>
+© 2016,TECHELP LTDA. Todos os Direitos Reservados.
+</p>
 </footer>
 
     <script src="js/jquery.min.js"></script>

@@ -2,17 +2,11 @@
 	 <h1 class="text-center">
   
   Bem Vindo!
+    <img class="imgbemvindo btn-lg btn-block  " src="imagens/logo.png">
+	  </img>
   </h1>
   
-  
- </p>
-</div>
-  
-          
-
-
-      <img class="center" src="imagens/logo.png">
-	  </img>
+    
       
 
       

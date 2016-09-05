@@ -58,14 +58,13 @@ session_start();
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="E-Mail" required autofocus></br>
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
+		<br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Logar</button>
+		<br>
+		<a href="#"><button class="btn btn-lg btn-primary btn-block" type="button">Realizar Denúncia</button></a>
+		<a  class="btn btn-lg btn-block" href="email.php">Esqueceu sua senha?</a>
       </form>
-	  <form class="form-signin">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Realizar Denúncia</button>
-      
-            <a  class="fontlink " href="email.php">Esqueceu sua senha?</a>
-          
-	  </form>
+	 
 	  </label>
 
     </div> <!-- /container -->
