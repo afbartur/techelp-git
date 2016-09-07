@@ -1,4 +1,7 @@
 <?php
+include_once("seguranca.php");
+?>
+<?php
 $id= $_GET['id'];
 $result = mysql_query("SELECT * FROM cadusuario WHERE id = '$id' LIMIT 1 ");
 $resultado = mysql_fetch_assoc($result);

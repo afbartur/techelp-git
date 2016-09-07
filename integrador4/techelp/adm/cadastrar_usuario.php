@@ -1,4 +1,6 @@
-﻿
+﻿<?php
+include_once("seguranca.php");
+?>
         <h1 class="text-center">Cadastrar Usuário</h1>
 								
 			<form class="fume" method="POST" action="index.php?link=6">
@@ -128,7 +130,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
   </script>
   <div class="form-group">
     <label >Tipo de Usuário</label>
-    <select class="btn btn-lg btn-primary btn-block" name="tipousuario" required>
+    <select class="btn btn-lg btn-primary btn-block " name="tipousuario" required>
 											<option >Selecione</option>
 											<option value="1" >Administrador</option>
 											<option value="2" >Professor</option>

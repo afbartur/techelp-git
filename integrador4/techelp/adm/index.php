@@ -36,6 +36,7 @@ echo "Bem vindo Administrador: " .$_SESSION['UsuarioNome'];
     <div class="container theme-showcase " role="main">
 	<div class="page-header">
 	<h3 class="text-right">
+	<br>
 	 <script>// <![CDATA[
 var mydate=new Date()
                         var year=mydate.getYear()
@@ -61,6 +62,13 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[4]="editar_usuario.php";
 	$pag[5]="processa/proc_edita_usuario.php";
 	$pag[6]="processa/cad_usuario.php";
+	$pag[7]="visualiza_usuario.php";
+	$pag[8]="processa/proc_apagar_usuario.php";
+	$pag[9]="processa/cad_equipamento.php";
+	$pag[10]="cadastrar_equipamento.php";
+	$pag[11]="visualiza_equipamento.php";
+	$pag[12]="listar_equipamento.php";
+	
 	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}

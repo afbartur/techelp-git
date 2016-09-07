@@ -1,3 +1,6 @@
+<?php
+include_once("seguranca.php");
+?>
 <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -23,7 +26,7 @@
 			  aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="index.php?link=3">Cadastrar de Usuário</a></li>
-                <li><a href="#">Cadastrar de Equipamento</a></li>
+                <li><a href="index.php?link=10">Cadastrar de Equipamento</a></li>
                 <li><a href="#">Cadastrar de Local</a></li>
                 <li><a href="#">Cadastrar de Curso</a></li>
               </ul>
@@ -52,7 +55,7 @@
           </ul>
 		  <p class="text-right">
 			<?php
-			echo "Bem vindo ao Administrativo " . $_SESSION['UsuarioNome'];
+			echo "Olá " . $_SESSION['UsuarioNome'];
 			?>
 			<br>
 			<a href="sair.php">Sair</a>

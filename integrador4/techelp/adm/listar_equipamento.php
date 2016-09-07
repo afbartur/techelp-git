@@ -1,10 +1,8 @@
 ﻿<?php
 include_once("seguranca.php");
 ?>     
-	 <h1 class="text-center">Lista de Usuários</h1>
+	 <h1 class="text-center">Lista de Equipamentos</h1>
 								
-				
-						
 						<div class="form-group">
 						<label ></label>
 						
@@ -34,7 +32,7 @@ include_once("seguranca.php");
 							
 							$qtd= $_POST["qtda"];
 							$nome=$_POST["nome"];
-							$resultado = mysql_query("SELECT * FROM cadusuario WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$resultado = mysql_query("SELECT * FROM cadequipamento WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysql_num_rows($resultado);
 							?>							
 		
@@ -46,11 +44,10 @@ include_once("seguranca.php");
               <tr>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>E-mail</th>
-                <th>CPF</th>
-				<th>Nivel de Acesso</th>
-				<th>Ações</th>
-              </tr>
+                <th>Situação</th>
+                <th>Descrição</th>
+				<th>Tombo</th>
+			</tr>
             </thead>
             <tbody>
 			
@@ -62,12 +59,12 @@ include_once("seguranca.php");
 		echo "<tr>";
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['nome'] ."</td>";
-		echo"<td>".$linhas['email'] ."</td>";
-		echo"<td>".$linhas['cpf'] ."</td>";
-		echo"<td>".$linhas['tipousuario'] ."</td>";
+		echo"<td>".$linhas['situacao'] ."</td>";
+		echo"<td>".$linhas['descricao'] ."</td>";
+		echo"<td>".$linhas['tombo'] ."</td>";
 		
 		?>
-		<td><a href='index.php?link=7&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn btn-lg btn-primary float-right'>Visualizar
+		<td><a href='index.php?link=11&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn btn-lg btn-primary float-right'>Visualizar
 		</button></a>-<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn btn-lg btn-primary float-right'>Editar
 		</button></a>- <a href='index.php?link=8&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn btn-lg btn-primary float-right'>Excluir</button></a>
 		</td>

@@ -2,7 +2,9 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
 
 
 
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+body{
+
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:14px;line-height:1.42857143;
 color:#f3eded;background-color:#fff;
 background-image:url(../imagens/fundo.jpg);
@@ -10,6 +12,11 @@ background-size: 100%;
 
 
 
+}
+
+tr:hover{
+	background: #99e5ff;
+	color: #666666;
 }
 .fontemenu{
 	font-size: 17px;
