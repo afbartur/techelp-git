@@ -27,7 +27,7 @@ include_once("seguranca.php");
   
   <input type="submit" value="Salvar"class="btn btn-lg btn-primary btn-block"></input><br>
  
-<a href="index.php?link=2"> <button type="button"  class="btn btn-lg btn-primary btn-block">Pesquisar</button></a>
+<a href="index.php?link=12"> <button type="button"  class="btn btn-lg btn-primary btn-block">Pesquisar</button></a>
 <br>		
 <a href="index.php"><button  type="button" class="btn btn-lg btn-primary btn-block">Voltar</button></a>
 </form>

@@ -15,7 +15,7 @@ include_once("seguranca.php");
         </div>
         <div class="navbar-header">
           
-          <a  class="btn btn-lg btn-block" href="index.php"><img src="imagens/favicon.ico"></img></a>
+          <a  class=" btn-block" href="index.php"><img src="imagens/favicon.ico"></img></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse fontemenu">
           <ul class="nav navbar-nav">
@@ -27,8 +27,8 @@ include_once("seguranca.php");
               <ul class="dropdown-menu">
                 <li><a href="index.php?link=3">Cadastrar de Usuário</a></li>
                 <li><a href="index.php?link=10">Cadastrar de Equipamento</a></li>
-                <li><a href="#">Cadastrar de Local</a></li>
-                <li><a href="#">Cadastrar de Curso</a></li>
+                <li><a href="index.php?link=16">Cadastrar de Local</a></li>
+                <li><a href="index.php?link=25">Cadastrar de Curso</a></li>
               </ul>
             </li>
 			<li class="dropdown">

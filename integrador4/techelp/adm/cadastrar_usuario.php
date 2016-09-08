@@ -130,7 +130,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
   </script>
   <div class="form-group">
     <label >Tipo de Usuário</label>
-    <select class="btn btn-lg btn-primary btn-block " name="tipousuario" required>
+    <select class="btn btn-lg btn-block " name="tipousuario" required>
 											<option >Selecione</option>
 											<option value="1" >Administrador</option>
 											<option value="2" >Professor</option>

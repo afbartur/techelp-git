@@ -2,10 +2,7 @@
 session_start();
 include_once("seguranca.php");
 include_once("conexao.php");
-echo "Bem vindo Administrador: " .$_SESSION['UsuarioNome'];
 ?>
-</br>
-<a href="sair.php">Sair</a>
 
 
 <!DOCTYPE html>
@@ -68,7 +65,20 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[10]="cadastrar_equipamento.php";
 	$pag[11]="visualiza_equipamento.php";
 	$pag[12]="listar_equipamento.php";
-	
+	$pag[13]="processa/proc_edita_equipamento.php";
+	$pag[14]="editar_equipamento.php";
+	$pag[15]="processa/proc_apagar_equipamento.php";
+	$pag[16]="cadastrar_local.php";
+	$pag[17]="processa/cad_local.php";
+	$pag[18]="listar_local.php";
+	$pag[19]="visualiza_local.php";
+	$pag[20]="editar_local.php";
+	$pag[21]="processa/proc_edita_local.php";
+	$pag[22]="processa/proc_apagar_local.php";
+	$pag[23]="processa/cad_curso.php";
+	$pag[24]="listar_curso.php";
+	$pag[25]="cadastrar_curso.php";
+	$pag[26]="visualiza_curso.php";
 	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}

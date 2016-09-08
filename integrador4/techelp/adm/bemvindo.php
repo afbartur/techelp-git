@@ -6,9 +6,10 @@ include_once("seguranca.php");
 	 <h1 class="text-center">
   
   Bem Vindo!
-    <img class="imgbemvindo btn-lg btn-block  " src="imagens/logo.png">
-	  </img>
+   
   </h1>
+   <img class="imgbemvindo    " src="imagens/logo.png">
+	  </img>
   
     
       

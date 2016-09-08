@@ -1,21 +1,21 @@
 ﻿<?php
 include_once("seguranca.php");
 ?>     
-	 <h1 class="text-center">Lista de Usuários</h1>
+	 <h1 class="text-center">Lista de Locais</h1>
 								
-				
-						
 						
 						<label ></label>
 						
 						<form method="POST">
 						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
 						<input  class="btn btn-lg btn-primary " type="submit" value="Pesquisar"></input>
+						<a  class="form-signin" href="index.php?link=16"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="Novo Cadastro" /></a>
 						</form>
-						<a  class="form-signin" href="index.php?link=3"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="Novo Cadastro" /></a>
+						
 						<?php
 						
 						?>
+						<div class="float-right">
 						<form  method="POST">
 						<select  class="btn btn-lg btn-primary " name="qtda">
 						<option value="LIMIT 10" selected >10 Últimos Cadastrados</option>
@@ -26,15 +26,15 @@ include_once("seguranca.php");
 						<option value=""  >TODOS</option>											
 						</select>
 						
-						<input   class="btn btn-lg btn-primary float-right"type="submit" value="OK" > 
+						<input   class="btn btn-lg btn-primary "type="submit" value="OK" > 
 						 
 						</form>
-						
+						</div>
 							<?PHP
 							
 							$qtd= $_POST["qtda"];
 							$nome=$_POST["nome"];
-							$resultado = mysql_query("SELECT * FROM cadusuario WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$resultado = mysql_query("SELECT * FROM cadlocal WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysql_num_rows($resultado);
 							?>							
 		
@@ -46,30 +46,31 @@ include_once("seguranca.php");
               <tr>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>E-mail</th>
-                <th>CPF</th>
-				<th>Nivel de Acesso</th>
-				<th>Ações</th>
-              </tr>
+                <th>Sala</th>
+				<th></th>
+				<th></th>
+                
+			</tr>
             </thead>
             <tbody>
 			
-	<?php
-	while($linhas= mysql_fetch_array($resultado)){
+		<?php
+		while($linhas= mysql_fetch_array($resultado)){
 		
 		
 		
-		echo "<tr>";
+		echo"<tr>";
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['nome'] ."</td>";
-		echo"<td>".$linhas['email'] ."</td>";
-		echo"<td>".$linhas['cpf'] ."</td>";
-		echo"<td>".$linhas['tipousuario'] ."</td>";
+		echo"<td>".$linhas['sala'] ."</td>";
+		echo"<td></td>";
+		echo"<td></td>";
+		
 		
 		?>
-		<td><a href='index.php?link=7&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn  btn-primary '>Visualizar
-		</button></a>-<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn  btn-primary '>Editar
-		</button></a>- <a href='index.php?link=8&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn  btn-primary '>Excluir</button></a>
+		<td><a href='index.php?link=19&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn  btn-primary '>Visualizar
+		</button></a>-<a href='index.php?link=20&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn  btn-primary '>Editar
+		</button></a>- <a href='index.php?link=22&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn btn-primary '>Excluir</button></a>
 		</td>
 		<?php
 		
