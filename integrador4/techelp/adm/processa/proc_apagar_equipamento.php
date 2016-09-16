@@ -8,7 +8,7 @@ $comando_sql = "DELETE FROM cadequipamento WHERE id=$id";
 ?>
 
 <br><br>
-<div class="container theme-showcase " role="main">
+
      
       <div class="page-header">
 	  <h1 class="text-center">
@@ -30,7 +30,7 @@ $comando_sql = "DELETE FROM cadequipamento WHERE id=$id";
 		}
 	  ?>
 	  </h1>
-		 <a  class="form-signin" href="index.php?link=12"><input class="btn btn-lg btn-primary btn-block" type = "button" value="Voltar" /></a>
+		 <a  class="form-signin" href="index.php?link=12"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
 		
 											
  
@@ -42,4 +42,4 @@ $comando_sql = "DELETE FROM cadequipamento WHERE id=$id";
 	  
         </div>
        
-    </div> <!-- /container -->
+   

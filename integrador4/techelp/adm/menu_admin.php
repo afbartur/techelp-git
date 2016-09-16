@@ -58,7 +58,7 @@ include_once("seguranca.php");
 			echo "Olá " . $_SESSION['UsuarioNome'];
 			?>
 			<br>
-			<a href="sair.php">Sair</a>
+			<a href="sair.php"><i class="fa fa-sign-in " aria-hidden="true"></i> Sair</a>
 			</p>
         </div><!--/.nav-collapse -->
 		

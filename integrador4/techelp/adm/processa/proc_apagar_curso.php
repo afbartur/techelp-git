@@ -3,7 +3,7 @@
 $id = $_GET['id'];
 
 
-$comando_sql = "DELETE FROM cadusuario WHERE id=$id";
+$comando_sql = "DELETE FROM cadcurso WHERE id=$id";
 
 ?>
 
@@ -19,7 +19,7 @@ $comando_sql = "DELETE FROM cadusuario WHERE id=$id";
 	if($resultado==1) {
 	
 	
-	echo "Usuário apagado com sucesso!";
+	echo "Curso apagado com sucesso!";
 	//header("location:index.html?link=2");
 	
 	}
@@ -30,7 +30,7 @@ $comando_sql = "DELETE FROM cadusuario WHERE id=$id";
 		}
 	  ?>
 	  </h1>
-		 <a  class="form-signin" href="index.php?link=2"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
+		 <a  class="form-signin" href="index.php?link=24"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
 		
 											
  
@@ -42,4 +42,4 @@ $comando_sql = "DELETE FROM cadusuario WHERE id=$id";
 	  
         </div>
        
-  
+

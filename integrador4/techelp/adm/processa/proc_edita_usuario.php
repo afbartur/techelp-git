@@ -13,9 +13,7 @@ tipousuario = '$tipousuario', modificado = NOW()  WHERE id = '$id' ";
 ?>
 
 <br><br>
-<div class="container theme-showcase " role="main">
-     
-      <div class="page-header">
+
 	  <h1 class="text-center">
 	  <?php
 	  $resultado = mysql_query($comando_sql);
@@ -34,16 +32,6 @@ tipousuario = '$tipousuario', modificado = NOW()  WHERE id = '$id' ";
 		}
 	  ?>
 	  </h1>
-		 <a  class="form-signin" href="index.php?link=2"><input class="btn btn-lg btn-primary btn-block" type = "button" value="Voltar" /></a>
-		
-											
- 
+		 <a  class="form-signin" href="index.php?link=2"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
+
     
-	  
-	  
-	  
-	  
-	  
-        </div>
-       
-    </div> <!-- /container -->

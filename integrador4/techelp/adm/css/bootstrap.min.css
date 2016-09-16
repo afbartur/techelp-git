@@ -6,7 +6,7 @@ body{
 
 font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:14px;line-height:1.42857143;
-color:#f3eded;background-color:#fff;
+color:#f3eded;
 background-image:url(../imagens/fundo.jpg);
 background-size: 100%;
 
@@ -14,9 +14,22 @@ background-size: 100%;
 
 }
 
+
+h1 {
+    
+    background-color: rgba(23, 173, 162, 0.5);
+    border-radius: 40px 40px 0px 0px;
+    margin: 1%;
+}
+.titulo{
+	background-color: rgba(23, 173, 162, 0.5);
+	border-radius: 40px 40px 0px 0px;
+	margin: 0% 20%;
+}
+
 .pesquisar {
     display: block;
-    width: 88%;
+    width: 100%;
     height: 45px;
     padding: 6px 12px;
     font-size: 14px;
@@ -37,15 +50,16 @@ background-size: 100%;
 tr:hover{
 	background: #99e5ff;
 	color: #666666;
+	
 }
 
 .novocadastro{
 	
     display: block;
-    width: 30%;
+    width: 300px;
     height: 45px;
     padding: 6px 12px;
-	margin: 0px 20px 0px 0px;
+	margin: 0% 0% 0% 0%;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
@@ -62,22 +76,47 @@ tr:hover{
 }
 	
 }
+tr{
+	color: #ff0000;
+	background: #99e5ff;
+	
+	-webkit-transition: 0.3s ease-in;
+-moz-transition: 0.3s ease-in;
+-o-transition: 0.3s ease-in
+}
 
 tr:hover{
-	background: #99e5ff;
 	color: #666666;
+	background: #99e5ff;
+	-webkit-transition: 0.3s ease-in;
+-moz-transition: 0.3s ease-in;
+-o-transition: 0.3s ease-in
 }
+	
 .fontemenu{
 	font-size: 17px;
 }
 .imgbemvindo{
 	
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(252, 252, 252, 0.6);
+	border-radius: 0px 60px;
+	box-shadow: -15px 15px 10px RGBA(255, 255, 255, 0.39);
+	transition-property: border-color;
+	transition-duration: 3s;
+	transition-timing-function: linear;
+	transition-delay: 5.1s;
 
 	
 }
+.margin40{
+	margin: 0% 35%;
+	width: 30%;
+	border-radius: 100%;
+}
+
 .footer {
 	
 	bottom:0;
@@ -184,6 +223,7 @@ background-color: rgba(56, 141, 215, 0.86);
 	background-image:url(../imagens/barra-x.png);
 	-webkit-transition: 0.5s linear;
 	-moz-transition: 0.5s linear;
+	box-shadow: -5px 5px 10px 15px RGBA(255, 255, 255, 0.39);
 	
 	
 }

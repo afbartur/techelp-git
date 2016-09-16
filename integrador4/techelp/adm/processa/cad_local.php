@@ -14,7 +14,7 @@ $comando_sql="INSERT INTO cadlocal
 ?>
 
 <br><br>
-<div class="container theme-showcase " role="main">
+
      
       <div class="page-header">
 	  <h1 class="text-center">
@@ -36,10 +36,10 @@ $comando_sql="INSERT INTO cadlocal
 	  ?>
 	  </h1>
 				               
-			<a href="index.php?link=18"><input class="btn btn-lg btn-primary btn-block" type = "submit" value="Voltar" /></a>
+			<a href="index.php?link=18"><input class="btn btn-lg btn-primary butao2 margin40" type = "submit" value="Voltar" /></a>
 	
 	  
         </div>
        
-    </div> <!-- /container -->
+
 

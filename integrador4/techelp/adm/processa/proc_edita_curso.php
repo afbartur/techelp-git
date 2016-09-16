@@ -2,11 +2,10 @@
 <?php
 $id = $_POST['id'];
 $nome = $_POST['nome'];
-$situacao = $_POST['situacao'];
-$descricao = $_POST['descricao'];
-$tombo = $_POST['tombo'];
 
-$comando_sql = "UPDATE cadequipamento SET nome = '$nome',situacao = '$situacao', descricao = '$descricao',tombo = '$tombo', 
+
+
+$comando_sql = "UPDATE cadcurso SET nome = '$nome', 
 modificado = NOW()  WHERE id = '$id' ";
 
 ?>
@@ -33,4 +32,16 @@ modificado = NOW()  WHERE id = '$id' ";
 		}
 	  ?>
 	  </h1>
-		 <a  class="form-signin" href="index.php?link=12"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
+		 <a  class="form-signin" href="index.php?link=24"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
+		
+											
+ 
+    
+	  
+	  
+	  
+	  
+	  
+     
+       
+

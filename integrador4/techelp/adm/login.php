@@ -37,7 +37,7 @@ session_start();
 ?>
     <div class="container">
 
-      <form class="form-signin" method="POST" action="validalogin.php">
+      <form class="form-signin fume " method="POST" action="validalogin.php">
 	  <div class="form-signin2">
 	 
 	  <label  >
@@ -61,7 +61,7 @@ session_start();
 		<br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Logar</button>
 		<br>
-		<a href="#"><button class="btn btn-lg btn-primary btn-block" type="button">Realizar Denúncia</button></a>
+		<a href="realizar_reclamacao.php"><button class="btn btn-lg btn-primary btn-block" type="button">Realizar Reclamação</button></a>
 		<a  class="btn btn-lg btn-block" href="email.php">Esqueceu sua senha?</a>
       </form>
 	 

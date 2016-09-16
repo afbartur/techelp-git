@@ -25,9 +25,9 @@ session_start();
 
   <body>
 
-    <div class="container">
+    <div class="container ">
 
-      <form class="form-signin">
+      <form class="form-signin fume">
 	  <div class="form-signin2">
 	 	  
 	  </div>
