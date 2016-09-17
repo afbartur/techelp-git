@@ -1,0 +1,1 @@
+<input class="textoNovo" type="text" name="cpf" value="" onkeyup="submitArt();" size="12" maxlength="11">
