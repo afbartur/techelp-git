@@ -34,7 +34,7 @@ include_once("conexao.php");
     <div class="container theme-showcase " role="main">
 	<div class="page-header">
 	<h3 class="text-right">
-	<br><br>
+
 	 <script>// <![CDATA[
 var mydate=new Date()
                         var year=mydate.getYear()
