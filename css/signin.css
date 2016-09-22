@@ -63,7 +63,7 @@ body {
 	padding: 70px 57px 70px;
 	margin: 0 auto;
 	background-image:url(../imagens/Imagem1.png);
-	border-radius: 5px;
+	border-radius: 0px 25px;
 	color: #D6D6D6;
 }
 .form-signin .form-signin-heading,

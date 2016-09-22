@@ -1,13 +1,11 @@
 <?php
-	/*
-		Desenvolvido por Marco Antoni <marquinho9.10@gmail.com>
-	*/
-
+	
 	class Upload{
 		private $arquivo;
 		private $altura;
 		private $largura;
 		private $pasta;
+		public $novo_nome;
 
 		function __construct($arquivo, $altura, $largura, $pasta){
 			$this->arquivo = $arquivo;
@@ -80,6 +78,8 @@
 			//localizacao do arquivo 
 			$destino = $this->pasta . $novo_nome;
 			
+			$this->novo_nome = $novo_nome;
+			
 			//move o arquivo
 			if (! move_uploaded_file($this->arquivo['tmp_name'], $destino)){
 				if ($this->arquivo['error'] == 1)
@@ -96,7 +96,8 @@
 				if(($largura > $this->largura) || ($altura > $this->altura))
 					$this->redimensionar($largura, $altura, $tipo, $destino);
 			}
-			return "Sucesso";
-		}						
+			return "OK!";
+		}
+		
 	}
 ?>

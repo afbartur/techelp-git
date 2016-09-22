@@ -2,15 +2,15 @@
 include_once("seguranca.php");
 ?>
         <h1 class="text-center">Cadastrar Usuário</h1>
-								
-			<form class="fume" method="POST" action="index.php?link=6">
+							
+			<form class="fume  " method="POST" action="index.php?link=6">
   <div class="form-group">
     <label >Nome</label>
-    <input type="text" class="form-control" required name="nome" placeholder="Nome">
+    <input type="text" class="form-control  " required name="nome" placeholder="Nome">
   </div>
   <div class="form-group">
     <label >E-mail</label>
-    <input type="text" class="form-control" required name="email" placeholder="E-mail">
+    <input type="text" class="form-control  " required name="email" placeholder="E-mail">
   </div>
   <div class="form-group">
     <label >CPF</label>
@@ -104,7 +104,7 @@ function cpf_mask(v){
 	return v
 }
 </script>
-<input placeholder="CPF" class="form-control type="text" name="cpf" id="cpf" 
+<input placeholder="CPF" class="form-control " type="text" name="cpf" id="cpf" 
 onblur="javascript: validarCPF(this.value);" 
 onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
     
