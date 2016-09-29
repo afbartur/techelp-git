@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `cadcurso` (
   `criado` varchar(255) NOT NULL,
   `modificado` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `cadcurso`
@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS `cadcurso` (
 
 INSERT INTO `cadcurso` (`id`, `nome`, `criado`, `modificado`) VALUES
 (1, 'AnÃ¡lise e Desenvolvimento de Sistemas', '2016-09-08 16:11:46', '2016-09-14 15:45:41'),
-(2, 'adm', '2016-09-14 19:20:13', '2016-09-20 21:21:24');
+(2, 'adm', '2016-09-14 19:20:13', '2016-09-20 21:21:24'),
+(3, 'Contabilidade', '2016-09-28 11:12:51', '2016-09-28 11:14:00');
 
 -- --------------------------------------------------------
 
@@ -107,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `cadreclamacao` (
   `modificado` varchar(255) NOT NULL,
   `titulo` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 --
 -- Extraindo dados da tabela `cadreclamacao`
@@ -136,7 +137,9 @@ INSERT INTO `cadreclamacao` (`id`, `descricao`, `situacao`, `foto`, `criado`, `m
 (53, 'gg', '', '1474567617.jpg', '2016-09-22 15:06:57', '', 'asdas'),
 (54, 'dddddddddd', '', '1474568602.jpg', '2016-09-22 15:23:22', '', 'dddddddddddd'),
 (55, 'dddddddddd', '', '1474568787.jpg', '2016-09-22 15:26:28', '', 'dddddddddddd'),
-(56, 'esta com volume quebrado', '', '1474569270.jpg', '2016-09-22 15:34:31', '', 'caixa de som na sala 10');
+(56, 'esta com volume quebrado', '', '1474569270.jpg', '2016-09-22 15:34:31', '', 'caixa de som na sala 10'),
+(57, 'sss', '', '1474580953.jpg', '2016-09-22 18:49:13', '', 'www'),
+(58, 'ttttttttttttttttttttttttttttttttttttttttttttt', '', '1475022398.jpg', '2016-09-27 21:26:39', '', 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh');
 
 -- --------------------------------------------------------
 
@@ -175,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `cadusuario` (
   `criado` varchar(100) NOT NULL,
   `modificado` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
 
 --
 -- Extraindo dados da tabela `cadusuario`
@@ -204,7 +207,8 @@ INSERT INTO `cadusuario` (`id`, `nome`, `email`, `senha`, `cpf`, `tipousuario`, 
 (47, 'jose', 'jose@jose.com', '123', '455.368.493-44', '1', 'NOW()', ''),
 (48, 'joao 3', 'aaa', '123', '455.368.493-44', '1', '2016-08-27 00:17:00', '2016-08-29 11:05:34'),
 (49, 'Nobrega', 'nobrega@gmail.com', '123', '680.016.613-85', '1', '2016-08-29 11:14:47', ''),
-(50, 'Artur Bandeira', 'aaa@aaa', '123', '455.368.493-44', '1', '2016-09-06 16:31:06', '2016-09-16 09:09:46');
+(50, 'Nome do UsuÃ¡rio', 'aaa@aaa', '123', '455.368.493-44', '1', '2016-09-06 16:31:06', '2016-09-23 19:24:40'),
+(51, 'Artur', 'artur@hotmail.com', '123', '680.016.613-85', '1', '2016-09-27 21:24:16', '');
 
 -- --------------------------------------------------------
 

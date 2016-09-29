@@ -40,7 +40,7 @@ include_once("seguranca.php");
                 <li><a href="#">Listar Reserva</a></li>
               </ul>
             </li>
-            <li><a href="#about">Atender Reclamações</a></li>
+            <li><a href="index.php?link=32">Atender Reclamações</a></li>
 			<li class="dropdown">
               <a href="#" class="dropdown-toggle" 
 			  data-toggle="dropdown" role="button" 

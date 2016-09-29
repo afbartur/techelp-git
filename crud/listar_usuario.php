@@ -32,8 +32,8 @@ include_once("seguranca.php");
 						
 							<?PHP
 							
-							$qtd= $_POST["qtda"];
-							$nome=$_POST["nome"];
+							$qtd = $_POST["qtda"];
+							$nome = $_POST["nome"];
 							$resultado = mysql_query("SELECT * FROM cadusuario WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysql_num_rows($resultado);
 							?>							

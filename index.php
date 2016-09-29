@@ -34,11 +34,7 @@ include_once("conexao.php");
     <div class="container theme-showcase " role="main">
 	<div class="page-header">
 	<h3 class="text-right">
-<<<<<<< HEAD
 	
-=======
-
->>>>>>> origin/master
 	 <script>// <![CDATA[
 var mydate=new Date()
                         var year=mydate.getYear()
@@ -89,6 +85,14 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[29]="processa/proc_apagar_curso.php";
 	$pag[30]="realizar_denuncia.php";
 	$pag[31]="processa/cad_reclamacao.php";
+	$pag[32]="crud/listar_reclamacao.php";
+	$pag[33]="crud/visualiza_reclamacao.php";
+	
+	
+	
+	
+	
+	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}
 		include$pag[$link];
