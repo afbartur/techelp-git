@@ -32,8 +32,33 @@ include_once("conexao.php");
   ?>
  
     <div class="container theme-showcase " role="main">
-	<div class="page-header">
-	<h3 class="text-right">
+	
+	<div class="text-right">
+	<?php
+	
+	$resultado = mysql_query("SELECT * FROM cadreclamacao" );
+	$linhas=mysql_num_rows($resultado);
+	
+	?>
+		
+<a href="index.php?link=32" >	<button href="" class="btn btn-success" type="button">
+  Reclamações <span class="badge"><?php echo $linhas; ?></span>
+</button>
+</a>
+<?php
+	
+	$resultado = mysql_query("SELECT * FROM cadreclamacao WHERE situacao = 1" );
+	$linhas_nao_lidas =mysql_num_rows($resultado);
+	
+	?>
+
+<a href="index.php?link=32" ><button  class="btn btn-danger" type="button">
+   Não Lidas <span class="badge"><?php echo $linhas_nao_lidas; ?></span>
+</button>
+</a>
+	</div>
+	
+	<h4 class="text-left">
 	
 	 <script>// <![CDATA[
 var mydate=new Date()
@@ -49,11 +74,18 @@ var dayarray=new Array("Domingo,","Segunda-feira,","Terça-feira,","Quarta-feira
 var montharray=new  Array("Janeiro","Fevereiro","Março","Abril","Malho","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
 document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"")
 </script>
-	</h3>
+	</h4>
+	
+	<div class="page-header">
+	
+	
+	
+	
+	
+	
 	
 	<?php
 	$link=$_GET["link"];
-	
 	$pag[1]="bevindo.php";
 	$pag[2]="crud/listar_usuario.php";
 	$pag[3]="crud/cadastrar_usuario.php";
@@ -87,8 +119,9 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[31]="processa/cad_reclamacao.php";
 	$pag[32]="crud/listar_reclamacao.php";
 	$pag[33]="crud/visualiza_reclamacao.php";
-	
-	
+	$pag[34]="crud/editar_reclamacao.php";
+	$pag[35]="processa/proc_edita_reclamacao.php";
+	$pag[36]="processa/proc_apagar_reclamacao.php";
 	
 	
 	

@@ -48,7 +48,7 @@ include_once("seguranca.php");
                 <th>Nome</th>
                 <th>Sala</th>
 				<th></th>
-				<th></th>
+				
                 
 			</tr>
             </thead>
@@ -63,8 +63,7 @@ include_once("seguranca.php");
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['nome'] ."</td>";
 		echo"<td>".$linhas['sala'] ."</td>";
-		echo"<td></td>";
-		echo"<td></td>";
+	
 		
 		
 		?>

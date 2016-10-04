@@ -9,7 +9,7 @@ include_once("seguranca.php");
 						<form method="POST">
 						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="titulo"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
-						<a href="index.php?link=25"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Novo Cadastro" /></a>
+						
 						</form>
 						
 						<?php
@@ -41,13 +41,13 @@ include_once("seguranca.php");
       </div>
       <div class="row">
         <div class="col-md-12">
-          <table class="table fume">
+          <table class="table fume ">
             <thead>
-              <tr>
+              <tr >
                 <th>ID</th>
 				<th>Data</th>
                 <th>Título</th>
-                <th></th>
+                <th>Atendimento</th>
 				<th></th>
                 
 			</tr>
@@ -63,14 +63,19 @@ include_once("seguranca.php");
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['criado'] ."</td>";
 		echo"<td>".$linhas['titulo'] ."</td>";
-		echo"<td></td>";
-		echo"<td></td>";
+		echo"<td>".$linhas['atendimento'] ."</td>";
+		
 		
 		
 		?>
 		<td><a href='index.php?link=33&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
-		</button></a><a href='index.php?link=27&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
-		</button></a><a href='index.php?link=29&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		</button></a>
+		
+		
+			
+		
+		<a href='index.php?link=36&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir
+		</button></a>
 		</td>
 		<?php
 		

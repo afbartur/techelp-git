@@ -36,8 +36,8 @@
 
 $comando_sql="INSERT INTO cadreclamacao
 
-(descricao,titulo,foto,criado) VALUES
-('$descricao','$titulo','$foto', NOW())";
+(descricao,titulo,foto,situacao,criado) VALUES
+('$descricao','$titulo','$foto',1, NOW())";
 
 
 

@@ -48,6 +48,7 @@ include_once("seguranca.php");
                 <th>Situação</th>
                 <th>Descrição</th>
 				<th>Tombo</th>
+				<th></th>
 			</tr>
             </thead>
             <tbody>

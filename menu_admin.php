@@ -18,7 +18,7 @@ include_once("seguranca.php");
           <a  class=" btn-block" href="index.php"><img src="imagens/favicon.ico"></img></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse fontemenu">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav transition">
             <li><a href="index.php">Início</a></li>
 			<li class="dropdown">
               <a href="#" class="dropdown-toggle" 
@@ -51,15 +51,31 @@ include_once("seguranca.php");
                 <li><a href="#">Relarório de Reserva</a></li>
               </ul>
             </li>
-           			
-          </ul>
-		  <p class="text-right">
-			<?php
-			echo "Olá " . $_SESSION['UsuarioNome'];
-			?>
-			<br>
-			<a href="sair.php"><i class="fa fa-sign-in " aria-hidden="true"></i> Sair</a>
-			</p>
+           			</ul>
+					
+					<ul class="nav navbar-nav" > 
+          
+		  
+		  <li class="dropdown">
+              <a href="#" class="dropdown-toggle" 
+			  data-toggle="dropdown" role="button" 
+			  aria-haspopup="true" aria-expanded="false">
+			  
+			  <?php
+			echo "Olá, " . $_SESSION['UsuarioNome'];
+			?> <span class="caret"></span></a>
+			
+              <ul class="dropdown-menu">
+			  <li><a href="sair.php"><i class="fa fa-sign-in " aria-hidden="true"></i> Mudar Senha</a></li>
+			  <li><a href="sair.php"><i class="fa fa-sign-in " aria-hidden="true"></i> Sair</a></li>
+			   
+                
+                
+              </ul>
+            </li>
+			
+			</ul>		
+			
         </div><!--/.nav-collapse -->
 		
       </div>
