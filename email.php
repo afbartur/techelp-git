@@ -1,6 +1,5 @@
 ﻿<?php
 session_start();
-include_once "conexao.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +11,7 @@ include_once "conexao.php";
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="imagens/favicon.ico">
-    <title>Recuperação de Senha - Tec Help</title>
+    <title>Recuperação de Senha -Techelp</title>
  
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,17 +25,17 @@ include_once "conexao.php";
 
   <body>
 
-    <div class="container">
+    <div class="container ">
 
-      <form class="form-signin" name="recuperacao" method="POST" action="recSenha.php">
-	     <div class="form-signin2">
+      <form class="form-signin fume">
+	  <div class="form-signin2">
 	 	  
-	     </div>
+	  </div>
         <h2 class="form-signin-heading text-center">Recuperação de Senha</h2>
         <label for="inputEmail" class="sr-only">Digite seu E-mail:</label>
-        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="E-mail" required autofocus>
+        <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
         <div class="checkbox">
-        </div>
+         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
 		<a class="btn btn-lg btn-block"href="login.php">Voltar</a>
       </form>

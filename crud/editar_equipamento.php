@@ -15,7 +15,28 @@ $resultado = mysql_fetch_assoc($result);
   </div>
   <div class="form-group">
     <label >Situação</label>
-    <input type="text" class="form-control" value= "<?php echo $resultado['situacao'] ;?>"required name="situacao" placeholder="Situação">
+	
+	<select class="form-control" name="situacao" required>
+		<option>Selecione<option>
+		<option value="1" 
+		<?php
+		if ($resultado['situacao'] == 1){
+			echo "selected";
+		};
+		?>
+		
+		>Livre</option>
+		
+		<option value="2" 
+		<?php if ($resultado['situacao'] == 2){
+			echo "selected";
+		};
+		?>
+		>Reservado</option>
+			            
+	</select>
+	
+	
   </div>
   <div class="form-group">
     <label >Descrição</label>

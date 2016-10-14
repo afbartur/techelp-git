@@ -121,10 +121,13 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[33]="crud/visualiza_reclamacao.php";
 	$pag[34]="crud/editar_reclamacao.php";
 	$pag[35]="processa/proc_edita_reclamacao.php";
-	$pag[36]="processa/proc_apagar_reclamacao.php";
-	
-	
-	
+	$pag[36]="crud/listar_reserva.php";
+	$pag[37]="processa/cad_reserva.php";
+	$pag[38]="crud/listar_reserva.php";
+	$pag[39]="crud/cadastrar_reserva.php";
+	$pag[40]="processa/proc_apagar_reclamacao.php";
+	$pag[41]="crud/editar_reserva.php";
+	$pag[42]="processa/proc_edita_reserva.php";
 	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}
@@ -141,7 +144,7 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 <br> <br>	
 <footer class="text-center fume">
 <p>
-© 2016,TECHELP LTDA. Todos os Direitos Reservados.
+TECHELP LTDA © 2016 - Todos os Direitos Reservados.
 </p>
 </footer>
 

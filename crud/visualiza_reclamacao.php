@@ -5,7 +5,7 @@ $resultado = mysql_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 <div class="page-header">       
-	   <h1 class="text-center">Visializa Reclamação</h1>
+	   <h1 class="text-center">Visualizar Reclamação</h1>
 								
 </div>			
 <div class="row">
@@ -33,18 +33,31 @@ $resultado = mysql_fetch_assoc($result);
 
 
 <div class="col-xs-4 col-sm-2 ">
-	<b>Modificado:</b>
+	<b>Modificado</b>
 </div>
 <div class="col-xs-8 col-sm-10 ">
-	<?php echo $resultado[modificado];?>
+	<p>:</p><?php echo $resultado[modificado];?>
 </div>
 
 
-<div class="col-xs-4 col-sm-4 ">
+<div class="col-xs-4 col-sm-2 ">
 	<b>Foto:</b>
 </div>
-<div class="col-xs-8 col-sm-8">
-	<a href="" name="imagem"> <img  class="img-responsive margin50" SRC="fotos/<?php echo $resultado[foto];?>" HEIGHT="300" WIDTH="300" ></a>
+<div class="col-xs-8 col-sm-10">
+
+<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bs-example-modal1-lg">
+Ver Imagem</button>
+
+<div class="modal fade bs-example-modal1-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+	  <a href="" name="imagem"> <img  class="img-responsive center-block" SRC="fotos/<?php echo $resultado[foto];?>"  ></a>
+	  
+	  
+	
+</div>
+</div>
 </div>
 </div>
 
@@ -65,6 +78,18 @@ $resultado = mysql_fetch_assoc($result);
 
 <form method="POST" action="index.php?link=35" >
 
+<div class="col-xs-4 col-sm-2 ">
+	<b>Atendimento:</b>
+	
+</div>
+<div class="col-xs-4 col-sm-4">
+	 <input type="text" class="form-control"   value= "<?php echo $resultado['atendimento'] ;?>" name="atendimento">
+	 </input>
+</div>
+
+</div>
+</div>
+</div>
 
 
  <select class="btn btn-lg btn-primary butao2" name="situacao" required>
@@ -95,13 +120,10 @@ $resultado = mysql_fetch_assoc($result);
 	</select>
 	 <input type="hidden" class="form-control" value= "<?php echo $resultado['id'] ;?>" name="id">
 	<button type="submit" class=" btn btn-lg btn-primary butao1"> <i class="fa fa-floppy-o fa-1x"></i> Salvar</button>
-<form>
+</form>
 <a href="index.php?link=32"> <button type="button"  class="btn btn-lg btn-primary butao1"><i class="fa fa-reply "></i> Voltar</button></a>
 </div>
 
-</div>
-
-</div>
 
        
         

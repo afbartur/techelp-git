@@ -7,8 +7,8 @@ include_once("seguranca.php");
 						<label ></label>
 						
 						<form method="POST">
-						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="titulo"></input>
-						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
+						<input class="pesquisar"  placeholder="Pesquisar"  value="1" type="hidden" name="situacao"></input>
+						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Não Lidas"></input>
 						
 						</form>
 						
@@ -33,8 +33,8 @@ include_once("seguranca.php");
 							<?PHP
 							
 							$qtd= $_POST["qtda"];
-							$titulo=$_POST["titulo"];
-							$resultado = mysql_query("SELECT * FROM cadreclamacao WHERE titulo LIKE '%$titulo%' ORDER BY id DESC $qtd" );
+							$situacao=$_POST["situacao"];
+							$resultado = mysql_query("SELECT * FROM cadreclamacao WHERE situacao LIKE '%$situacao%' ORDER BY id DESC $qtd" );
 							$linhas=mysql_num_rows($resultado);
 							?>							
 		
@@ -47,8 +47,8 @@ include_once("seguranca.php");
                 <th>ID</th>
 				<th>Data</th>
                 <th>Título</th>
-                <th>Atendimento</th>
-				<th></th>
+				<th>Situação</th>
+                <th></th>
                 
 			</tr>
             </thead>
@@ -59,11 +59,11 @@ include_once("seguranca.php");
 		
 		
 		
-		echo"<tr>";
+		
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['criado'] ."</td>";
 		echo"<td>".$linhas['titulo'] ."</td>";
-		echo"<td>".$linhas['atendimento'] ."</td>";
+		echo"<td>".$linhas['situacao']."</td>";
 		
 		
 		
@@ -71,18 +71,37 @@ include_once("seguranca.php");
 		<td><a href='index.php?link=33&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
 		</button></a>
 		
-		
+		<script>
+function confirma()
+{
+if (confirm ("Tem certeza que deseja excluir?"))
+{ window.location.; }
+}
+</script>
 			
 		
-		<a href='index.php?link=36&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir
+		<a ><button type='buton' href='index.php?link=40&id=<?php echo $linhas['id']; ?>' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir
 		</button></a>
+		
+		          
+	
+		
+		
+		
+		
+		
+		
+		
+		
 		</td>
 		<?php
 		
 		echo "</tr>";
 	}
 			?>
-              
+			
+			
+			  
              </tbody>
           </table>
         </div>

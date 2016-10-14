@@ -267,28 +267,3 @@ background-color: rgba(56, 141, 215, 0.86);
 	
 	
 }
-
-@-webkit-keyframes fadeIn {
-0% { opacity: 0; }
-100% { opacity: 1; } 
-}
-@-moz-keyframes fadeIn {
-0% { opacity: 0;}
-100% { opacity: 1; }
-}
-@-o-keyframes fadeIn {
-0% { opacity: 0; }
-100% { opacity: 1; }
-}
-@keyframes fadeIn {
-0% { opacity: 0; }
-100% { opacity: 1; }
-}
-
-
-body{
--webkit-animation: fadeIn 1s ease-in-out;
--moz-animation: fadeIn 1s ease-in-out;
--o-animation: fadeIn 1s ease-in-out;
-animation: fadeIn 1s ease-in-out;
-}

@@ -7,12 +7,12 @@ include_once("seguranca.php");
 			<div class="row">
   <div class="form-group col-md-6">
     <label >Nome</label>
-    <input type="text" class="form-control" required name="nome" placeholder="Nome">
+    <input type="text" class="form-control" name="nome" placeholder="Nome">
   </div>
    
   <div class="form-group col-md-6">
     <label >Sala</label>
-	<input  class="form-control" name="sala" type="text" required placeholder="Sala" />
+	<input  class="form-control" name="sala" type="text"  placeholder="Sala" />
   </div>
     </div>
    

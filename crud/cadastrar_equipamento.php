@@ -12,7 +12,11 @@ include_once("seguranca.php");
    
   <div class="form-group col-md-6">
     <label >Situação</label>
-	<input  class="form-control" name="situacao" type="text" required placeholder="Situação" />
+	<select name="situacao" class="form-control">
+	<option value="1">Livre</option>
+	<option value="2">Reservado</option>
+	</select>
+	
   </div>
   <div class="form-group col-md-6">
     <label >Descrição</label>

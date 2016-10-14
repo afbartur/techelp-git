@@ -1,11 +1,19 @@
 ﻿<?php
 include_once("seguranca.php");
 ?>     
+
+	<?PHP
+	
+	$qtd= $_POST["qtda"];
+	$nome=$_POST["nome"];
+	$resultado = mysql_query("SELECT * FROM cadcurso WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+	$linhas=mysql_num_rows($resultado);
+	?>
+
 	 <h1 class="text-center">Lista de Cursos</h1>
 								
 						
-						<label ></label>
-						
+												
 						<form method="POST">
 						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
@@ -30,13 +38,7 @@ include_once("seguranca.php");
 						 
 						</form>
 						</div>
-							<?PHP
-							
-							$qtd= $_POST["qtda"];
-							$nome=$_POST["nome"];
-							$resultado = mysql_query("SELECT * FROM cadcurso WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
-							$linhas=mysql_num_rows($resultado);
-							?>							
+														
 		
       </div>
       <div class="row">
@@ -68,6 +70,10 @@ include_once("seguranca.php");
 		?>
 		<td><a href='index.php?link=26&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
 		</button></a><a href='index.php?link=27&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
+		
+		
+		
+		
 		</button></a><a href='index.php?link=29&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		<?php

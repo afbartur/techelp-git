@@ -24,7 +24,7 @@ session_start();
 
   </head>
 
-  <body>
+  <body class="fadeIn" >
   <?php
   unset(
   $_SESSION['UsuarioNome'],		

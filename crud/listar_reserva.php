@@ -1,7 +1,7 @@
 ﻿<?php
 include_once("seguranca.php");
 ?>     
-	 <h1 class="text-center">Lista de Cursos</h1>
+	 <h1 class="text-center">Listar Reservas</h1>
 								
 						
 						<label ></label>
@@ -9,7 +9,7 @@ include_once("seguranca.php");
 						<form method="POST">
 						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
-						<a href="index.php?link=25"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Novo Cadastro" /></a>
+						<a href="index.php?link=25"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Nova Reserva" /></a>
 						</form>
 						
 						<?php
@@ -33,8 +33,8 @@ include_once("seguranca.php");
 							<?PHP
 							
 							$qtd= $_POST["qtda"];
-							$nome=$_POST["nome"];
-							$resultado = mysql_query("SELECT * FROM cadcurso WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$equipamento=$_POST["equipamento"];
+							$resultado = mysql_query("SELECT * FROM cadreserva WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
 							$linhas=mysql_num_rows($resultado);
 							?>							
 		
@@ -45,9 +45,17 @@ include_once("seguranca.php");
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Nome</th>
+				<th>Usuário</th>
+                <th>Equipamento</th>
+				<th>Data</th>
+				<th>Horario Inicio</th>
+				<th>Horario Fim</th>
+				<th>Turno</th>
+				<th>Local</th>
+				<th>Sala</th>
+				<th>Data/Hora que foi feita</th>
                 <th></th>
-				<th></th>
+				
                 
 			</tr>
             </thead>
@@ -60,14 +68,19 @@ include_once("seguranca.php");
 		
 		echo"<tr>";
 		echo"<td>".$linhas['id'] ."</td>";
-		echo"<td>".$linhas['nome'] ."</td>";
-		echo"<td></td>";
-		echo"<td></td>";
-		
+		echo"<td>".$linhas['usuario'] ."</td>";
+		echo"<td>".$linhas['equipamento'] ."</td>";
+		echo"<td>".$linhas['data'] ."</td>";
+		echo"<td>".$linhas['horarioinicio'] ."</td>";
+		echo"<td>".$linhas['horariofim'] ."</td>";
+		echo"<td>".$linhas['turno'] ."</td>";
+		echo"<td>".$linhas['local'] ."</td>";
+		echo"<td>".$linhas['sala'] ."</td>";
+		echo"<td>".$linhas['criado'] ."</td>";
 		
 		?>
 		<td><a href='index.php?link=26&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
-		</button></a><a href='index.php?link=27&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
+		</button></a><a href='index.php?link=41&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
 		</button></a><a href='index.php?link=29&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		<?php

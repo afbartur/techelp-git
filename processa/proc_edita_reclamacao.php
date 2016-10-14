@@ -6,7 +6,8 @@ $atendimento = $_POST['atendimento'];
 
 
 
-$comando_sql = "UPDATE cadreclamacao SET situacao = '$situacao',atendimento = '$atendimento' 
+
+$comando_sql = "UPDATE cadreclamacao SET situacao = '$situacao', atendimento = '$atendimento',
 modificado = NOW()  WHERE id = '$id' ";
 
 ?>
