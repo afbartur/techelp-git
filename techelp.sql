@@ -32,16 +32,15 @@ CREATE TABLE IF NOT EXISTS `cadcurso` (
   `criado` varchar(255) NOT NULL,
   `modificado` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Extraindo dados da tabela `cadcurso`
 --
 
 INSERT INTO `cadcurso` (`id`, `nome`, `criado`, `modificado`) VALUES
-(1, 'AnÃ¡lise e Desenvolvimento de Sistemas', '2016-09-08 16:11:46', '2016-09-14 15:45:41'),
-(2, 'adm', '2016-09-14 19:20:13', '2016-09-20 21:21:24'),
-(3, 'Contabilidade', '2016-09-28 11:12:51', '2016-09-28 11:14:00');
+(3, 'Contabilidade', '2016-09-28 11:12:51', '2016-09-28 11:14:00'),
+(6, 'Enfermagem', '2016-11-01 08:25:55', '');
 
 -- --------------------------------------------------------
 
@@ -58,15 +57,16 @@ CREATE TABLE IF NOT EXISTS `cadequipamento` (
   `criado` varchar(255) NOT NULL,
   `modificado` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Extraindo dados da tabela `cadequipamento`
 --
 
 INSERT INTO `cadequipamento` (`id`, `nome`, `situacao`, `descricao`, `tombo`, `criado`, `modificado`) VALUES
-(1, 'Data Show /Projetor', 'Normal', 'Projetor BenQ MS524B 3200 Lumens', 25637, '2016-09-07 18:31:14', '2016-09-07 19:51:45'),
-(5, 'Canetas', 'Normal', 'caneta esferografica', 222333, '2016-09-07 23:41:29', '2016-09-07 23:42:16');
+(7, 'data show', '1', 'novo', 35535, '2016-09-30 19:04:37', '2016-10-26 14:47:27'),
+(8, 'caixa de som', '1', 'norma', 123213, '2016-09-30 19:16:34', '2016-10-26 14:01:23'),
+(9, 'data show', '1', 'novo', 2345, '2016-10-21 20:09:13', '2016-10-26 14:47:14');
 
 -- --------------------------------------------------------
 
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `cadlocal` (
   `criado` varchar(255) NOT NULL,
   `modificado` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Extraindo dados da tabela `cadlocal`
@@ -91,7 +91,8 @@ INSERT INTO `cadlocal` (`id`, `nome`, `sala`, `criado`, `modificado`) VALUES
 (3, 'Anexo', '01', '2016-09-08 15:46:48', ''),
 (4, 'Anexo', '02', '2016-09-16 15:30:52', ''),
 (5, 'Anexo', '03', '2016-09-16 15:31:10', ''),
-(6, 'Anexo', '04', '2016-09-16 15:31:33', '');
+(6, 'Anexo', '04', '2016-09-16 15:31:33', ''),
+(8, 'Anexo', '05', '2016-09-30 19:17:33', '2016-10-14 09:08:08');
 
 -- --------------------------------------------------------
 
@@ -103,43 +104,23 @@ CREATE TABLE IF NOT EXISTS `cadreclamacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(255) NOT NULL,
   `situacao` varchar(255) NOT NULL,
+  `atendimento` varchar(255) NOT NULL,
   `foto` varchar(255) NOT NULL,
   `criado` varchar(255) NOT NULL,
   `modificado` varchar(255) NOT NULL,
   `titulo` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
 
 --
 -- Extraindo dados da tabela `cadreclamacao`
 --
 
-INSERT INTO `cadreclamacao` (`id`, `descricao`, `situacao`, `foto`, `criado`, `modificado`, `titulo`) VALUES
-(34, 'asdasd', '', '1474499016.jpg', '2016-09-21 20:03:37', '', 'asdas'),
-(35, 'aaaaaaaa', '', '1474499048.jpg', '2016-09-21 20:04:10', '', 'aaaaaaaa'),
-(36, 'asdas', '', '1474499126.jpg', '2016-09-21 20:05:27', '', 'asdas'),
-(37, 'asdasd', '', '1474499263.jpg', '2016-09-21 20:07:44', '', 'asdasdas'),
-(38, 'ddddddddddd', '', '1474551371.jpg', '2016-09-22 10:36:11', '', 'dddddddddd'),
-(39, 'dd', '', '1474551611.jpg', '2016-09-22 10:40:11', '', 'dddddd'),
-(40, 'nnnnnnnnnnnn', '', '1474553154.jpg', '2016-09-22 11:05:55', '', 'nnnnnnnnn'),
-(41, 'gg', '', '1474553221.jpg', '2016-09-22 11:07:03', '', 'gg'),
-(42, 'ffff', '', '1474553462.jpg', '2016-09-22 11:11:02', '', 'ffff'),
-(43, 'fsdfsdfs', '', '1474553537.jpg', '2016-09-22 11:12:17', '', 'dfsdfsd'),
-(44, 'asdasd', '', '1474553563.jpg', '2016-09-22 11:12:43', '', 'asdasd'),
-(45, 't', '', '1474553933.jpg', '2016-09-22 11:18:53', '', 't'),
-(46, '666', '', '1474554186.jpg', '2016-09-22 11:23:06', '', '666'),
-(47, 'd', '', '1474554265.jpg', '2016-09-22 11:24:25', '', 'd'),
-(48, '55555555', '', '1474554393.jpg', '2016-09-22 11:26:33', '', '555555555'),
-(49, 'd', '', '1474565481.jpg', '2016-09-22 14:31:21', '', 'dddddddddd'),
-(50, 'd', '', '1474565546.jpg', '2016-09-22 14:32:26', '', 'dddddddddd'),
-(51, 'd', '', '1474566081.jpg', '2016-09-22 14:41:21', '', 'dddddddddd'),
-(52, 'd', '', '1474566101.jpg', '2016-09-22 14:41:41', '', 'dddddddddd'),
-(53, 'gg', '', '1474567617.jpg', '2016-09-22 15:06:57', '', 'asdas'),
-(54, 'dddddddddd', '', '1474568602.jpg', '2016-09-22 15:23:22', '', 'dddddddddddd'),
-(55, 'dddddddddd', '', '1474568787.jpg', '2016-09-22 15:26:28', '', 'dddddddddddd'),
-(56, 'esta com volume quebrado', '', '1474569270.jpg', '2016-09-22 15:34:31', '', 'caixa de som na sala 10'),
-(57, 'sss', '', '1474580953.jpg', '2016-09-22 18:49:13', '', 'www'),
-(58, 'ttttttttttttttttttttttttttttttttttttttttttttt', '', '1475022398.jpg', '2016-09-27 21:26:39', '', 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh');
+INSERT INTO `cadreclamacao` (`id`, `descricao`, `situacao`, `atendimento`, `foto`, `criado`, `modificado`, `titulo`) VALUES
+(62, 'barulho', '1', '', '1476386002.png', '2016-10-13 16:13:22', '', 'ventilador'),
+(63, 'nao liga', '2', '	 Vai resolver no fim do mÃªs', '1476445397.png', '2016-10-14 08:43:17', '2016-10-14 08:52:48', 'catraca'),
+(64, 'a lampada da sala 03 do anexo ', '2', 'segunda feira concerta', '1476452528.jpg', '2016-10-14 10:42:09', '2016-10-14 10:43:09', 'lampada queimada'),
+(65, 'Agua quente', '2', 'Vai ser mandado um tÃ©cnico dia 30', '1476709952.jpg', '2016-10-17 10:12:33', '2016-10-17 10:13:29', 'Bebedor ');
 
 -- --------------------------------------------------------
 
@@ -151,7 +132,8 @@ CREATE TABLE IF NOT EXISTS `cadreserva` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(200) NOT NULL,
   `local` varchar(200) NOT NULL,
-  `horario` varchar(200) NOT NULL,
+  `horarioinicio` varchar(200) NOT NULL,
+  `horariofim` varchar(255) NOT NULL,
   `equipamento` varchar(200) NOT NULL,
   `curso` varchar(200) NOT NULL,
   `turno` varchar(200) NOT NULL,
@@ -159,8 +141,18 @@ CREATE TABLE IF NOT EXISTS `cadreserva` (
   `situacao` varchar(200) NOT NULL,
   `criado` varchar(200) NOT NULL,
   `modificado` varchar(200) NOT NULL,
+  `sala` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Extraindo dados da tabela `cadreserva`
+--
+
+INSERT INTO `cadreserva` (`id`, `usuario`, `local`, `horarioinicio`, `horariofim`, `equipamento`, `curso`, `turno`, `data`, `situacao`, `criado`, `modificado`, `sala`) VALUES
+(2, 'Artur', 'Principal', '12:00', '17:30', 'data show', 'Contabilidade', 'ManhÃ£', '2016-10-14', '1', '2016-10-14 14:41:05', '', '03'),
+(4, 'Artur', 'Principal', '12:00', '17:30', 'data show', 'Contabilidade', 'ManhÃ£', '2016-10-16', '1', '2016-10-14 14:54:16', '', '01'),
+(5, 'Julho', 'Anexo', '12:00', '17:30', 'data show', 'Contabilidade', 'ManhÃ£', '2016-10-05', '1', '2016-10-14 14:55:58', '2016-10-14 16:23:38', '10');
 
 -- --------------------------------------------------------
 
@@ -178,14 +170,13 @@ CREATE TABLE IF NOT EXISTS `cadusuario` (
   `criado` varchar(100) NOT NULL,
   `modificado` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
 
 --
 -- Extraindo dados da tabela `cadusuario`
 --
 
 INSERT INTO `cadusuario` (`id`, `nome`, `email`, `senha`, `cpf`, `tipousuario`, `criado`, `modificado`) VALUES
-(27, 'Lucas', 'lucas@hotmail.com', '123', '455.368.493-44', '2', '', ''),
 (28, 'Lucas', 'lucas@hotmail.com', '123', '455.368.493-44', '2', '', ''),
 (29, 'Lucas', 'lucas@hotmail.com', '123', '455.368.493-44', '2', '', ''),
 (30, 'Lucas', 'lucas@hotmail.com', '123', '455.368.493-44', '3', '', ''),
@@ -201,14 +192,16 @@ INSERT INTO `cadusuario` (`id`, `nome`, `email`, `senha`, `cpf`, `tipousuario`, 
 (41, 'david', 'david@homail.com', '123', '455.368.493-44', '1', '', '2016-09-05 15:08:26'),
 (42, 'Junio', 'junio@hotmil.com', '123', '680.016.613-85', '1', '', '2016-08-30 10:53:00'),
 (43, 'Flaviana', 'flaviana@hotmail.com', '123', '455.368.493-44', '1', '', ''),
-(44, 'adriana', '123', '', '455.368.493-44', '2', '', '2016-08-27 00:21:29'),
-(45, 'daniela', 'daniela@daniela.com', '123', '455.368.493-44', '1', '', ''),
-(46, 'joao1', 'joao@joao', '', '455.368.493-44', '1', '', '2016-08-26 21:18:32'),
+(44, 'adriana', 'adriana@hotmail.com', '123', '455.368.493-44', '2', '', '2016-10-11 10:56:01'),
+(45, 'daniela', 'daniela@daniela.com', '123', '455.368.493-44', '4', '', '2016-10-11 10:56:27'),
+(46, 'joao1', 'joao@hotmail.com', '123', '455.368.493-44', '3', '', '2016-10-11 10:57:02'),
 (47, 'jose', 'jose@jose.com', '123', '455.368.493-44', '1', 'NOW()', ''),
-(48, 'joao 3', 'aaa', '123', '455.368.493-44', '1', '2016-08-27 00:17:00', '2016-08-29 11:05:34'),
+(48, 'joao 3', 'joao3@hotmail.com', '123', '455.368.493-44', '1', '2016-08-27 00:17:00', '2016-10-11 10:55:29'),
 (49, 'Nobrega', 'nobrega@gmail.com', '123', '680.016.613-85', '1', '2016-08-29 11:14:47', ''),
-(50, 'Nome do UsuÃ¡rio', 'aaa@aaa', '123', '455.368.493-44', '1', '2016-09-06 16:31:06', '2016-09-23 19:24:40'),
-(51, 'Artur', 'artur@hotmail.com', '123', '680.016.613-85', '1', '2016-09-27 21:24:16', '');
+(50, 'Artur', 'aaa@aaa.com', '123', '455.368.493-44', '1', '2016-09-06 16:31:06', '2016-10-04 13:55:52'),
+(51, 'Artur', 'artur@hotmail.com', '202cb962ac59075b964b07152d234b70', '680.016.613-85', '1', '2016-09-27 21:24:16', ''),
+(52, 'Julho', 'lulho@hotmail.com', '123', '680.016.613-85', '1', '2016-09-30 19:06:17', ''),
+(56, 'Higor', 'igor@hotmail.com', '123', '680.016.613-85', '1', '2016-09-30 19:15:37', '');
 
 -- --------------------------------------------------------
 
