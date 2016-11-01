@@ -6,8 +6,8 @@ include_once("seguranca.php");
 	
 	$qtd= $_POST["qtda"];
 	$nome=$_POST["nome"];
-	$resultado = mysql_query("SELECT * FROM cadcurso WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
-	$linhas=mysql_num_rows($resultado);
+	$resultado = mysqli_query($conn, "SELECT * FROM cadcurso WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+	$linhas=mysqli_num_rows($resultado);
 	?>
 
 	 <h1 class="text-center">Lista de Cursos</h1>
@@ -56,7 +56,7 @@ include_once("seguranca.php");
             <tbody>
 			
 		<?php
-		while($linhas= mysql_fetch_array($resultado)){
+		while($linhas= mysqli_fetch_array($resultado)){
 		
 		
 		
@@ -74,7 +74,7 @@ include_once("seguranca.php");
 		
 		
 		
-		</button></a><a href='index.php?link=29&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=29&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		<?php
 		

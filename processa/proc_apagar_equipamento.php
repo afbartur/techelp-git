@@ -13,8 +13,8 @@ $comando_sql = "DELETE FROM cadequipamento WHERE id=$id";
       <div class="page-header">
 	  <h1 class="text-center">
 	  <?php
-	  $resultado = mysql_query($comando_sql);
-	  $linhas = mysql_affected_rows();
+	  $resultado = mysqli_query($conn, $comando_sql);
+	  $linhas = mysqli_affected_rows();
 
 	if($resultado==1) {
 	
@@ -30,7 +30,7 @@ $comando_sql = "DELETE FROM cadequipamento WHERE id=$id";
 		}
 	  ?>
 	  </h1>
-		 <a  class="form-signin" href="index.php?link=12"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
+		 <a  class="form-signin" href="index.php?link=12"><input class="btn btn-lg btn-primary  margin40" type = "button" value="Voltar" /></a>
 		
 											
  

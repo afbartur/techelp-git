@@ -1,7 +1,7 @@
 ﻿<?php
 $id= $_GET['id'];
-$result = mysql_query("SELECT * FROM cadequipamento WHERE id = '$id' LIMIT 1 ");
-$resultado = mysql_fetch_assoc($result);
+$result = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE id = '$id' LIMIT 1 ");
+$resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 <div class="page-header">       
@@ -32,7 +32,15 @@ $resultado = mysql_fetch_assoc($result);
 	<b>Situação:</b>
 </div>
 <div class="col-xs-9 col-sm-11 ">
-	<?php echo $resultado[situacao];?>
+	<?php 
+	if ($resultado[situacao] == 1){
+			$sit = "Livre";
+		};
+		if ($resultado[situacao] == 2){
+			$sit = "Reservado";
+		};
+	
+	echo $sit;?>
 </div>
 <div class="col-xs-3 col-sm-1">
 	<b>Tombo:</b>

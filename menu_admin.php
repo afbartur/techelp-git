@@ -1,24 +1,31 @@
-<?php
-include_once("seguranca.php");
-?>
+
 <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
+	   
 	  <div class="navbar-header">
+	  
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+		  
+          
+          
+        
+            
+			<img class=" imgmob" src="imagens/favicon.ico"></img>
+            
           </button>
           <a class="navbar-brand" href="#"></a>
         </div>
-        <div class="navbar-header">
-          
-          <a  class=" btn-block" href="index.php"><img src="imagens/favicon.ico"></img></a>
-        </div>
+       
+	   
+	   
+	   
         <div id="navbar" class="navbar-collapse collapse fontemenu">
+		
           <ul class="nav navbar-nav">
+		 <div class="navbar-header">
+		<a  class=" img-responsive" href="index.php"><img src="imagens/favicon.ico"></img></a>
+		 </div>
             <li><a href="index.php">Início</a></li>
 			<li class="dropdown">
               <a href="#" class="dropdown-toggle" 

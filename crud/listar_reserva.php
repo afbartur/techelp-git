@@ -9,7 +9,7 @@ include_once("seguranca.php");
 						<form method="POST">
 						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
-						<a href="index.php?link=25"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Nova Reserva" /></a>
+						<a href="index.php?link=39"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Nova Reserva" /></a>
 						</form>
 						
 						<?php
@@ -34,8 +34,8 @@ include_once("seguranca.php");
 							
 							$qtd= $_POST["qtda"];
 							$equipamento=$_POST["equipamento"];
-							$resultado = mysql_query("SELECT * FROM cadreserva WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
-							$linhas=mysql_num_rows($resultado);
+							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
+							$linhas=mysqli_num_rows($resultado);
 							?>							
 		
       </div>
@@ -62,7 +62,7 @@ include_once("seguranca.php");
             <tbody>
 			
 		<?php
-		while($linhas= mysql_fetch_array($resultado)){
+		while($linhas= mysqli_fetch_array($resultado)){
 		
 		
 		
@@ -70,18 +70,21 @@ include_once("seguranca.php");
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['usuario'] ."</td>";
 		echo"<td>".$linhas['equipamento'] ."</td>";
-		echo"<td>".$linhas['data'] ."</td>";
+		$newDate = date("d-m-Y", strtotime($linhas['data']));
+		echo"<td>".$newDate ."</td>";
 		echo"<td>".$linhas['horarioinicio'] ."</td>";
 		echo"<td>".$linhas['horariofim'] ."</td>";
 		echo"<td>".$linhas['turno'] ."</td>";
 		echo"<td>".$linhas['local'] ."</td>";
 		echo"<td>".$linhas['sala'] ."</td>";
-		echo"<td>".$linhas['criado'] ."</td>";
+		$newDate2 = date("d-m-Y  h:m:s", strtotime($linhas['criado']));
+		
+		echo"<td>".$newDate2."</td>";
 		
 		?>
-		<td><a href='index.php?link=26&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
-		</button></a><a href='index.php?link=41&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
-		</button></a><a href='index.php?link=29&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		<td>
+		<a href='index.php?link=41&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=43&id=<?php echo $linhas['id'];?>&equipamento=<?php echo $linhas['equipamento'];?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		<?php
 		

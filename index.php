@@ -36,8 +36,8 @@ include_once("conexao.php");
 	<div class="text-right">
 	<?php
 	
-	$resultado = mysql_query("SELECT * FROM cadreclamacao" );
-	$linhas=mysql_num_rows($resultado);
+	$resultado = mysqli_query($conn, "SELECT * FROM cadreclamacao" );
+	$linhas=mysqli_num_rows($resultado);
 	
 	?>
 		
@@ -47,8 +47,8 @@ include_once("conexao.php");
 </a>
 <?php
 	
-	$resultado = mysql_query("SELECT * FROM cadreclamacao WHERE situacao = 1" );
-	$linhas_nao_lidas =mysql_num_rows($resultado);
+	$resultado = mysqli_query($conn, "SELECT * FROM cadreclamacao WHERE situacao = 1" );
+	$linhas_nao_lidas =mysqli_num_rows($resultado);
 	
 	?>
 
@@ -128,6 +128,7 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[40]="processa/proc_apagar_reclamacao.php";
 	$pag[41]="crud/editar_reserva.php";
 	$pag[42]="processa/proc_edita_reserva.php";
+	$pag[43]="processa/proc_apagar_reserva.php";
 	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}

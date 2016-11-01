@@ -15,7 +15,7 @@ modificado = NOW()  WHERE id = '$id' ";
 
 	  <h1 class="text-center">
 	  <?php
-	  $resultado = mysql_query($comando_sql);
+	  $resultado = mysqli_query($conn, $comando_sql);
 
 	if($resultado==1) {
 	
@@ -31,6 +31,6 @@ modificado = NOW()  WHERE id = '$id' ";
 		}
 	  ?>
 	  </h1>
-		 <a  class="form-signin" href="index.php?link=18"><input class="btn btn-lg btn-primary butao2 margin40" type = "button" value="Voltar" /></a>
+		 <a  class="form-signin" href="index.php?link=18"><input class="btn btn-lg btn-primary  margin40" type = "button" value="Voltar" /></a>
 
        

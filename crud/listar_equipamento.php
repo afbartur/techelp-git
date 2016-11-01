@@ -5,15 +5,23 @@ include_once("seguranca.php");
 								
 						
 						<label ></label>
+						<script type="text/javascript" src="jquery.min.js"></script>
+						<script type="text/javascript" src="javascriptpersonalizado.js"></script>
 						
-						<form method="POST">
-						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
-						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
+						<form method="POST" id="form-pesquisa" >
+						<input class="pesquisar" id="pesquisa" placeholder="Pesquisar" type="text" name="nome"></input>
+						
+						
+						
+						<input  class="btn btn-lg btn-primary novocadastro"  type="submit" value="Pesquisar"></input>
 						</form>
 						<a  class="form-signin" href="index.php?link=10"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Novo Cadastro" /></a>
-						<?php
+												
+						<ul class="resultado">
+		
+						</ul>
 						
-						?>
+						
 						<div class="float-right">
 						<form  method="POST">
 						<select  class="btn btn-lg btn-primary " name="qtda">
@@ -33,8 +41,8 @@ include_once("seguranca.php");
 							
 							$qtd= $_POST["qtda"];
 							$nome=$_POST["nome"];
-							$resultado = mysql_query("SELECT * FROM cadequipamento WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
-							$linhas=mysql_num_rows($resultado);
+							$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$linhas=mysqli_num_rows($resultado);
 							?>							
 		
       </div>
@@ -54,14 +62,20 @@ include_once("seguranca.php");
             <tbody>
 			
 	<?php
-	while($linhas= mysql_fetch_array($resultado)){
+	while($linhas= mysqli_fetch_array($resultado)){
 		
 		
 		
 		echo "<tr>";
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['nome'] ."</td>";
-		echo"<td>".$linhas['situacao'] ."</td>";
+		if ($linhas['situacao'] == 1){
+			$sit = "Livre";
+		};
+		if ($linhas['situacao'] == 2){
+			$sit = "Reservado";
+		};
+		echo"<td>".$sit ."</td>";
 		echo"<td>".$linhas['descricao'] ."</td>";
 		echo"<td>".$linhas['tombo'] ."</td>";
 		
@@ -70,7 +84,7 @@ include_once("seguranca.php");
 		</button></a><a href='index.php?link=14&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
 		
 		
-		</button></a><a href='index.php?link=15&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=15&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		</td>
 		<?php

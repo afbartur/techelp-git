@@ -13,8 +13,8 @@ $comando_sql = "DELETE FROM cadreclamacao WHERE id=$id";
       <div class="page-header">
 	  <h1 class="text-center">
 	  <?php
-	  $resultado = mysql_query($comando_sql);
-	  $linhas = mysql_affected_rows();
+	  $resultado = mysqli_query($conn, $comando_sql);
+	  $linhas = mysqli_affected_rows();
 
 	if($resultado==1) {
 	

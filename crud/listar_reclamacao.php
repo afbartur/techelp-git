@@ -34,8 +34,8 @@ include_once("seguranca.php");
 							
 							$qtd= $_POST["qtda"];
 							$situacao=$_POST["situacao"];
-							$resultado = mysql_query("SELECT * FROM cadreclamacao WHERE situacao LIKE '%$situacao%' ORDER BY id DESC $qtd" );
-							$linhas=mysql_num_rows($resultado);
+							$resultado = mysqli_query($conn, "SELECT * FROM cadreclamacao WHERE situacao LIKE '%$situacao%' ORDER BY id DESC $qtd" );
+							$linhas=mysqli_num_rows($resultado);
 							?>							
 		
       </div>
@@ -55,15 +55,28 @@ include_once("seguranca.php");
             <tbody>
 			
 		<?php
-		while($linhas= mysql_fetch_array($resultado)){
+		while($linhas= mysqli_fetch_array($resultado)){
 		
 		
 		
 		
 		echo"<td>".$linhas['id'] ."</td>";
-		echo"<td>".$linhas['criado'] ."</td>";
+		
+		$newDate2 = date("d-m-Y  h:m:s", strtotime($linhas['criado']));
+		
+		echo"<td>".$newDate2."</td>";
+		
 		echo"<td>".$linhas['titulo'] ."</td>";
-		echo"<td>".$linhas['situacao']."</td>";
+		if ($linhas['situacao'] == 1){
+			$sit = "Não Lida";
+		};
+		if ($linhas['situacao'] == 2){
+			$sit = "Em Análise";
+		};
+		if ($linhas['situacao'] == 3){
+			$sit = "Resolvido";
+		};
+		echo"<td>".$sit ."</td>";
 		
 		
 		
@@ -80,7 +93,7 @@ if (confirm ("Tem certeza que deseja excluir?"))
 </script>
 			
 		
-		<a ><button type='buton' href='index.php?link=40&id=<?php echo $linhas['id']; ?>' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir
+		<a ><button type='buton' onclick="return confirm('Deseja mesmo Excluir?');"  href='index.php?link=40&id=<?php echo $linhas['id']; ?>' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir
 		</button></a>
 		
 		          

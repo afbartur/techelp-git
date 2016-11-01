@@ -16,7 +16,7 @@ $comando_sql="INSERT INTO cadreserva
 (horarioinicio,horariofim,turno,data,local,curso,equipamento,usuario,situacao,sala,criado) VALUES
 ('$horarioinicio','$horariofim','$turno','$data','$local','$curso','$equipamento','$usuario',1,'$sala',NOW())";
 
-
+$comando_sql2 = "UPDATE cadequipamento SET situacao = '2' WHERE nome = '$equipamento' && situacao != '2' LIMIT 1 ";
 
 ?>
 
@@ -26,7 +26,7 @@ $comando_sql="INSERT INTO cadreserva
       <div class="page-header">
 	  <h1 class="text-center">
 	  <?php
-	  $resultado = mysql_query($comando_sql);
+	  $resultado = mysqli_query($conn, $comando_sql);
 
 	if($resultado==1) {
 	
@@ -42,8 +42,27 @@ $comando_sql="INSERT INTO cadreserva
 		}
 	  ?>
 	  </h1>
+	  
+	  <h1 class="text-center">
+	  <?php
+	  $resultado2 = mysqli_query($conn, $comando_sql2);
+
+	if($resultado2==1) {
+	
+	
+	echo "ok!";
+	//header("location:index.html");
+	
+	}
+		else {
+		
+		echo"Erro ao inserir dados no DB";
+		
+		}
+	  ?>
+	  </h1>
 				               
-			<a href="index.php?link=39"><input class="btn btn-lg btn-primary butao2 margin40" type = "submit" value="Voltar" /></a>
+			<a href="index.php?link=39"><input class="btn btn-lg btn-primary  margin40" type = "submit" value="Voltar" /></a>
 	
 	  
         </div>

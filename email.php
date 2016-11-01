@@ -13,6 +13,9 @@ session_start();
     <link rel="icon" href="imagens/favicon.ico">
     <title>Recuperação de Senha -Techelp</title>
  
+ 
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -32,10 +35,14 @@ session_start();
 	 	  
 	  </div>
         <h2 class="form-signin-heading text-center">Recuperação de Senha</h2>
-        <label for="inputEmail" class="sr-only">Digite seu E-mail:</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
-        <div class="checkbox">
-         </div>
+        
+        <div class="input-group">
+		<span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+		
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="E-Mail" required autofocus>
+		</div>
+		<br>
+       
         <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
 		<a class="btn btn-lg btn-block"href="login.php">Voltar</a>
       </form>

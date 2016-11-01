@@ -1,7 +1,7 @@
 ﻿<?php
 $id= $_GET['id'];
-$result = mysql_query("SELECT * FROM cadcurso WHERE id = '$id' LIMIT 1 ");
-$resultado = mysql_fetch_assoc($result);
+$result = mysqli_query($conn, "SELECT * FROM cadcurso WHERE id = '$id' LIMIT 1 ");
+$resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 <div class="page-header">       

@@ -13,6 +13,9 @@ session_start();
     <meta name="author" content="Techelp">
     <link rel="icon" href="imagens/favicon.ico">
     <title>Login-Techelp</title>
+	
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
  
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -55,9 +58,21 @@ session_start();
 		</h3>
 		
         <label for="inputEmail" class="sr-only">E-mail</label>
-        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="E-Mail" required autofocus></br>
+		<div class="input-group">
+		<span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+		
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="E-Mail" required autofocus>
+		</div>
+		</br>
+		
         <label for="inputPassword" class="sr-only">Senha</label>
+		<div class="input-group">
+		<span class="input-group-addon" id="basic-addon1"> .<i class="fa fa-lock" aria-hidden="true"></i> </span>
+		
+		
         <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
+		
+		</div>
 		<br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Logar</button>
 		<br>

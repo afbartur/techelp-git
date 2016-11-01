@@ -1,7 +1,7 @@
 ﻿<?php
 $id= $_GET['id'];
-$result = mysql_query("SELECT * FROM cadreclamacao WHERE id = '$id' LIMIT 1 ");
-$resultado = mysql_fetch_assoc($result);
+$result = mysqli_query($conn, "SELECT * FROM cadreclamacao WHERE id = '$id' LIMIT 1 ");
+$resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 <div class="page-header">       
@@ -28,7 +28,13 @@ $resultado = mysql_fetch_assoc($result);
 	<b>Data da Reclamação:</b>
 </div>
 <div class="col-xs-8 col-sm-10 ">
-	<?php echo $resultado[criado];?>
+	<?php 
+	
+	$newDate = date("d-m-Y  h:m:s", strtotime($resultado[criado]));
+		
+		echo":". $newDate ;
+	
+	?>
 </div>
 
 
@@ -36,7 +42,13 @@ $resultado = mysql_fetch_assoc($result);
 	<b>Modificado</b>
 </div>
 <div class="col-xs-8 col-sm-10 ">
-	<p>:</p><?php echo $resultado[modificado];?>
+	<?php 
+	
+	$newDate2 = date("d-m-Y  h:m:s", strtotime($resultado[modificado]));
+		
+		echo":". $newDate2 ;
+	
+	?>
 </div>
 
 
@@ -65,8 +77,8 @@ Ver Imagem</button>
 
 <?php
 $id= $_GET['id'];
-$result = mysql_query("SELECT * FROM cadreclamacao WHERE id = '$id' LIMIT 1 ");
-$resultado = mysql_fetch_assoc($result);
+$result = mysqli_query($conn, "SELECT * FROM cadreclamacao WHERE id = '$id' LIMIT 1 ");
+$resultado = mysqli_fetch_assoc($result);
 ?>
      								
 		 

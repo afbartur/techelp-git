@@ -19,7 +19,7 @@ $comando_sql="INSERT INTO cadcurso
       <div class="page-header">
 	  <h1 class="text-center">
 	  <?php
-	  $resultado = mysql_query($comando_sql);
+	  $resultado = mysqli_query($conn, $comando_sql);
 
 	if($resultado==1) {
 	
@@ -36,7 +36,7 @@ $comando_sql="INSERT INTO cadcurso
 	  ?>
 	  </h1>
 				               
-			<a href="index.php?link=24"><input class="btn btn-lg btn-primary butao2 margin40" type = "submit" value="Voltar" /></a>
+			<a href="index.php?link=24"><input class="btn btn-lg btn-primary  margin40" type = "submit" value="Voltar" /></a>
 	
 	  
         </div>

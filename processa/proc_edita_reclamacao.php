@@ -18,7 +18,7 @@ modificado = NOW()  WHERE id = '$id' ";
      
 	  <h1 class="text-center">
 	  <?php
-	  $resultado = mysql_query($comando_sql);
+	  $resultado = mysqli_query($conn, $comando_sql);
 
 	if($resultado==1) {
 	

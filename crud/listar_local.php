@@ -34,8 +34,8 @@ include_once("seguranca.php");
 							
 							$qtd= $_POST["qtda"];
 							$nome=$_POST["nome"];
-							$resultado = mysql_query("SELECT * FROM cadlocal WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
-							$linhas=mysql_num_rows($resultado);
+							$resultado = mysqli_query($conn, "SELECT * FROM cadlocal WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$linhas=mysqli_num_rows($resultado);
 							?>							
 		
       </div>
@@ -55,7 +55,7 @@ include_once("seguranca.php");
             <tbody>
 			
 		<?php
-		while($linhas= mysql_fetch_array($resultado)){
+		while($linhas= mysqli_fetch_array($resultado)){
 		
 		
 		
@@ -69,7 +69,7 @@ include_once("seguranca.php");
 		?>
 		<td><a href='index.php?link=19&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
 		</button></a><a href='index.php?link=20&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
-		</button></a><a href='index.php?link=22&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=22&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		<?php
 		

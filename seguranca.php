@@ -4,7 +4,7 @@ if(($_SESSION['UsuarioId'] == "") || ($_SESSION['UsuarioNome'] == "") || ($_SESS
 || ($_SESSION['UsuarioCpf'] == "") ||($_SESSION['UsuarioSenha'] == "") || ($_SESSION['UsuarioTipousuario'] == "") ){
 	
 	//Mensagem erro
-	$_SESSION['loginErro'] = "Área restrita, somonte usuários cadastrados são permitidos.";
+	$_SESSION['loginErro'] = "Área restrita, somente usuários cadastrados são permitidos.";
 	
 	// Manda para a tela de Login
 	

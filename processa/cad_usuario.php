@@ -3,7 +3,7 @@
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $cpf = $_POST['cpf'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 $tipousuario = $_POST['tipousuario'];
 $criado = $_POST['criado'];
 
@@ -21,7 +21,7 @@ $comando_sql="INSERT INTO cadusuario
       <div class="page-header">
 	  <h1 class="text-center">
 	  <?php
-	  $resultado = mysql_query($comando_sql);
+	  $resultado = mysqli_query($conn, $comando_sql);
 
 	if($resultado==1) {
 	
@@ -38,7 +38,7 @@ $comando_sql="INSERT INTO cadusuario
 	  ?>
 	  </h1>
 				               
-			<a href="index.php?link=2"><input class="btn btn-lg btn-primary butao2 margin40" type = "submit" value="Voltar" /></a>
+			<a href="index.php?link=2"><input class="btn btn-lg btn-primary  margin40" type = "submit" value="Voltar" /></a>
 	
 	  
         </div>

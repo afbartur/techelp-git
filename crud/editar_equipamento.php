@@ -3,8 +3,8 @@ include_once("seguranca.php");
 ?>
 <?php
 $id= $_GET['id'];
-$result = mysql_query("SELECT * FROM cadequipamento WHERE id = '$id' LIMIT 1 ");
-$resultado = mysql_fetch_assoc($result);
+$result = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE id = '$id' LIMIT 1 ");
+$resultado = mysqli_fetch_assoc($result);
 ?>
         <h1 class="text-center">Editar Equipamento</h1>
 								

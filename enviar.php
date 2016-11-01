@@ -21,15 +21,15 @@ $Mailer->Host = 'smtp.mail.yahoo.com';
 $Mailer->Port = 465;
 
 //dados do email de saida
-$Mailer->Username = 'afbartur@yahoo.com.br';
-$Mailer->Password = 'jesus100%';
+$Mailer->Username = 'seuemail';
+$Mailer->Password = 'suasenha';
 
 //email remetnde
-$Mailer->From = 'afbartur@yahoo.com.br';
+$Mailer->From = '@yahoo.com.br';
 
 // nome do remetente
 
-$Mailer->FromName = 'Techelp';
+$Mailer->FromName = 'seusite';
 
 //assunto da mensatem
 
@@ -41,11 +41,11 @@ $Mailer->Body = 'Conteudo da mensagem';
 
 //conteudo da mensagem em texto
 
-$Mailer->Username = 'atendimentotechelp@gmail.com';
+$Mailer->Username = '@gmail.com';
 
 //destinatário
 
-$Mailer->AddAddress = 'afbartur@gmail.com';
+$Mailer->AddAddress = '@gmail.com';
 
 if($Mailer->Send()){
 	echo "E-Mail enviado com sucesso";

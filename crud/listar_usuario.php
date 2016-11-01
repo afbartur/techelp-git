@@ -34,8 +34,9 @@ include_once("seguranca.php");
 							
 							$qtd = $_POST["qtda"];
 							$nome = $_POST["nome"];
-							$resultado = mysql_query("SELECT * FROM cadusuario WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
-							$linhas=mysql_num_rows($resultado);
+							$resultado = mysqli_query($conn, "SELECT * FROM cadusuario WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$linhas=mysqli_num_rows($resultado);
+							
 							?>							
 		
       </div>
@@ -54,26 +55,45 @@ include_once("seguranca.php");
             </thead>
             <tbody>
 			
-	<?php
-	while($linhas= mysql_fetch_array($resultado)){
+		<?php
+				while($linhas= mysqli_fetch_array($resultado)){
 		
 		
 		
-		echo "<tr>";
-		echo"<td>".$linhas['id'] ."</td>";
-		echo"<td>".$linhas['nome'] ."</td>";
-		echo"<td>".$linhas['email'] ."</td>";
-		echo"<td>".$linhas['cpf'] ."</td>";
-		echo"<td>".$linhas['tipousuario'] ."</td>";
+				echo "<tr>";
+				echo"<td>".$linhas['id'] ."</td>";
+				echo"<td>".$linhas['nome'] ."</td>";
+				echo"<td>".$linhas['email'] ."</td>";
+				echo"<td>".$linhas['cpf'] ."</td>";
+				if ($linhas['tipousuario'] == 1){
+					$sit = "Administrador";
+				};
+				if ($linhas['tipousuario'] == 2){
+					$sit = "Professor";
+				};
+				if ($linhas['tipousuario'] == 3){
+					$sit = "Funcionário";
+				};
+				if ($linhas['tipousuario'] == 4){
+					$sit = "Estagiáriio";
+				};
+				echo"<td>".$sit ."</td>";
+				
+				
+				
 		
 		?>
 		<td><a href='index.php?link=7&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
-		</button></a><a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
-		</button></a><a href='index.php?link=8&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		</button></a>
+		
+		
+		<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
+		</button></a>
+		
+		<a onclick="return confirm('Deseja mesmo Excluir?');"  href='index.php?link=8&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		<?php
-		
-		echo "</tr>";
+				echo "</tr>";
 	}
 			?>
               

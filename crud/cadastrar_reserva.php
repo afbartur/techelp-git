@@ -13,7 +13,7 @@ include_once("seguranca.php");
 			
 			<div class="form-group col-md-2">
 			
-			<label >Uruário:</label>
+			<label >Usuário:</label>
 			<select disabled class="form-control" >
 			<option><?php
 			echo $_SESSION['UsuarioNome'];
@@ -160,10 +160,10 @@ size="5" maxlength="5"></td>
 	 <SELECT class="form-control" name="sala" size="1">
 	
 <?php
-	$resultado = mysql_query("SELECT sala FROM cadlocal" );
-	$linhas=mysql_num_rows($resultado);
+	$resultado = mysqli_query($conn, "SELECT sala FROM cadlocal" );
+	$linhas=mysqli_num_rows($resultado);
 	
-	While($registro=mysql_fetch_array($resultado))
+	While($registro=mysqli_fetch_array($resultado))
 		{
 ?>	
 		<option> 
@@ -187,10 +187,10 @@ size="5" maxlength="5"></td>
 	 <SELECT class="form-control" name="curso" size="1">
 	
 <?php
-	$resultado = mysql_query("SELECT nome FROM cadcurso" );
-	$linhas=mysql_num_rows($resultado);
+	$resultado = mysqli_query($conn,"SELECT nome FROM cadcurso" );
+	$linhas=mysqli_num_rows($resultado);
 	
-	While($registro=mysql_fetch_array($resultado))
+	While($registro=mysqli_fetch_array($resultado))
 		{
 ?>	
 		<option> 
@@ -201,7 +201,7 @@ size="5" maxlength="5"></td>
 	
 		<?php
 		}
-		mysql_free_result($resultado);
+		mysqli_free_result($resultado);
 
 		?>
 
@@ -216,21 +216,24 @@ size="5" maxlength="5"></td>
 	<SELECT class="form-control" name="equipamento" size="1">
 	
 <?php
-	$resultado = mysql_query("SELECT nome FROM cadequipamento WHERE situacao = 1" );
-	$linhas=mysql_num_rows($resultado);
+	$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE situacao = 1" );
+	$linhas=mysqli_num_rows($resultado);
 	
-	While($registro=mysql_fetch_array($resultado))
+	While($registro=mysqli_fetch_array($resultado))
 		{
 ?>	
 		<option> 
 		<?php
-		print "$registro[nome]"
+		
+		print "$registro[nome]";
+				
 		?> 
 		</option>
 	
 		<?php
 		}
-		mysql_free_result($resultado);
+		
+		mysqli_free_result($resultado);
 
 		?>
 
@@ -240,7 +243,7 @@ size="5" maxlength="5"></td>
   
   </div>
   </div>
- 
+ </div>
 <button type="submit" class=" btn btn-lg btn-primary butao1"> <i class="fa fa-floppy-o fa-2x"></i> Salvar</button>
  
 <a href="index.php?link=38"> <button type="button"  class="btn btn-lg btn-primary butao2"><i class="fa fa-search fa-2x" ></i> Pesquisar</button></a>
