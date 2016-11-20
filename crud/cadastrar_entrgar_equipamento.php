@@ -153,7 +153,9 @@ include_once("seguranca.php");
 					</SELECT>
 			  </div>
 			  
-			  <div class="form-group col-md-3">
+			 
+			  
+			  <div class="form-group col-md-4">
 				<label >Horário 1</label>
 				<SELECT class="form-control" name="horario1" >
 				<option>Não Selecionado</option>
@@ -163,7 +165,7 @@ include_once("seguranca.php");
 					</SELECT>
 			  </div>
 			  
-			  <div class="form-group col-md-3">
+			  <div class="form-group col-md-4">
 				<label >Horário 2</label>
 				<SELECT class="form-control" name="horario2" >
 				<option>Não Selecionado</option>
@@ -173,7 +175,7 @@ include_once("seguranca.php");
 					</SELECT>
 			  </div>
 			  
-			  <div class="form-group col-md-3">
+			  <div class="form-group col-md-4">
 				<label >Horário 3</label>
 				<SELECT class="form-control" name="horario3" >
 				<option>Não Selecionado</option>
@@ -183,7 +185,38 @@ include_once("seguranca.php");
 					</SELECT>
 			  </div>
 			  
-			  <div class="form-group col-md-3">
+			   <div class="form-group col-md-4">
+				<label >Curso</label>
+				<SELECT class="form-control" name="curso" >
+				<option>Selecione</option>
+					<?php
+				//$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE situacao = 1" );
+				$resultado = mysqli_query($conn, "SELECT * FROM cadcurso" );
+				$linhas=mysqli_num_rows($resultado);
+				
+				While($registro=mysqli_fetch_array($resultado))
+					{
+					?>	
+					<option> 
+					<?php
+					
+					print "$registro[nome]";
+						
+							
+					?> 
+					</option>
+				
+					<?php
+					}
+					
+					mysqli_free_result($resultado);
+
+					?>
+
+					</SELECT>
+			  </div>
+			  
+			  <div class="form-group col-md-4">
 				<label >Turno</label>
 				<SELECT class="form-control" name="turno" >
 				<option>Selecione</option>

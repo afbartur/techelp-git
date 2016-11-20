@@ -149,11 +149,11 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[61]="crud/editar_receber_equipamento.php";
 	$pag[62]="crud/listar_receber_equipamento.php";
 	$pag[63]="processa/proc_apagar_emprestimo.php";
-	
-	
-	
-	
-	
+	$pag[64]="crud/editar_entrgar_reserva.php";
+	$pag[65]="processa/proc_soedita_entrega_equipamento.php";
+	$pag[66]="crud/editar_so_entrega_equipamento.php";
+	$pag[67]="processa/cad_entrega_reserva_equipamento.php";
+	$pag[68]="crud/editar_entrgar_reserva2.php";
 	
 	
 	

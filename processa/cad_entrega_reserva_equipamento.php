@@ -20,7 +20,7 @@ $comando_sql="INSERT INTO cadendregas
 (nome,nomeprofessor,equipamento,situacao,dataentrega,dataprevista,datarecebido,local,sala,curso,horario1,horario2,horario3,turno,criado) VALUES
 ('$nome','$nomeprofessor','$equipamento','$situacao','$dataentrega','$dataprevista','$datarecebido','$local','$sala','$curso','$horario1','$horario2','$horario3','$turno',NOW())";
 
-$comando_sql2 = "UPDATE cadequipamento SET situacao = '3' WHERE nome = '$equipamento' && situacao = '1' LIMIT 1 ";
+$comando_sql2 = "UPDATE cadequipamento SET situacao = '3' WHERE nome = '$equipamento' && situacao = '2' LIMIT 1 ";
 
 ?>
 

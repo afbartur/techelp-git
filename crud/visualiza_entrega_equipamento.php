@@ -40,7 +40,7 @@ $resultado = mysqli_fetch_assoc($result);
 	<b>Situação:</b>
 </div>
 <div class="col-xs-4 col-sm-9 ">
-	<?php echo $resultado[situacao];?>
+	<?php echo".". $resultado[situacao];?>
 </div>
 
 <div class="col-xs-8 col-sm-3">
@@ -49,7 +49,7 @@ $resultado = mysqli_fetch_assoc($result);
 <div class="col-xs-4 col-sm-9 ">
 
 	<?php 
-	$newDate = date("d-m-Y  h:m:s", strtotime($resultado[dataentrega]));
+	$newDate = date("d-m-Y ", strtotime($resultado[dataentrega]));
 	echo $newDate;?>
 </div>
 
@@ -60,7 +60,7 @@ $resultado = mysqli_fetch_assoc($result);
 	<?php 
 	
 	
-	$newDate2 = date("d-m-Y  h:m:s", strtotime($resultado[dataprevista]));
+	$newDate2 = date("d-m-Y  ", strtotime($resultado[dataprevista]));
 	echo $newDate2;
 	?>
 	
@@ -86,7 +86,7 @@ $resultado = mysqli_fetch_assoc($result);
 <div class="col-xs-4 col-sm-9 ">
 	<?php 
 	
-	$newDate4 = date("d-m-Y  h:m:s", strtotime($resultado[criado]));
+	$newDate4 = date("d-m-Y  h:i:s", strtotime($resultado[criado]));
 	echo $newDate4;
 	
 	?>

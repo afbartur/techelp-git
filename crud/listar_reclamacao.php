@@ -67,7 +67,7 @@ include_once("seguranca.php");
 		
 		echo"<td>".$linhas['id'] ."</td>";
 		
-		$newDate2 = date("d-m-Y  h:m:s", strtotime($linhas['criado']));
+		$newDate2 = date("d-m-Y  h:i:s", strtotime($linhas['criado']));
 		
 		echo"<td>".$newDate2."</td>";
 		

@@ -6,7 +6,7 @@ $id= $_GET['id'];
 $result = mysqli_query($conn, "SELECT * FROM cadendregas WHERE id = '$id' LIMIT 1 ");
 $resultado = mysqli_fetch_assoc($result);
 ?>
-        <h1 class="text-center">Receber Equipamento Emprestado</h1>
+        <h1 class="text-center">Receber Equipamento </h1>
 								
 			<form class="fume" method="POST" action="index.php?link=59">
 			<div class="row">
@@ -53,6 +53,15 @@ $resultado = mysqli_fetch_assoc($result);
   </div>
   
   <div class="form-group col-md-4">
+    <label >Curso:</label>
+	<input type="text" disabled class="form-control" value= "<?php echo $resultado['curso'] ;?>" required name="curso" placeholder="Curso">
+	
+	<input type="hidden" class="form-control" value= "<?php echo $resultado['curso'] ;?>" required name="curso" placeholder="Curso">
+	
+	
+  </div>
+  
+  <div class="form-group col-md-4">
     <label >Horário 1:</label>
 	<input type="text" disabled class="form-control" value= "<?php echo $resultado['horario1'] ;?>" required name="horario1" placeholder="Horário1">
 	
@@ -88,33 +97,7 @@ $resultado = mysqli_fetch_assoc($result);
   </div>
   
   
-  <div class="form-group col-md-4">
-    <label >Situação:</label>
-	<select  class="form-control" name="situacao">
-		<option>Selecione</option>
-		<option value="Emprestado" 
-		<?php
-		if ($resultado['situacao'] == "Emprestado"){
-			echo "selected";
-		};
-		?>
-		
-		>Emprestado</option>
-		
-		<option value="Recebido" 
-		<?php
-		if ($resultado['situacao'] == "Recebido"){
-			echo "selected";
-		};
-		?>
-		
-		>Recebido</option>
-	
-
-	</select>
-	
-   
-  </div>
+ 
     <div class="form-group col-md-4 ">
     <label >Data da Entrega:</label>
     <input disabled type="date" class="form-control" value= "<?php echo $resultado['dataentrega'] ;?>"required name="dataentrega" placeholder="Data da Entrega">
@@ -130,7 +113,28 @@ $resultado = mysqli_fetch_assoc($result);
   <div class="form-group col-md-4">
     <label >Data de Recebimento:</label>
     <input type="date" class="form-control" value= "<?php echo $resultado['datarecebido'] ;?>"required name="datarecebido" placeholder="Data de Recebimento">
-  </div> 	
+  </div> 
+
+ <div class="form-group col-md-4">
+    <label >Situação:</label>
+	<select  class="form-control" name="situacao">
+		<option>Selecione</option>
+		
+		
+		<option value="Recebido" 
+		<?php
+		if ($resultado['situacao'] == "Recebido"){
+			echo "selected";
+		};
+		?>
+		
+		>Recebido</option>
+	
+
+	</select>
+	
+   
+  </div>  
   
  
   <input type="hidden" class="form-control" value= "<?php echo $resultado['id'] ;?>" name="id">

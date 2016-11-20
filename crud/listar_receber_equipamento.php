@@ -85,8 +85,11 @@ include_once("seguranca.php");
 		echo"<td>".$linhas['dataentrega'] ."</td>";
 		echo"<td>".$linhas['dataprevista'] ."</td>";
 		echo"<td>".$linhas['datarecebido'] ."</td>";
-		echo"<td>".$linhas['criado'] ."</td>";
-		echo"<td>".$linhas['modificado'] ."</td>";
+		$newDate = date("d-m-Y  h:i:s", strtotime($linhas['criado']));
+		echo"<td>".$newDate."</td>";
+		$newDate5 = date("d-m-Y  h:i:s", strtotime($linhas['modificado']));
+		echo"<td>".$newDate5."</td>";
+		
 		
 		
 		

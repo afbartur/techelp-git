@@ -46,7 +46,7 @@ include_once("seguranca.php");
       </div>
       <div class="row">
         <div class="col-md-12">
-          <table class="table fume">
+          <table class="table fume" style="font-size: 12px;">
             <thead>
               <tr>
                 <th>ID</th>
@@ -54,14 +54,15 @@ include_once("seguranca.php");
 				<th>Reserva para:</th>
                 <th>Equipamento</th>
 				<th>Para a Data</th>
-				<th>Horario 1</th>
-				<th>Horario 2</th>
-				<th>Horario 3</th>
+				<th>Horário 1</th>
+				<th>Horário 2</th>
+				<th>Horário 3</th>
 				<th>Turno</th>
 				<th>Local</th>
 				<th>Sala</th>
 				<th>Data/Hora que foi feita</th>
                 <th></th>
+				<th></th>
 				
                 
 			</tr>
@@ -86,7 +87,7 @@ include_once("seguranca.php");
 		echo"<td>".$linhas['turno'] ."</td>";
 		echo"<td>".$linhas['local'] ."</td>";
 		echo"<td>".$linhas['sala'] ."</td>";
-		$newDate2 = date("d-m-Y  h:m:s", strtotime($linhas['criado']));
+		$newDate2 = date("d-m-Y  h:i:s", strtotime($linhas['criado']));
 		
 		echo"<td>".$newDate2."</td>";
 		
@@ -94,14 +95,19 @@ include_once("seguranca.php");
 		?>
 		<td>
 		
-		<a href='index.php?link=58&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
+		<a href='index.php?link=68&id=<?php echo $linhas['id']; ?>'><button title="Empestar" type='buton' class='btn  btn-primary '><i class="fa fa-share-square" aria-hidden="true"></i> Emprestar
+		</button></a>
+		</td>
+		<td>
+		
+		<a href='index.php?link=58&id=<?php echo $linhas['id']; ?>'><button title="Visualizar" type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> 
 		</button></a>
 		
-		<a href='index.php?link=41&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
+		<a href='index.php?link=41&id=<?php echo $linhas['id']; ?>'><button title="Editar"type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> 
 		
 		
 		
-		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=43&id=<?php echo $linhas['id'];?>&equipamento=<?php echo $linhas['equipamento'];?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=43&id=<?php echo $linhas['id'];?>&equipamento=<?php echo $linhas['equipamento'];?>'><button title="Excluir" type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> </button></a>
 		</td>
 		<?php
 		

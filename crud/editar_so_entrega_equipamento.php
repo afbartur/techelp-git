@@ -8,7 +8,7 @@ $resultado = mysqli_fetch_assoc($result);
 ?>
         <h1 class="text-center">Editar Emprestimo de Equipamento</h1>
 								
-			<form class="fume" method="POST" action="index.php?link=59">
+			<form class="fume" method="POST" action="index.php?link=65">
 			<div class="row">
 
     <div class="form-group col-md-4">

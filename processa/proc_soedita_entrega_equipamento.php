@@ -20,7 +20,7 @@ $comando_sql = "UPDATE cadendregas SET nome = '$nome',nomeprofessor = '$nomeprof
 modificado = NOW()  WHERE id = '$id' ";
 
 
-$comando_sql2 = "UPDATE cadequipamento SET situacao = '1' WHERE nome = '$equipamento' && situacao = '3' LIMIT 1 ";
+//$comando_sql2 = "UPDATE cadequipamento SET situacao = '1' WHERE nome = '$equipamento' && situacao = '3' LIMIT 1 ";
 
 ?>
 
@@ -45,21 +45,21 @@ $comando_sql2 = "UPDATE cadequipamento SET situacao = '1' WHERE nome = '$equipam
 		
 		}
 	  ?>
-	   <?php
-	  $resultado2 = mysqli_query($conn, $comando_sql2);
+	  <?php
+	 // $resultado2 = mysqli_query($conn, $comando_sql2);
 
-	if($resultado2==1) {
+	//if($resultado2==1) {
 	
 	
-	echo "";
+	//echo "";
 	//header("location:index.html");
 	
-	}
-		else {
+	//}
+		//else {
 		
-		echo"Erro ao inserir dados no situação  DB";
+		//echo"Erro ao inserir dados no situação  DB";
 		
-		}
+		//}
 	  ?>
 	  
 	  

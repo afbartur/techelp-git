@@ -114,7 +114,7 @@ $resultado = mysqli_fetch_assoc($result);
 
 
 	<?php 
-	$newDate = date("d-m-Y h:m:s", strtotime($resultado[criado]));
+	$newDate = date("d-m-Y h:i:s", strtotime($resultado[criado]));
 	
 	echo ".".$newDate;?>
 </div>
@@ -124,7 +124,7 @@ $resultado = mysqli_fetch_assoc($result);
 </div>
 <div class="col-xs-6 col-sm-8 ">
 <?php 
-	$newDate2 = date("d-m-Y h:m:s", strtotime($resultado[modificado]));
+	$newDate2 = date("d-m-Y h:i:s", strtotime($resultado[modificado]));
 	
 	echo ".".$newDate2;?>
 

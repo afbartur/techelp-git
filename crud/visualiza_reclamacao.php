@@ -30,7 +30,7 @@ $resultado = mysqli_fetch_assoc($result);
 <div class="col-xs-8 col-sm-10 ">
 	<?php 
 	
-	$newDate = date("d-m-Y  h:m:s", strtotime($resultado[criado]));
+	$newDate = date("d-m-Y  h:i:s", strtotime($resultado[criado]));
 		
 		echo":". $newDate ;
 	

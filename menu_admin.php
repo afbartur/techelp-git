@@ -59,6 +59,7 @@
                 <li><a href="crud/relatorio_equipamento.php">Relatório de Equipamento</a></li>
                 <li><a href="crud/relatorio_usuario.php">Relatório de Usuário</a></li>
                 <li><a href="crud/relatorio_reserva.php">Relarório de Reserva</a></li>
+				<li><a href="crud/relatorio_emprestimo.php">Relarório de Emprestimo</a></li>
               </ul>
             </li>
            			
