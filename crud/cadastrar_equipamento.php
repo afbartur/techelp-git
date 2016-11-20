@@ -6,8 +6,34 @@ include_once("seguranca.php");
 			<form class="fume" method="POST" action="index.php?link=9">
 			<div class="row">
   <div class="form-group col-md-6">
-    <label >Nome</label>
-    <input type="text" class="form-control" required name="nome" placeholder="Nome">
+    <label >Nome / Categoria de Equipamento</label>
+    <SELECT class="form-control" name="nome" size="1">
+	
+<?php
+	//$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE situacao = 1" );
+	$resultado = mysqli_query($conn, "SELECT * FROM cadcategoriaequipamento" );
+	$linhas=mysqli_num_rows($resultado);
+	
+	While($registro=mysqli_fetch_array($resultado))
+		{
+?>	
+		<option> 
+		<?php
+		
+		print "$registro[nome]";
+			
+				
+		?> 
+		</option>
+	
+		<?php
+		}
+		
+		mysqli_free_result($resultado);
+
+		?>
+
+</SELECT>
   </div>
    
   <div class="form-group col-md-6">
@@ -15,6 +41,7 @@ include_once("seguranca.php");
 	<select name="situacao" class="form-control">
 	<option value="1">Livre</option>
 	<option value="2">Reservado</option>
+	<option value="3">Emprestado</option>
 	</select>
 	
   </div>

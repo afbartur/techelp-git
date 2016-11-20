@@ -129,6 +129,33 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[41]="crud/editar_reserva.php";
 	$pag[42]="processa/proc_edita_reserva.php";
 	$pag[43]="processa/proc_apagar_reserva.php";
+	$pag[44]="crud/relatorio_equipamento.php";
+	$pag[45]="crud/relatorio_usuario.php";
+	$pag[46]="crud/gerar_pdf.php";
+	$pag[47]="crud/cadastrar_categoria_equipamento.php";
+	$pag[48]="processa/cad_categoria_equipamento.php";
+	$pag[49]="crud/listar_categoria_equipamento.php";
+	$pag[50]="crud/visualiza_categoria_equipamento.php";
+	$pag[51]="crud/editar_categoria_equipamento.php";
+	$pag[52]="processa/proc_edita_categoria_equipamento.php";
+	$pag[53]="processa/proc_apagar_categoria_equipamento.php";
+	$pag[54]="crud/cadastrar_entrgar_equipamento.php";
+	$pag[55]="processa/cad_entrega_equipamento.php";
+	$pag[56]="crud/listar_entregar_equipamento.php";
+	$pag[57]="crud/visualiza_entrega_equipamento.php";
+	$pag[58]="crud/visualiza_reserva.php";
+	$pag[59]="processa/proc_edita_entrega_equipamento.php";
+	$pag[60]="crud/editar_entrega_equipamento.php";
+	$pag[61]="crud/editar_receber_equipamento.php";
+	$pag[62]="crud/listar_receber_equipamento.php";
+	$pag[63]="processa/proc_apagar_emprestimo.php";
+	
+	
+	
+	
+	
+	
+	
 	
 	if(!empty($link)){
 		if(file_exists($pag[$link])){}

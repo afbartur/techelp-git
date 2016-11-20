@@ -9,16 +9,43 @@ $resultado = mysqli_fetch_assoc($result);
         <h1 class="text-center">Editar Local</h1>
 								
 			<form class="fume" method="POST" action="index.php?link=21">
-  <div class="form-group">
+			<div class="row">
+  <div class="form-group col-md-6">
     <label >Nome</label>
-    <input type="text" class="form-control" value= "<?php echo $resultado['nome'] ;?>" required name="nome" placeholder="Nome">
+	
+	<select name="nome" class="form-control" >
+	<option>Selecione</option>
+	
+	<option value="Anexo" 
+		<?php
+		if ($resultado['nome'] == Anexo){
+			echo "selected";
+		}
+		?>
+		
+		>Anexo</option>
+	
+	
+	<option value="Principal" 
+		<?php
+		if ($resultado['nome'] == Principal){
+			echo "selected";
+		}
+		?>
+		
+		>Principal</option>>
+	
+	</select>
+	
+	
+    
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-6">
     <label >Sala</label>
     <input type="text" class="form-control" value= "<?php echo $resultado['sala'] ;?>"required name="sala" placeholder="Sala">
   </div>
 
- 
+ </div>
   <input type="hidden" class="form-control" value= "<?php echo $resultado['id'] ;?>" name="id">
   
   

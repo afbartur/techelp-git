@@ -23,16 +23,21 @@ include_once("seguranca.php");
 						<option value="LIMIT 30" >30 Últimos Cadastrados</option>
 						<option value="LIMIT 40" >40 Últimos Cadastrados</option>
 						<option value="LIMIT 50" >50 Últimos Cadastrados</option>
-						<option value=""  >TODOS</option>											
+						<option value="LIMIT 99999999"  >TODOS</option>											
 						</select>
 						
-						<input   class="btn btn-lg btn-primary "type="submit" value="OK" > 
+						<input   class="btn btn-lg btn-primary float-right"type="submit" value="OK" > 
 						 
 						</form>
-						</div>
+						
 							<?PHP
+							if($_POST["qtda"]== null){
+								$qtd = "LIMIT 10";
+							}else{
+								
+								$qtd = $_POST["qtda"];
 							
-							$qtd= $_POST["qtda"];
+							};
 							$situacao=$_POST["situacao"];
 							$resultado = mysqli_query($conn, "SELECT * FROM cadreclamacao WHERE situacao LIKE '%$situacao%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
@@ -93,8 +98,7 @@ if (confirm ("Tem certeza que deseja excluir?"))
 </script>
 			
 		
-		<a ><button type='buton' onclick="return confirm('Deseja mesmo Excluir?');"  href='index.php?link=40&id=<?php echo $linhas['id']; ?>' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir
-		</button></a>
+		<a onclick="return confirm('Deseja mesmo Excluir?');"  href='index.php?link=40&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		
 		          
 	

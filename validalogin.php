@@ -24,9 +24,9 @@
 			if($_SESSION['UsuarioTipousuario'] == "1"){
 				header("Location: index.php");
 			}elseif($_SESSION['UsuarioTipousuario'] == "2"){
-				header("Location: professor.php");
+				header("Location: professor\index.php");
 			}else{
-				header("Location: usuario.php");
+				header("Location: funcionario\index.php");
 			}
 		//Não foi encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
 		//redireciona o usuario para a página de login

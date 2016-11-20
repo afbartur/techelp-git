@@ -1,7 +1,6 @@
 
 <?php
 $horarioinicio 	= 		$_POST['horarioinicio'];
-$horariomeio 	= 		$_POST['horariomeio'];
 $horariofim		=		$_POST['horariofim'];
 $turno 			= 		$_POST['turno'];
 $data 			= 		$_POST['data'];
@@ -9,21 +8,20 @@ $local 			=		$_POST['local'];
 $curso 			= 		$_POST['curso'];
 $equipamento 	= 		$_POST['equipamento'];
 $usuario 		= 		$_POST['usuario'];
-$usuario2 		= 		$_POST['usuario2'];
 $situacao 		= 		$_POST['situacao'];
 $sala 			= 		$_POST['sala'];
 
 
 $comando_sql="INSERT INTO cadreserva
-(horarioinicio,horariomeio,horariofim,turno,data,local,curso,equipamento,usuario,usuario2,situacao,sala,criado) VALUES
-('$horarioinicio','$horariomeio','$horariofim','$turno','$data','$local','$curso','$equipamento','$usuario','$usuario2',1,'$sala',NOW())";
+(horarioinicio,horariofim,turno,data,local,curso,equipamento,usuario,situacao,sala,criado) VALUES
+('$horarioinicio','$horariofim','$turno','$data','$local','$curso','$equipamento','$usuario',1,'$sala',NOW())";
 
 $comando_sql3="INSERT INTO relreserva
-(horarioinicio,horariomeio,horariofim,turno,data,local,curso,equipamento,usuario,usuario2,situacao,sala,criado) VALUES
-('$horarioinicio','$horariomeio','$horariofim','$turno','$data','$local','$curso','$equipamento','$usuario','$usuario2',1,'$sala',NOW())";
+(horarioinicio,horariofim,turno,data,local,curso,equipamento,usuario,situacao,sala,criado) VALUES
+('$horarioinicio','$horariofim','$turno','$data','$local','$curso','$equipamento','$usuario',1,'$sala',NOW())";
 
 
-$comando_sql2 = "UPDATE cadequipamento SET situacao = '2' WHERE nome = '$equipamento' && situacao = '1' LIMIT 1 ";
+$comando_sql2 = "UPDATE cadequipamento SET situacao = '2' WHERE nome = '$equipamento' && situacao != '2' LIMIT 1 ";
 
 ?>
 
@@ -63,7 +61,7 @@ $comando_sql2 = "UPDATE cadequipamento SET situacao = '2' WHERE nome = '$equipam
 	}
 		else {
 		
-		echo"Erro ao inserir dados no situação  DB";
+		echo"Erro ao inserir dados no situação DB";
 		
 		}
 	  ?>

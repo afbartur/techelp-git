@@ -1,7 +1,7 @@
 ﻿<?php
 include_once("seguranca.php");
 ?>     
-	 <h1 class="text-center">Lista de Equipamentos</h1>
+	 <h1 class="text-center">Receber Equipamentos</h1>
 								
 						
 						<label ></label>
@@ -15,7 +15,7 @@ include_once("seguranca.php");
 						
 						<input  class="btn btn-lg btn-primary novocadastro"  type="submit" value="Pesquisar"></input>
 						</form>
-						<a  class="form-signin" href="index.php?link=10"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Novo Cadastro" /></a>
+						<a  class="form-signin" href="index.php?link=54"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Novo Empréstimo" /></a>
 												
 						<ul class="resultado">
 		
@@ -46,7 +46,7 @@ include_once("seguranca.php");
 							
 							};
 							$nome=$_POST["nome"];
-							$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$resultado = mysqli_query($conn, "SELECT * FROM cadendregas WHERE nomeprofessor LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
 							?>							
 		
@@ -57,10 +57,15 @@ include_once("seguranca.php");
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Nome</th>
+                <th>Usuario do Sistema</th>
+                <th>Professor</th>
+				<th>Equipamento</th>
                 <th>Situação</th>
-                <th>Descrição</th>
-				<th>Tombo</th>
+				<th>Data da Entrega</th>
+				<th>Previsão de Devolução</th>
+				<th>Data de Recebido</th>
+				<th>Data do Protocolo</th>
+				<th>Data de Alteração</th>
 				<th></th>
 			</tr>
             </thead>
@@ -74,25 +79,26 @@ include_once("seguranca.php");
 		echo "<tr>";
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['nome'] ."</td>";
-		if ($linhas['situacao'] == 1){
-			$sit = "Livre";
-		};
-		if ($linhas['situacao'] == 2){
-			$sit = "Reservado";
-		};
-		if ($linhas['situacao'] == 3){
-			$sit = "Emprestado";
-		};
-		echo"<td>".$sit ."</td>";
-		echo"<td>".$linhas['descricao'] ."</td>";
-		echo"<td>".$linhas['tombo'] ."</td>";
+		echo"<td>".$linhas['nomeprofessor'] ."</td>";
+		echo"<td>".$linhas['equipamento'] ."</td>";
+		echo"<td>".$linhas['situacao'] ."</td>";
+		echo"<td>".$linhas['dataentrega'] ."</td>";
+		echo"<td>".$linhas['dataprevista'] ."</td>";
+		echo"<td>".$linhas['datarecebido'] ."</td>";
+		echo"<td>".$linhas['criado'] ."</td>";
+		echo"<td>".$linhas['modificado'] ."</td>";
+		
+		
+		
 		
 		?>
-		<td><a href='index.php?link=11&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
-		</button></a><a href='index.php?link=14&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
+		<td>
 		
 		
-		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=15&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		<a href='index.php?link=61&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn  btn-primary '><i class="fa fa-pencil-square-o"></i> Receber</button></a>
+		
+		
+		
 		</td>
 		</td>
 		<?php

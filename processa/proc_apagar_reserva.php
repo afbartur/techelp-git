@@ -5,7 +5,7 @@ $equipamento = $_GET['equipamento'];
 
 $comando_sql = "DELETE FROM cadreserva WHERE id=$id";
 
-$comando_sql2 = "UPDATE cadequipamento SET situacao = '1' WHERE nome = '$equipamento' && situacao != '1' LIMIT 1";
+$comando_sql2 = "UPDATE cadequipamento SET situacao = '1' WHERE nome = '$equipamento' && situacao = '2' LIMIT 1";
 
 
 ?>
@@ -21,7 +21,7 @@ $comando_sql2 = "UPDATE cadequipamento SET situacao = '1' WHERE nome = '$equipam
 
 	if($resultado==1) {
 	
-	echo "Reserva cancelada com sucesso!";
+	echo "Reserva excluída com sucesso!";
 	//header("location:index.html?link=2");
 	
 	}
@@ -41,13 +41,13 @@ $comando_sql2 = "UPDATE cadequipamento SET situacao = '1' WHERE nome = '$equipam
 
 	if($resultado2==1) {
 	
-	echo "O Equipamento está Livre Novamente!";
+	echo "";
 	//header("location:index.html?link=2");
 	
 	}
 		else {
 		
-		echo"Erro ao inserir dados no DB";
+		echo"Erro ao inserir dados no apaga reserva DB";
 		
 		}
 	  ?>

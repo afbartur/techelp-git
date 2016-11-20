@@ -11,7 +11,7 @@ include_once("seguranca.php");
 			
 			<div class="row">
 			
-			<div class="form-group col-md-2">
+			<div class="form-group col-md-3">
 			
 			<label >Usuário:</label>
 			<select disabled class="form-control" >
@@ -23,47 +23,75 @@ include_once("seguranca.php");
 
 			</div>
 			
-  <div class="form-group col-md-2">
-    <label >Horário inicio</label>
-	<SCRIPT LANGUAGE="JavaScript">
-<!--
-function Mascara_Hora(Hora){ 
-var hora01 = ''; 
-hora01 = hora01 + Hora; 
-if (hora01.length == 2){ 
-hora01 = hora01 + ':'; 
-document.forms[0].Hora.value = hora01; 
-} 
-if (hora01.length == 5){ 
-Verifica_Hora(); 
-} 
-} 
-           
-function Verifica_Hora(){ 
-hrs = (document.forms[0].Hora.value.substring(0,2)); 
-min = (document.forms[0].Hora.value.substring(3,5)); 
-               
-estado = ""; 
-if ((hrs < 00 ) || (hrs > 23) || ( min < 00) ||( min > 59)){ 
-estado = "errada"; 
-} 
-               
-if (document.forms[0].Hora.value == "") { 
-estado = "errada"; 
-} 
- 
-if (estado == "errada") { 
-alert("Hora inválida!"); 
-document.forms[0].Hora.focus(); 
-} 
-} 
-//-->
-</script>
+			 <div class="form-group col-md-3">
+				<label >Reserva para: </label>    
+				<SELECT class="form-control" name="usuario2" >
+				<option><?php
+			echo $_SESSION['UsuarioNome'];
+			?></option>
+			<?php
+				//$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE situacao = 1" );
+				$resultado = mysqli_query($conn, "SELECT * FROM cadusuario" );
+				$linhas=mysqli_num_rows($resultado);
+				
+				While($registro=mysqli_fetch_array($resultado))
+					{
+			?>	
+					<option> 
+					<?php
+					
+					print "$registro[nome]";
+						
+							
+					?> 
+					</option>
+				
+					<?php
+					}
+					
+					mysqli_free_result($resultado);
+
+					?>
+
+			</SELECT> 
+			
+			</div>
+			
+  <div class="form-group col-md-3">
+    <label >Horário 1 </label>    
+	 <select name="horarioinicio" class="form-control" >
+	<option>Não selecionado</option>
+	<option value="ab">AB</option>
+	
+	</select>  
+	
+  </div>
+  
+  <div class="form-group col-md-3">
+    <label >Horário 2 </label>    
+	 <select name="horariomeio" class="form-control" >
+	<option>Não selecionado</option>
+	<option value="cd">CD</option>
+	
+	</select>  
+	
+  </div>
+  
+  
+  
+  
+  
+   <div class="form-group col-md-3">
+    <label >Horário 3</label>
+	<select name="horariofim" class="form-control" >
+	<option>Não selecionado</option>
+	<option value="ef">EF</option>
+	
+	</select>
 	
 
 
-<input name="horarioinicio" class="form-control" type="text" id="Hora" OnKeyUp="Mascara_Hora(this.value)" 
-size="5" maxlength="5"></td>
+</td>
 
 
    
@@ -72,56 +100,7 @@ size="5" maxlength="5"></td>
   
   
   </div>
-   <div class="form-group col-md-2">
-    <label >Horário fim</label>
-	<SCRIPT LANGUAGE="JavaScript">
-<!--
-function Mascara_Hora2(Hora2){ 
-var hora01 = ''; 
-hora01 = hora01 + Hora2; 
-if (hora01.length == 2){ 
-hora01 = hora01 + ':'; 
-document.forms[0].Hora2.value = hora01; 
-} 
-if (hora01.length == 5){ 
-Verifica_Hora(); 
-} 
-} 
-           
-function Verifica_Hora(){ 
-hrs = (document.forms[0].Hora2.value.substring(0,2)); 
-min = (document.forms[0].Hora2.value.substring(3,5)); 
-               
-estado = ""; 
-if ((hrs < 00 ) || (hrs > 23) || ( min < 00) ||( min > 59)){ 
-estado = "errada"; 
-} 
-               
-if (document.forms[0].Hora2.value == "") { 
-estado = "errada"; 
-} 
- 
-if (estado == "errada") { 
-alert("Hora inválida!"); 
-document.forms[0].Hora2.focus(); 
-} 
-} 
-//-->
-</script>
-	
-
-
-<input name="horariofim" class="form-control" type="text" id="Hora2" OnKeyUp="Mascara_Hora2(this.value)" 
-size="5" maxlength="5"></td>
-
-
-   
-	
-  
-  
-  
-  </div>
-  <div class="form-group col-md-2">
+  <div class="form-group col-md-3">
     <label >Turno</label>
 	<select class="form-control" name="turno"> 
 		<option>Selecione</option>
@@ -132,14 +111,14 @@ size="5" maxlength="5"></td>
 	</select>
     
   </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-3">
     <label >Data</label>
 	<input class="form-control" name="data" type="date" required placeholder="Digite a Data"  />
       </div>
-  <div class="form-group col-md-2">
+  <div class="form-group col-md-3">
     <label >Local</label>
 	 	 <SELECT class="form-control" name="local" size="1">
-	
+	<option> Selecione</option>
 		<option value="Anexo"> 
 		 Anexo
 		</option>
@@ -158,7 +137,7 @@ size="5" maxlength="5"></td>
   <div class="form-group col-md-4">
     <label >Sala</label>
 	 <SELECT class="form-control" name="sala" size="1">
-	
+	<option> Selecione</option>
 <?php
 	$resultado = mysqli_query($conn, "SELECT sala FROM cadlocal" );
 	$linhas=mysqli_num_rows($resultado);
@@ -185,7 +164,7 @@ size="5" maxlength="5"></td>
   <div class="form-group col-md-4">
     <label >Curso</label>
 	 <SELECT class="form-control" name="curso" size="1">
-	
+	<option> Selecione</option>
 <?php
 	$resultado = mysqli_query($conn,"SELECT nome FROM cadcurso" );
 	$linhas=mysqli_num_rows($resultado);
@@ -214,9 +193,10 @@ size="5" maxlength="5"></td>
 	<div class="form-group col-md-4">
 	<label >Pesquisar Equipamento</label>
 	<SELECT class="form-control" name="equipamento" size="1">
-	
+	<option> Selecione</option>
 <?php
-	$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE situacao = 1" );
+	//$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE situacao = 1" );
+	$resultado = mysqli_query($conn, "SELECT * FROM cadcategoriaequipamento" );
 	$linhas=mysqli_num_rows($resultado);
 	
 	While($registro=mysqli_fetch_array($resultado))
@@ -226,6 +206,7 @@ size="5" maxlength="5"></td>
 		<?php
 		
 		print "$registro[nome]";
+			
 				
 		?> 
 		</option>

@@ -9,19 +9,20 @@ $resultado = mysqli_fetch_assoc($result);
         <h1 class="text-center">Editar Usuário</h1>
 								
 			<form class="fume" method="POST" action="index.php?link=5">
-  <div class="form-group">
+  <div class="row">
+  <div class="form-group col-md-4">
     <label >Nome</label>
     <input type="text" class="form-control" value= "<?php echo $resultado['nome'] ;?>" required name="nome" placeholder="Nome">
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-4">
     <label >E-mail</label>
     <input type="text" class="form-control" value= "<?php echo $resultado['email'] ;?>"required name="email" placeholder="E-mail">
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-4">
     <label >Senha</label>
     <input type="password" class="form-control" value= "<?php echo $resultado['senha'] ;?>"required name="senha" placeholder="Senha">
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-6">
     <label >CPF</label>
 	<script>
 	function validarCPF( cpf ){
@@ -120,10 +121,10 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
   </div>
  
   
-  <div class="form-group">
+  <div class="form-group col-md-6 ">
     <label >Tipo de Usuário</label>
-    <select class="btn btn-lg btn-primary btn-block" name="tipousuario" required>
-		<option>Selecione<option>
+    <select class="form-control" name="tipousuario" required>
+		<option>Selecione</option>
 		<option value="1" 
 		<?php
 		if ($resultado['tipousuario'] == 1){
@@ -151,6 +152,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
 		?>
 		>Estagiário</option>	            
 	</select>
+  </div>
   </div>
   <input type="hidden" class="form-control" value= "<?php echo $resultado['id'] ;?>" name="id">
   

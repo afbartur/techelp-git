@@ -7,7 +7,14 @@ include_once("seguranca.php");
 			<div class="row">
   <div class="form-group col-md-6">
     <label >Nome</label>
-    <input type="text" class="form-control" name="nome" placeholder="Nome">
+	<select name="nome" class="form-control" >
+	<option>Selecione</option>
+	<option>Anexo</option>
+	<option>Principal</option>
+	
+	</select>
+	
+	
   </div>
    
   <div class="form-group col-md-6">

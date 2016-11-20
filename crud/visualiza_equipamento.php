@@ -39,6 +39,9 @@ $resultado = mysqli_fetch_assoc($result);
 		if ($resultado[situacao] == 2){
 			$sit = "Reservado";
 		};
+		if ($resultado[situacao] == 3){
+			$sit = "Emprestado";
+		};
 	
 	echo $sit;?>
 </div>

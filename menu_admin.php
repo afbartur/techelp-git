@@ -33,8 +33,9 @@
 			  aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="index.php?link=3">Cadastrar de Usuário</a></li>
+				<li><a href="index.php?link=47">Cadastrar Categoria de Equipamento</a></li>
                 <li><a href="index.php?link=10">Cadastrar de Equipamento</a></li>
-                <li><a href="index.php?link=16">Cadastrar de Local</a></li>
+				<li><a href="index.php?link=16">Cadastrar de Local</a></li>
                 <li><a href="index.php?link=25">Cadastrar de Curso</a></li>
               </ul>
             </li>
@@ -45,6 +46,8 @@
               <ul class="dropdown-menu">
                 <li><a href="index.php?link=39">Realizar Reserva</a></li>
                 <li><a href="index.php?link=38">Listar Reserva</a></li>
+				<li><a href="index.php?link=54">Emprestar Equipamento</a></li>
+				<li><a href="index.php?link=62">Receber Equipamento</a></li>
               </ul>
             </li>
             <li><a href="index.php?link=32">Atender Reclamações</a></li>
@@ -53,9 +56,9 @@
 			  data-toggle="dropdown" role="button" 
 			  aria-haspopup="true" aria-expanded="false">Relatório <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Relatório de Equipamento</a></li>
-                <li><a href="index.php?link=2">Relatório de Usurário</a></li>
-                <li><a href="#">Relarório de Reserva</a></li>
+                <li><a href="crud/relatorio_equipamento.php">Relatório de Equipamento</a></li>
+                <li><a href="crud/relatorio_usuario.php">Relatório de Usuário</a></li>
+                <li><a href="crud/relatorio_reserva.php">Relarório de Reserva</a></li>
               </ul>
             </li>
            			

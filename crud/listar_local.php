@@ -23,16 +23,21 @@ include_once("seguranca.php");
 						<option value="LIMIT 30" >30 Últimos Cadastrados</option>
 						<option value="LIMIT 40" >40 Últimos Cadastrados</option>
 						<option value="LIMIT 50" >50 Últimos Cadastrados</option>
-						<option value=""  >TODOS</option>											
+						<option value="LIMIT 99999999"  >TODOS</option>											
 						</select>
 						
-						<input   class="btn btn-lg btn-primary "type="submit" value="OK" > 
+						<input   class="btn btn-lg btn-primary float-right"type="submit" value="OK" > 
 						 
 						</form>
-						</div>
+						
 							<?PHP
+							if($_POST["qtda"]== null){
+								$qtd = "LIMIT 10";
+							}else{
+								
+								$qtd = $_POST["qtda"];
 							
-							$qtd= $_POST["qtda"];
+							};
 							$nome=$_POST["nome"];
 							$resultado = mysqli_query($conn, "SELECT * FROM cadlocal WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);

@@ -23,7 +23,7 @@ include_once("seguranca.php");
 						<option value="LIMIT 30" >30 Últimos Cadastrados</option>
 						<option value="LIMIT 40" >40 Últimos Cadastrados</option>
 						<option value="LIMIT 50" >50 Últimos Cadastrados</option>
-						<option value=""  >TODOS</option>											
+						<option value="LIMIT 99999999"  >TODOS</option>											
 						</select>
 						
 						<input   class="btn btn-lg btn-primary float-right"type="submit" value="OK" > 
@@ -31,8 +31,14 @@ include_once("seguranca.php");
 						</form>
 						
 							<?PHP
+							if($_POST["qtda"]== null){
+								$qtd = "LIMIT 10";
+							}else{
+								
+								$qtd = $_POST["qtda"];
 							
-							$qtd = $_POST["qtda"];
+							};
+														
 							$nome = $_POST["nome"];
 							$resultado = mysqli_query($conn, "SELECT * FROM cadusuario WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
@@ -75,7 +81,7 @@ include_once("seguranca.php");
 					$sit = "Funcionário";
 				};
 				if ($linhas['tipousuario'] == 4){
-					$sit = "Estagiáriio";
+					$sit = "Estagiário";
 				};
 				echo"<td>".$sit ."</td>";
 				
