@@ -68,7 +68,7 @@ $resultado = mysqli_fetch_assoc($result);
   
   <div class="form-group col-md-4">
     <label >Data de Recebimento:</label>
-    <input type="date" class="form-control" value= "<?php echo $resultado['datarecebido'] ;?>"required name="datarecebido" placeholder="Data de Recebimento">
+    <input type="date" class="form-control" value= "<?php echo $resultado['datarecebido'] ;?>" name="datarecebido" placeholder="Data de Recebimento">
   </div> 	
   
   <div class="form-group col-md-4">

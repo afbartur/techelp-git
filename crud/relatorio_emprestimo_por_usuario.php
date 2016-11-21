@@ -42,7 +42,7 @@ $data=date("d/m/Y");
 							$qtd= $_POST["qtda"];
 							$nome=$_POST["nome"];
 							$equipamento=$_POST["equipamento"];
-							$resultado = mysqli_query($conn, "SELECT * FROM cadendregas WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
+							$resultado = mysqli_query($conn, "SELECT * FROM cadendregas WHERE nomeprofessor LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
 							?>
 							

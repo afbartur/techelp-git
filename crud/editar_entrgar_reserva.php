@@ -190,6 +190,10 @@ $resultado = mysqli_fetch_assoc($result);
   
   
    </div>
+    
+  
+  
+   </div>
   
   
   

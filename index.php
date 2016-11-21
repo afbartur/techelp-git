@@ -154,7 +154,8 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[66]="crud/editar_so_entrega_equipamento.php";
 	$pag[67]="processa/cad_entrega_reserva_equipamento.php";
 	$pag[68]="crud/editar_entrgar_reserva2.php";
-	
+	$pag[69]="crud/relatorio_reserva_filtro.php";
+	$pag[70]="crud/relatorio_emprestimo_filtro.php";
 	
 	
 	if(!empty($link)){

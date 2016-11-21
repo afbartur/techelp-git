@@ -30,7 +30,7 @@ session_start();
 
     <div class="container ">
 
-      <form class="form-signin fume">
+      <form METHOD="POST" class="form-signin fume" action="recSenha/recSenha.php">
 	  <div class="form-signin2">
 	 	  
 	  </div>

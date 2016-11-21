@@ -13,7 +13,6 @@ $data=date("d/m/Y");
 
 <body>
 
-
 <table width="800" border="0" style ="table, th ,td{
 	border: 3px solid;
 	border-collapse: collapse;
@@ -30,19 +29,20 @@ $data=date("d/m/Y");
     <td width="325" align="right"><h6>Data de Impressão: <?php echo $data?></h6></td>
   </tr>
   <tr>
-    <td><h1> Relatório Emprestimo de Equipamentos</h1></td>
+    <td><h1> Relatório de Reservas</h1></td>
   </tr>
   <tr>
     <td>Rua Monsenhor Frota, 609. CEP: 63.430-000, Icó - CE. Fone: (88)3561-2760 / FAX: (88) 3561-2670</td>
   </tr>
 </table>
 
-<?PHP
+							<?PHP
 							
 							$qtd= $_POST["qtda"];
 							$nome=$_POST["nome"];
 							$equipamento=$_POST["equipamento"];
-							$resultado = mysqli_query($conn, "SELECT * FROM cadendregas WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
+							
+							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
 							?>
 							
@@ -62,52 +62,43 @@ $data=date("d/m/Y");
             <thead>
               <tr>
                 
-                <th>Usuario do sistema:</th>
-                <th>Locatário</th>
-				<th>Equipamento</th>
-				<th>Local</th>
-				<th>Sala</th>
-				<th>Curso</th>
-				<th>Horário1</th>
-				<th>Horário2</th>
-				<th>Horário3</th>
-				<th>Turno</th>
-                <th>Situação</th>
-				<th>Data da Entrega</th>
-				<th>Previsão do Retorno</th>
-				<th>Data do Retorno</th>
+                <td  ><h5>Usuário</h5></td>
+				<td  ><h5>Locatário</h5></td>
+                <td ><h5>Equipamento</h5></td>
+                <td  ><h5>Data</h5></td>
+				<td ><h5>Horário 1</h5></td>
+				<td ><h5>Horário 2</h5></td>
+				<td ><h5>Horário 3</h5></td>
+				<td ><h5>Turno</h5></td>
+				<td ><h5>Local</h5></td>
+				<td ><h5>Sala</h5></td>
+				<td ><h5>Data/Hora que foi feita</h5></td>
+							
 				
               </tr>
             </thead>
            
 			
 		<?php
-				while($linhas= mysqli_fetch_array($resultado)){
+		while($linhas= mysqli_fetch_array($resultado)){
 		
 		
 		
-		echo "<tr>";
-		
-		echo"<td>".$linhas['nome'] ."</td>";
-		echo"<td>".$linhas['nomeprofessor'] ."</td>";
+		echo"<tr>";
+		echo"<td>".$linhas['usuario'] ."</td>";
+		echo"<td>".$linhas['usuario2'] ."</td>";
 		echo"<td>".$linhas['equipamento'] ."</td>";
+		$newDate = date("d-m-Y", strtotime($linhas['data']));
+		echo"<td>".$newDate ."</td>";
+		echo"<td>".$linhas['horarioinicio'] ."</td>";
+		echo"<td>".$linhas['horariomeio'] ."</td>";
+		echo"<td>".$linhas['horariofim'] ."</td>";
+		echo"<td>".$linhas['turno'] ."</td>";
 		echo"<td>".$linhas['local'] ."</td>";
 		echo"<td>".$linhas['sala'] ."</td>";
-		echo"<td>".$linhas['curso'] ."</td>";
-		echo"<td>".$linhas['horario1'] ."</td>";
-		echo"<td>".$linhas['horario2'] ."</td>";
-		echo"<td>".$linhas['horario3'] ."</td>";
-		echo"<td>".$linhas['turno'] ."</td>";
-		echo"<td>".$linhas['situacao'] ."</td>";
-		$newDate2 = date("d-m-Y  ", strtotime($linhas['dataentrega']));
-		echo"<td>".$newDate2."</td>";
-		$newDate3 = date("d-m-Y  ", strtotime($linhas['dataprevista']));
-		echo"<td>".$newDate3."</td>";
+		$newDate2 = date("d-m-Y  h:i:s", strtotime($linhas['criado']));
 		
-		echo"<td>".$linhas['datarecebido']."</td>";
-				
-				
-				
+		echo"<td>".$newDate2."</td>";
 		
 		?>
 		
@@ -138,7 +129,7 @@ $data=date("d/m/Y");
 
 <?php include("pdf/mpdf.php");
 $html = ob_get_clean();
-$mpdf=new mPDF('A4','','',10,10,10,10,16,13); 
+$mpdf=new mPDF('A4','','',10,10,10,25,16,13); 
 $mpdf->SetDisplayMode('fullpage');
 $mpdf->list_indent_first_level = 0;	
 //$stylesheet = file_get_contents('estilohome.css');

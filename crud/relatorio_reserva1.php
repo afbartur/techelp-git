@@ -64,6 +64,7 @@ $data=date("d/m/Y");
               <tr>
                 
                 <td  ><h4>Usuário</h4></td>
+				<td  ><h4>Locatário</h4></td>
                 <td ><h4>Equipamento</h4></td>
 				<td  ><h4>Data</h4></td>
                 <td  ><h4>Horario Inicio</h4></td>
@@ -88,6 +89,7 @@ $data=date("d/m/Y");
 		
 		echo"<tr>";
 		echo"<td>".$linhas['usuario'] ."</td>";
+		echo"<td>".$linhas['usuario2'] ."</td>";
 		echo"<td>".$linhas['equipamento'] ."</td>";
 		$newDate = date("d-m-Y", strtotime($linhas['data']));
 		echo"<td>".$newDate ."</td>";
@@ -96,7 +98,7 @@ $data=date("d/m/Y");
 		echo"<td>".$linhas['turno'] ."</td>";
 		echo"<td>".$linhas['local'] ."</td>";
 		echo"<td>".$linhas['sala'] ."</td>";
-		$newDate2 = date("d-m-Y  h:m:s", strtotime($linhas['criado']));
+		$newDate2 = date("d-m-Y  h:i:s", strtotime($linhas['criado']));
 		
 		echo"<td>".$newDate2."</td>";
 		

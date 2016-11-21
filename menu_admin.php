@@ -56,10 +56,12 @@
 			  data-toggle="dropdown" role="button" 
 			  aria-haspopup="true" aria-expanded="false">Relatório <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="crud/relatorio_equipamento.php">Relatório de Equipamento</a></li>
-                <li><a href="crud/relatorio_usuario.php">Relatório de Usuário</a></li>
-                <li><a href="crud/relatorio_reserva.php">Relarório de Reserva</a></li>
-				<li><a href="crud/relatorio_emprestimo.php">Relarório de Emprestimo</a></li>
+                <li><a target="_blank" href="crud/relatorio_equipamento.php">Relatório de Equipamento</a></li>
+                <li><a target="_blank" href="crud/relatorio_usuario.php">Relatório de Usuário</a></li>
+                <li><a target="_blank" href="crud/relatorio_reserva.php">Relarório de Reserva Completo</a></li>
+				<li><a href="index.php?link=69">Relarório de Reserva Específico</a></li>
+				<li><a target="_blank" href="crud/relatorio_emprestimo.php">Relarório de Emprestimo Completo</a></li>
+				<li><a href="index.php?link=70">Relarório de Emprestimo Específico</a></li>
               </ul>
             </li>
            			

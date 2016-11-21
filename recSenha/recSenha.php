@@ -7,13 +7,13 @@ $email = $_POST["email"];
 
 $sql = ("SELECT * FROM cadusuario WHERE email = '$email'") or die(mysql_error());
 
-$result = mysql_query($sql, $conectar);
-$dados = mysql_fetch_array($result);
+$result = mysqli_query($conn, $sql);
+$dados = mysqli_fetch_array($result);
 $nome = $dados['nome'];
 $senha = $dados['senha'];
 $assunto = "Recuperação de Senha - Tec Help";
 
-if(mysql_num_rows ($result) > 0)
+if(mysqli_num_rows ($result) > 0)
   {
 	  $msg_email = " <font face='Comic Sans MS' size='2'>
 		Olá <b>$nome</b>, <br><br>
@@ -24,7 +24,8 @@ if(mysql_num_rows ($result) > 0)
 		Fique tranquilo pois sua senha só pode ser enviada para e-mail cadastrado em seu perfil.<br><br>
 		<b>Atenciosamente, Equipe Tec Help.</b>";
 		
-$emailsender = "adriano@renewalpt.com.br";
+//$emailsender = "adriano@renewalpt.com.br";
+$emailsender = "afbartur@gmail.com";
 $emaildestinatario = $email;
 
 $quebra_linha = "\n";
@@ -40,7 +41,7 @@ mail($emaildestinatario, $assunto, $msg_email, $headers, "-r". $emailsender);
 
 echo '<script type="text/javascript">
 	alert("Os dados de acesso foram enviados ao seu E-mail!");
-	window.location="index.php";	
+	window.location="../login.php";	
 	</script>';
 
 }

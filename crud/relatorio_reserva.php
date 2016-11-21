@@ -39,8 +39,10 @@ $data=date("d/m/Y");
 							<?PHP
 							
 							$qtd= $_POST["qtda"];
+							$nome=$_POST["nome"];
 							$equipamento=$_POST["equipamento"];
-							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
+							
+							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE usuario2 LIKE '%$nome%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
 							?>
 							
@@ -61,6 +63,7 @@ $data=date("d/m/Y");
               <tr>
                 
                 <td  ><h5>Usuário</h5></td>
+				 <td  ><h5>Locatário</h5></td>
                 <td ><h5>Equipamento</h5></td>
                 <td  ><h5>Data</h5></td>
 				<td ><h5>Horário 1</h5></td>
@@ -83,6 +86,7 @@ $data=date("d/m/Y");
 		
 		echo"<tr>";
 		echo"<td>".$linhas['usuario'] ."</td>";
+		echo"<td>".$linhas['usuario2'] ."</td>";
 		echo"<td>".$linhas['equipamento'] ."</td>";
 		$newDate = date("d-m-Y", strtotime($linhas['data']));
 		echo"<td>".$newDate ."</td>";
@@ -92,7 +96,7 @@ $data=date("d/m/Y");
 		echo"<td>".$linhas['turno'] ."</td>";
 		echo"<td>".$linhas['local'] ."</td>";
 		echo"<td>".$linhas['sala'] ."</td>";
-		$newDate2 = date("d-m-Y  h:m:s", strtotime($linhas['criado']));
+		$newDate2 = date("d-m-Y  h:i:s", strtotime($linhas['criado']));
 		
 		echo"<td>".$newDate2."</td>";
 		

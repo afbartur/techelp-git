@@ -188,7 +188,33 @@ $resultado = mysqli_fetch_assoc($result);
     <input type="text" class="form-control" value= "<?php echo $resultado['equipamento'] ;?>"required name="equipamento">
   </div>
   
-  
+  <div class="form-group col-md-3">
+    <label >Situação</label>
+   
+	<select class="form-control" name="situacao">
+	<option value="Reservado" 
+		<?php
+		if ($resultado['situacao'] == Reservado){
+			echo "selected";
+		}
+		?>
+		
+		>Reservado</option>
+		
+	<option value="Emprestado" 
+		<?php
+		if ($resultado['situacao'] == Emprestado){
+			echo "selected";
+		}
+		?>
+		
+		>Emprestado</option>
+	
+	</select>
+
+
+
+  </div>
   
   
   
