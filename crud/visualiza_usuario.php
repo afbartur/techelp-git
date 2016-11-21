@@ -5,7 +5,7 @@ $resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 <div class="page-header">       
-	   <h1 class="text-center">Visializa Usuário</h1>
+	   <h1 class="text-center">Visualiza Usuário</h1>
 								
 </div>			
 <div class="row">

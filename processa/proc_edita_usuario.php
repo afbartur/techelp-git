@@ -4,7 +4,7 @@ $id = $_POST['id'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $cpf = $_POST['cpf'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 $tipousuario = $_POST['tipousuario'];
 
 $comando_sql = "UPDATE cadusuario SET nome = '$nome',email = '$email', cpf = '$cpf',senha = '$senha', 
