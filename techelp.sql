@@ -93,6 +93,7 @@ CREATE TABLE IF NOT EXISTS `cadendregas` (
   `datarecebido` varchar(255) NOT NULL,
   `local` varchar(255) NOT NULL,
   `sala` varchar(255) NOT NULL,
+  `curso` varchar(255) NOT NULL,
   `horario1` varchar(255) NOT NULL,
   `horario2` varchar(255) NOT NULL,
   `horario3` varchar(255) NOT NULL,
@@ -100,20 +101,51 @@ CREATE TABLE IF NOT EXISTS `cadendregas` (
   `criado` varchar(255) NOT NULL,
   `modificado` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Extraindo dados da tabela `cadendregas`
 --
 
-INSERT INTO `cadendregas` (`id`, `nome`, `nomeprofessor`, `equipamento`, `situacao`, `dataentrega`, `dataprevista`, `datarecebido`, `local`, `sala`, `horario1`, `horario2`, `horario3`, `turno`, `criado`, `modificado`) VALUES
-(2, 'Artur', 'Artur', 'Caixa de Som', 'Recebido', '2016-11-14', '2016-11-14', '2016-11-14', 'Pincipal', '12', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-14 09:25:32', '2016-11-14 16:30:43'),
-(3, 'Artur', 'sintia', 'Data Show', 'Recebido', '2016-11-14', '2016-11-14', '2016-11-16', 'Anexo', '05', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-14 14:51:22', '2016-11-16 09:57:59'),
-(4, 'Artur', 'daniela', 'Data Show', 'Recebido', '2016-11-14', '2016-11-14', '2016-11-14', 'Principal', '17', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-14 15:03:02', '2016-11-14 16:23:56'),
-(6, 'Artur', 'patricio', 'Caixa de Som', 'Recebido', '2016-11-17', '2016-11-17', '2016-11-16', 'Anexo', '03', 'ab', 'cd', 'NÃ£o Selecionado', 'ManhÃ£', '2016-11-16 10:57:30', '2016-11-16 14:07:21'),
-(7, 'Artur', 'Ana', 'Data Show', 'Recebido', '2016-11-16', '2016-11-16', '2016-11-16', 'Anexo', '04', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'ManhÃ£', '2016-11-16 11:00:25', '2016-11-16 14:07:09'),
-(8, 'Artur', 'Ana', 'Apagador', 'Recebido', '2016-11-16', '2016-11-16', '2016-11-16', 'Anexo', '02', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'Noite', '2016-11-16 14:59:57', '2016-11-16 15:00:47'),
-(10, 'Artur', 'Ana', 'Caixa de Som', 'Recebido', '2016-11-16', '2016-11-16', '2016-11-16', 'Anexo', '02', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'Noite', '2016-11-16 15:07:32', '2016-11-16 15:08:21');
+INSERT INTO `cadendregas` (`id`, `nome`, `nomeprofessor`, `equipamento`, `situacao`, `dataentrega`, `dataprevista`, `datarecebido`, `local`, `sala`, `curso`, `horario1`, `horario2`, `horario3`, `turno`, `criado`, `modificado`) VALUES
+(2, 'Artur', 'Artur', 'Caixa de Som', 'Recebido', '2016-11-14', '2016-11-14', '2016-11-14', 'Pincipal', '12', 'Contabilidade', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-14 09:25:32', '2016-11-20 05:22:10'),
+(3, 'Artur', 'sintia', 'Data Show', 'Recebido', '2016-11-14', '2016-11-14', '2016-11-16', 'Anexo', '05', 'AdministraÃ§Ã£o', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-14 14:51:22', '2016-11-20 05:21:53'),
+(4, 'Artur', 'daniela', 'Data Show', 'Recebido', '2016-11-14', '2016-11-14', '2016-11-14', 'Principal', '17', 'Contabilidade', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-14 15:03:02', '2016-11-20 05:21:15'),
+(6, 'Artur', 'patricio', 'Caixa de Som', 'Recebido', '2016-11-17', '2016-11-17', '2016-11-16', 'Anexo', '03', 'ADS', 'ab', 'cd', 'NÃ£o Selecionado', 'ManhÃ£', '2016-11-16 10:57:30', '2016-11-20 05:20:47'),
+(7, 'Artur', 'Ana', 'Data Show', 'Recebido', '2016-11-16', '2016-11-16', '2016-11-16', 'Anexo', '04', 'Enfermagem', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'ManhÃ£', '2016-11-16 11:00:25', '2016-11-20 05:20:29'),
+(8, 'Artur', 'Ana', 'Apagador', 'Recebido', '2016-11-16', '2016-11-16', '2016-11-16', 'Anexo', '02', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'Noite', '2016-11-16 14:59:57', '2016-11-20 05:20:04'),
+(10, 'Artur', 'Ana', 'Caixa de Som', 'Recebido', '2016-11-16', '2016-11-16', '2016-11-16', 'Anexo', '02', 'ADS', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'Noite', '2016-11-16 15:07:32', '2016-11-20 05:03:29'),
+(11, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'Contabilidade', 'ab', 'cd', 'NÃ£o selecionado', 'Tarde', '2016-11-20 04:32:53', '2016-11-20 04:37:14'),
+(12, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'ServiÃ§o Social', 'ab', 'cd', 'NÃ£o Selecionado', 'Tarde', '2016-11-20 05:07:17', '2016-11-20 05:19:23'),
+(13, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'AdministraÃ§Ã£o', 'ab', 'cd', 'NÃ£o Selecionado', 'Tarde', '2016-11-20 05:10:43', '2016-11-20 05:19:01'),
+(14, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'Contabilidade', 'ab', 'cd', 'NÃ£o selecionado', 'Tarde', '2016-11-20 05:22:51', '2016-11-20 06:38:13'),
+(15, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'Contabilidade', 'ab', 'cd', 'NÃ£o selecionado', 'Tarde', '2016-11-20 05:24:41', '2016-11-20 06:37:58'),
+(16, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'Contabilidade', 'ab', 'cd', 'NÃ£o selecionado', 'Tarde', '2016-11-20 05:26:52', '2016-11-20 06:35:07'),
+(17, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'Contabilidade', 'ab', 'cd', 'NÃ£o selecionado', 'Tarde', '2016-11-20 05:38:48', '2016-11-20 06:33:25'),
+(18, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'Contabilidade', 'ab', 'cd', 'NÃ£o selecionado', 'Tarde', '2016-11-20 06:03:58', '2016-11-20 06:31:03'),
+(19, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '01', 'Contabilidade', 'ab', 'cd', 'NÃ£o Selecionado', 'Tarde', '2016-11-20 06:09:04', '2016-11-20 06:55:25'),
+(20, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '12', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'ManhÃ£', '2016-11-20 06:57:01', '2016-11-20 07:00:26'),
+(21, 'Artur', 'Artur', 'Data Show', 'Selecione', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '12', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 07:01:00', '2016-11-20 21:49:19'),
+(23, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '12', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 07:24:54', '2016-11-20 07:35:26'),
+(24, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '12', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 07:33:53', '2016-11-20 07:35:11'),
+(25, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '12', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 07:36:24', '2016-11-20 21:49:08'),
+(26, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '16', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'cd', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 07:37:59', '2016-11-20 07:38:41'),
+(27, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '16', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'cd', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 08:03:36', '2016-11-20 21:48:35'),
+(28, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '14', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 08:06:57', '2016-11-20 08:09:19'),
+(29, 'Artur', 'david', 'Apagador', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '14', 'Psicologia', 'ab', 'NÃ£o Selecionado', 'NÃ£o Selecionado', 'ManhÃ£', '2016-11-20 08:07:54', '2016-11-20 08:08:24'),
+(30, 'Artur', 'adriana', 'Data Show', 'Recebido', '2016-11-20', '2016-11-20', '2016-11-20', 'Anexo', '17', 'AdministraÃ§Ã£o', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-20 21:50:25', '2016-11-20 21:51:27'),
+(31, 'Artur', 'Artur', 'Caixa de Som', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '16', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-20 21:55:04', '2016-11-20 22:13:04'),
+(32, 'Artur', 'Artur', 'Caixa de Som', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '16', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'cd', 'ef', 'ManhÃ£', '2016-11-20 22:05:12', '2016-11-20 22:12:42'),
+(33, 'Artur', 'Moara', 'Apagador', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '15', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 22:16:15', '2016-11-20 22:17:48'),
+(34, 'Artur', 'Moara', 'Apagador', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '15', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 22:19:57', '2016-11-20 22:20:31'),
+(35, 'Artur', 'david', 'Data Show', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '15', 'Fisioterapia', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 22:24:47', '2016-11-20 22:25:45'),
+(36, 'Artur', 'Flaviana', 'Data Show', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '16', 'Fisioterapia', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 22:26:21', '2016-11-20 22:26:58'),
+(37, 'Artur', 'Marcia', 'Apagador', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '16', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 22:31:29', '2016-11-20 22:32:03'),
+(38, 'Artur', 'Artur', 'Apagador', 'Recebido', '2016-11-21', '2016-11-20', '2016-11-20', 'Anexo', '14', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'ManhÃ£', '2016-11-20 22:33:40', '2016-11-20 22:34:21'),
+(39, 'Artur', 'Flaviana', 'Data Show', 'Recebido', '22-11-2016', '22-11-2016', '2016-11-22', 'Anexo', '16', 'Enfermagem', 'NÃ£o Selecionado', 'cd', 'ef', 'Noite', '2016-11-22 00:18:59', '2016-11-22 00:22:35'),
+(40, 'Artur', 'Moara', 'Caixa de Som', 'Recebido', '22-11-2016', '22-11-2016', '2016-11-22', 'Anexo', '13', 'Psicologia', 'ab', 'cd', 'NÃ£o Selecionado', 'Tarde', '2016-11-22 00:29:41', '2016-11-22 00:42:19'),
+(41, 'Artur', 'david', 'Data Show', 'Recebido', '22-11-2016', '22-11-2016', '2016-11-22', 'Anexo', '15', 'Psicologia', 'ab', 'cd', 'NÃ£o Selecionado', 'Tarde', '2016-11-22 01:07:09', '2016-11-22 01:09:10'),
+(42, 'Artur', 'Artur', 'Data Show', 'Recebido', '2016-11-22', '2016-11-22', '2016-11-22', 'Anexo', '15', 'EducaÃ§Ã£o FÃ­sica', 'ab', 'cd', 'NÃ£o selecionado', 'Tarde', '2016-11-22 01:11:54', '2016-11-22 01:13:10');
 
 -- --------------------------------------------------------
 
@@ -238,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `cadreserva` (
   `modificado` varchar(200) NOT NULL,
   `sala` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Extraindo dados da tabela `cadreserva`
@@ -247,7 +279,19 @@ CREATE TABLE IF NOT EXISTS `cadreserva` (
 INSERT INTO `cadreserva` (`id`, `usuario`, `usuario2`, `local`, `horarioinicio`, `horariomeio`, `horariofim`, `equipamento`, `curso`, `turno`, `data`, `situacao`, `criado`, `modificado`, `sala`) VALUES
 (10, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'ef', 'data show', 'Contabilidade', 'ManhÃ£', '2016-11-14', '1', '2016-11-10 09:39:47', '2016-11-13 15:33:54', '01'),
 (12, 'Laura', 'Laura', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'data show', 'Contabilidade', 'Tarde', '2016-11-18', '1', '2016-11-13 11:40:40', '2016-11-14 10:40:50', '01'),
-(13, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'Data Show', 'Contabilidade', 'Tarde', '2016-11-17', '1', '2016-11-13 11:42:48', '2016-11-14 10:40:35', '01');
+(13, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'Data Show', 'Contabilidade', 'Tarde', '2016-11-17', '1', '2016-11-13 11:42:48', '2016-11-14 10:40:35', '01'),
+(14, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 06:55:50', '', '12'),
+(15, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 07:37:27', '', '16'),
+(16, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 08:06:19', '', '14'),
+(17, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'ef', 'Caixa de Som', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 21:53:00', '', '16'),
+(18, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:13:50', '', '14'),
+(19, 'Artur', 'Moara', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:15:10', '', '15'),
+(20, 'Artur', 'Flaviana', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'Fisioterapia', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:22:26', '', '16'),
+(21, 'Artur', 'david', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'Fisioterapia', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:23:56', '', '15'),
+(22, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'Tarde', '2016-11-20', '1', '2016-11-20 22:27:37', '', '13'),
+(23, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:28:43', '', '14'),
+(24, 'Artur', 'Marcia', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-03', '1', '2016-11-20 22:29:39', '', '16'),
+(25, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'Tarde', '2016-11-22', '1', '2016-11-22 01:11:06', '', '15');
 
 -- --------------------------------------------------------
 
@@ -335,7 +379,7 @@ CREATE TABLE IF NOT EXISTS `relreserva` (
   `modificado` varchar(255) NOT NULL,
   `sala` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Extraindo dados da tabela `relreserva`
@@ -356,7 +400,19 @@ INSERT INTO `relreserva` (`id`, `usuario`, `usuario2`, `local`, `horarioinicio`,
 (12, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'Data Show', 'AnÃ¡lise e Desenvolvimento de Sistemas', 'Noite', '2016-11-16', '1', '2016-11-16 11:14:37', '', '05'),
 (13, 'Artur', 'Artur', 'Anexo', 'NÃ£o selecionado', 'cd', 'NÃ£o selecionado', 'Data Show', 'AnÃ¡lise e Desenvolvimento de Sistemas', 'Noite', '2016-11-16', '1', '2016-11-16 11:20:08', '', '01'),
 (14, 'Artur', 'Ana', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Caixa de Som', 'AnÃ¡lise e Desenvolvimento de Sistemas', 'Noite', '2016-11-16', '1', '2016-11-16 15:02:29', '', '02'),
-(15, 'Artur', 'joao1', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'AnÃ¡lise e Desenvolvimento de Sistemas', 'ManhÃ£', '2016-11-16', '1', '2016-11-16 21:04:54', '', '02');
+(15, 'Artur', 'joao1', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'AnÃ¡lise e Desenvolvimento de Sistemas', 'ManhÃ£', '2016-11-16', '1', '2016-11-16 21:04:54', '', '02'),
+(16, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 06:55:50', '', '12'),
+(17, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 07:37:27', '', '16'),
+(18, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 08:06:19', '', '14'),
+(19, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'ef', 'Caixa de Som', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 21:53:00', '', '16'),
+(20, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:13:50', '', '14'),
+(21, 'Artur', 'Moara', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:15:10', '', '15'),
+(22, 'Artur', 'Flaviana', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'Fisioterapia', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:22:26', '', '16'),
+(23, 'Artur', 'david', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Data Show', 'Fisioterapia', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:23:56', '', '15'),
+(24, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'Tarde', '2016-11-20', '1', '2016-11-20 22:27:37', '', '13'),
+(25, 'Artur', 'Artur', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-20', '1', '2016-11-20 22:28:43', '', '14'),
+(26, 'Artur', 'Marcia', 'Anexo', 'ab', 'NÃ£o selecionado', 'NÃ£o selecionado', 'Apagador', 'EducaÃ§Ã£o FÃ­sica', 'ManhÃ£', '2016-11-03', '1', '2016-11-20 22:29:39', '', '16'),
+(27, 'Artur', 'Artur', 'Anexo', 'ab', 'cd', 'NÃ£o selecionado', 'Data Show', 'EducaÃ§Ã£o FÃ­sica', 'Tarde', '2016-11-22', '1', '2016-11-22 01:11:06', '', '15');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
