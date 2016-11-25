@@ -129,7 +129,7 @@ include_once("seguranca.php");
 		<a href='index.php?link=66&id=<?php echo $linhas['id']; ?>'><button title="Editar" type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> editar</button></a>
 		
 		
-		<a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=63&id=<?php echo $linhas['id']; ?>'><button title="Excluir" type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> </button></a>
+		
 		</td>
 		</td>
 		<?php

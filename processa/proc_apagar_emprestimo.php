@@ -19,7 +19,7 @@ $comando_sql = "DELETE FROM cadendregas WHERE id=$id";
 	if($resultado==1) {
 	
 	
-	echo "Emprestimo apagado com sucesso!";
+	echo "Empréstimo apagado com sucesso!";
 	//header("location:index.html?link=2");
 	
 	}
