@@ -100,13 +100,13 @@ $resultado = mysqli_fetch_assoc($result);
  
     <div class="form-group col-md-4 ">
     <label >Data da Entrega:</label>
-    <input disabled type="date" class="form-control" value= "<?php echo $resultado['dataentrega'] ;?>"required name="dataentrega" placeholder="Data da Entrega">
+    <input disabled type="text" class="form-control" value= "<?php echo $resultado['dataentrega'] ;?>"required name="dataentrega" placeholder="Data da Entrega">
 	<input type="hidden" class="form-control" value= "<?php echo $resultado['dataentrega'] ;?>"required name="dataentrega" placeholder="Data da Entrega">
   </div>
   
    <div class="form-group col-md-4 ">
     <label >Previsão de Devolução:</label>
-    <input disabled type="date" class="form-control" value= "<?php echo $resultado['dataprevista'] ;?>"required name="dataprevista" placeholder="Data da Entrega">
+    <input disabled type="text" class="form-control" value= "<?php echo $resultado['dataprevista'] ;?>"required name="dataprevista" placeholder="Data da Entrega">
 	<input  type="hidden" class="form-control" value= "<?php echo $resultado['dataprevista'] ;?>"required name="dataprevista" placeholder="Data da Entrega">
   </div>
   

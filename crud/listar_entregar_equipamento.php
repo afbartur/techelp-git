@@ -72,7 +72,7 @@ include_once("seguranca.php");
 				<th>Previsão do Retorno</th>
 				<th>Data do Retorno</th>
 				
-				
+				<th></th>
 				<th></th>
 			</tr>
             </thead>
@@ -100,8 +100,13 @@ include_once("seguranca.php");
 		echo"<td>".$newDate2."</td>";
 		$newDate3 = date("d-m-Y  ", strtotime($linhas['dataprevista']));
 		echo"<td>".$newDate3."</td>";
+		if($linhas['datarecebido']>0){
+			echo"<td>".$linhas['datarecebido']."</td>";
+		}else{
+			echo"<td>".$linhas['situacao']."</td>";
+		}
 		
-		echo"<td>".$linhas['datarecebido']."</td>";
+		
 		
 		
 		
@@ -114,17 +119,17 @@ include_once("seguranca.php");
 		<td>
 		
 		
-		<a href='index.php?link=61&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn  btn-primary '><i class="fa fa-pencil-square-o"></i> Receber</button></a>
+		<a href='index.php?link=61&id=<?php echo $linhas['id']; ?>'><button title="Receber" type='button' class='btn  btn-primary '><i class="fa fa-pencil-square-o"></i> Receber</button></a>
 		
 		
 		
 		</td>
-		<td><a href='index.php?link=57&id=<?php echo $linhas['id']; ?>'><button title="Apagar" type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar</button></a>
+		<td><a href='index.php?link=57&id=<?php echo $linhas['id']; ?>'><button title="Visualizar" type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar</button></a>
 		
-		<a href='index.php?link=66&id=<?php echo $linhas['id']; ?>'><button title="Editar" type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar</button></a>
+		<a href='index.php?link=66&id=<?php echo $linhas['id']; ?>'><button title="Editar" type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> editar</button></a>
 		
 		
-		<a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=63&id=<?php echo $linhas['id']; ?>'><button title="Excluir" type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> X</button></a>
+		<a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=63&id=<?php echo $linhas['id']; ?>'><button title="Excluir" type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> </button></a>
 		</td>
 		</td>
 		<?php

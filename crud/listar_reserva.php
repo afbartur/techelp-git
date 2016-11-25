@@ -7,7 +7,7 @@ include_once("seguranca.php");
 						<label ></label>
 						
 						<form method="POST">
-						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
+						<input class="pesquisar"  placeholder="Pesquisar nome"  type="text" name="usuario2"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
 						<a href="index.php?link=39"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Nova Reserva" /></a>
 						</form>
@@ -15,6 +15,7 @@ include_once("seguranca.php");
 						<?php
 						
 						?>
+						
 						<div class="float-right">
 						<form  method="POST">
 						<select  class="btn btn-lg btn-primary " name="qtda">
@@ -38,8 +39,8 @@ include_once("seguranca.php");
 								$qtd = $_POST["qtda"];
 							
 							};
-							$equipamento=$_POST["equipamento"];
-							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE equipamento LIKE '%$equipamento%' ORDER BY id DESC $qtd" );
+							$usuario2=$_POST["usuario2"];
+							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE usuario2 LIKE '%$usuario2%' ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
 							?>							
 		

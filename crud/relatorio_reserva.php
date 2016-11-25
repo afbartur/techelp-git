@@ -38,11 +38,51 @@ $data=date("d/m/Y");
 
 							<?PHP
 							
-							$qtd= $_POST["qtda"];
-							$nome=$_POST["nome"];
-							$equipamento=$_POST["equipamento"];
 							
-							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE usuario2 LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$sdata =" AND data LIKE";
+							$sdata1 =" AND usuario2 LIKE";
+							$sdata2 =" AND equipamento LIKE";
+							$sdata3 =" AND curso LIKE";
+							$sdata4 =" AND local LIKE";
+							$sdata5 =" AND sala LIKE";
+
+							
+							if($_POST["datadia"]!= null){
+								$okdata1 = $sdata." ". "'%".$_POST["datadia"]."%'";
+								
+								//date("d-m-Y", strtotime($_POST["datadia"]))
+							}
+							if($_POST["datames"]!= null){
+								 $okdata2 = $sdata." ". "'%".$_POST["datames"]."%'";
+							}
+							if($_POST["dataano"]!= null){
+								 $okdata3 = $sdata." ". "'%".$_POST["dataano"]."%'";
+							}
+							
+							if($_POST["nome"]!= null){
+								 $okdata4 = $sdata1." ". "'%".$_POST["nome"]."%'";
+							}
+							if($_POST["equipamento"]!= null){
+								 $okdata5 = $sdata2." ". "'%".$_POST["equipamento"]."%'";
+							}
+							if($_POST["curso"]!= null){
+								 $okdata6 = $sdata3." ". "'%".$_POST["curso"]."%'";
+							}
+							if($_POST["local"]!= null){
+								 $okdata7 = $sdata4." ". "'%".$_POST["local"]."%'";
+							}
+							if($_POST["sala"]!= null){
+								 $okdata8 = $sdata5." ". "'%".$_POST["sala"]."%'";
+							}
+							
+							
+							
+							
+							
+							$qtd = $_POST["qtda"];
+							$nome = $_POST["nome"];
+														
+							$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE usuario2 LIKE '%$nome%' $okdata1 $okdata2 $okdata3 $okdata5 $okdata6 $okdata7 $okdata8 ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
 							?>
 							
@@ -70,6 +110,7 @@ $data=date("d/m/Y");
 				<td ><h5>Horário 2</h5></td>
 				<td ><h5>Horário 3</h5></td>
 				<td ><h5>Turno</h5></td>
+				<td ><h5>Curso</h5></td>
 				<td ><h5>Local</h5></td>
 				<td ><h5>Sala</h5></td>
 				<td ><h5>Data/Hora que foi feita</h5></td>
@@ -94,6 +135,7 @@ $data=date("d/m/Y");
 		echo"<td>".$linhas['horariomeio'] ."</td>";
 		echo"<td>".$linhas['horariofim'] ."</td>";
 		echo"<td>".$linhas['turno'] ."</td>";
+		echo"<td>".$linhas['curso'] ."</td>";
 		echo"<td>".$linhas['local'] ."</td>";
 		echo"<td>".$linhas['sala'] ."</td>";
 		$newDate2 = date("d-m-Y  h:i:s", strtotime($linhas['criado']));

@@ -2,47 +2,65 @@
 include_once("seguranca.php");
 ?>     
 	 <h1 class="text-center">Relatório de Empréstimos</h1>
-								
+		<h4 class="text-center">Preencha somente os campos necessários </h4>
 						
 						<label ></label>
 						
 						<div class="row">
 						<div class="form-group col-md-4">
-						<form method="POST" action="crud/relatorio_emprestimo.php" target="_blank">
-						<input class="form-control"  placeholder="Digite o equipamento desejado"  type="text" name="equipamento">
-						<input  class="btn btn-lg btn-primary form-control" type="submit" value="Gerar por equipamento">
-						
-			
-						</form>
-						</div>
-						
-						
-						<div class="form-group col-md-4">
-						<form method="POST" action="crud/relatorio_emprestimo_por_usuario.php" target="_blank">
+						<form  method="POST" action="crud/relatorio_emprestimo.php" target="_blank">
+						<label>Usuário:</label>
 						<input class="form-control"  placeholder="Digite o usuário desejado"  type="text" name="nome"></input>
-						<a href="crud/relatorio_reserva.php"><input class="btn btn-lg btn-primary form-control" type = "submit" value="Gerar por Usuário" /></a>
-						</form>
+						
+						</div>
+						
+						
+						<div class="form-group col-md-4">
+						<label>Equipamento:</label>
+						<input class="form-control"  placeholder="Digite o equipamento desejado"  type="text" name="equipamento">
+						
 						</div>
 						
 						<div class="form-group col-md-4">
-						<form method="POST" action="crud/relatorio_emprestimo_por_data.php" target="_blank">
-						<input class="form-control"  placeholder="Digite a data específica"  type="date" name="data"></input>
-						<a href="crud/relatorio_reserva.php"><input class="btn btn-lg btn-primary form-control" type = "submit" value="Gerar por data" /></a>
-						</form>
+						<label>Data:</label>
+						<input class="form-control"  placeholder="Digite a data específica"  type="date" name="datadia"></input>
+						
+						
 						</div>
 						
 						<div class="form-group col-md-4">
-						<form method="POST" action="crud/relatorio_emprestimo_por_data.php" target="_blank">
-						<input class="form-control"  placeholder="Digite o ano"  type="text" name="data"></input>
-						<a href="crud/relatorio_reserva.php"><input class="btn btn-lg btn-primary form-control" type = "submit" value="Gerar por ano" /></a>
-						</form>
+						<label>Ano:</label>
+						<input class="form-control"  placeholder="Digite o ano"  type="text" name="dataano"></input>
+						
+						
 						</div>
 						
 						<div class="form-group col-md-4">
-						<form method="POST" action="crud/relatorio_emprestimo_por_data.php" target="_blank">
-						<input class="form-control"  placeholder="Digite assim: ano-mês"  type="text" name="data"></input>
-						<a href="crud/relatorio_reserva.php"><input class="btn btn-lg btn-primary form-control" type = "submit" value="Gerar por mês" /></a>
-						</form>
+						<label>Mês:</label>
+						<input class="form-control"  placeholder="Digite assim: ano-mês"  type="text" name="datames"></input>
+						
+						
+						</div>
+						
+						<div class="form-group col-md-4">
+						<label>Corso:</label>
+						<input class="form-control"  placeholder="Digite o Curso"  type="text" name="curso"></input>
+						
+						
+						</div>
+						
+						<div class="form-group col-md-4">
+						<label>Local:</label>
+						<input class="form-control"  placeholder="Anexo ou Principal"  type="text" name="local"></input>
+						
+						
+						</div>
+						
+						<div class="form-group col-md-4">
+						<label>Sala:</label>
+						<input class="form-control"  placeholder="Digite o número ou nome da sala"  type="text" name="sala"></input>
+						
+						
 						</div>
 						
 						
@@ -52,26 +70,36 @@ include_once("seguranca.php");
 						?>
 						<div class="form-group col-md-4">
 						
-						<form  method="POST" action="crud/relatorio_emprestimo.php" target="_blank">
-						<select  class="btn  btn-primary form-control" name="qtda">
-						<option value="LIMIT 10" selected >10 Últimos Cadastrados</option>
+						<label>Quantidade:</label>
+						<select  class=" form-control" name="qtda">
+						<option value="LIMIT 10"  >10 Últimos Cadastrados</option>
 						<option value="LIMIT 20" >20 Últimos Cadastrados</option>
 						<option value="LIMIT 30" >30 Últimos Cadastrados</option>
 						<option value="LIMIT 40" >40 Últimos Cadastrados</option>
 						<option value="LIMIT 50" >50 Últimos Cadastrados</option>
-						<option value="LIMIT 99999999"  >TODOS</option>											
+						<option value="LIMIT 99999999" selected >TODOS</option>											
 						</select>
 						
-						<input   class="btn btn-primary form-control"type="submit" value="Gerar por quantidade" > 
-						 
-						</form>
+						
 						
 													
 		
 						
 						</div >
 				</div>
+				<p class="text-center">
               
+			  	
+				
+				 <button type='submit' class='btn  btn-primary '><i class="fa fa-spinner" aria-hidden="true"></i> Gerar Relatório</button>
+				 
+				
+			 <button type='reset' class='btn  btn-primary  '><i class="fa fa-eraser" aria-hidden="true"></i> limpar Campos</button>	
+			  
+			  
+						 </p>
+			</form>
+			  
              </tbody>
           </table>
         </div>

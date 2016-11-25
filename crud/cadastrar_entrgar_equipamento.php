@@ -98,12 +98,14 @@ include_once("seguranca.php");
   
   <div class="form-group col-md-4">
     <label >Data de Entrega</label>
-    <input type="date" class="form-control" required name="dataentrega" >
+    <input disabled type="text" value="<?php echo date('d-m-o');  ?>" class="form-control" required name="dataentrega" >
+	<input type="hidden" value="<?php echo date('d-m-o');  ?>" class="form-control" required name="dataentrega" >
   </div>
   
    <div class="form-group col-md-4">
     <label >Data Prevista de Devolução</label>
-    <input type="date" class="form-control" required name="dataprevista" >
+    <input disabled type="text" value="<?php echo date('d-m-o');  ?>"class="form-control" required name="dataprevista" >
+	<input type="hidden" value="<?php echo date('d-m-o');  ?>"class="form-control" required name="dataprevista" >
   </div>
   
   <div class="form-group col-md-4">
