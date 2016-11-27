@@ -141,7 +141,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
     <label >Tipo de Usuário</label>
 			<select class="form-control " name="tipousuario" required>
 			<option >Selecione</option>
-			<option value="1" >Administrador</option>
+			
 			<option value="2" >Professor</option>
 			<option value="3" >Funcionário</option>
 			<option value="4" >Estagiário</option>	            

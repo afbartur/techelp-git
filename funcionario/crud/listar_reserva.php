@@ -7,7 +7,7 @@ include_once("seguranca.php");
 						<label ></label>
 						
 						<form method="POST">
-						<input class="pesquisar"  placeholder="Pesquisar nome"  type="text" name="usuario2"></input>
+						<input required class="pesquisar"  placeholder="Pesquisar nome"  type="text" name="usuario2"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
 						<a href="index.php?link=39"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Nova Reserva" /></a>
 						</form>
@@ -62,10 +62,8 @@ include_once("seguranca.php");
 				<th>Local</th>
 				<th>Sala</th>
 				<th>Data/Hora que foi feita</th>
+                <th></th>
 				<th></th>
-				<th></th>
-				<th></th>
-               
 				
                 
 			</tr>
@@ -103,17 +101,14 @@ include_once("seguranca.php");
 		</td>
 		<td>
 		
-		
-		</td>
-		<td>
-		<a href='index.php?link=58&id=<?php echo $linhas['id']; ?>'><button title="Visualizar" type='buton' class='btn  btn-primary '><i class="fa fa-eye" ></i> 
+		<a href='index.php?link=58&id=<?php echo $linhas['id']; ?>'><button title="Visualizar" type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> 
 		</button></a>
 		
-		<a href='index.php?link=41&id=<?php echo $linhas['id']; ?>'><button title="Editar"type='buton' class='btn  btn-primary '><i class="fa fa-pencil-square-o"></i> 
+		<a href='index.php?link=41&id=<?php echo $linhas['id']; ?>'><button title="Editar"type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> 
 		
 		
 		
-		</button></a>
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=43&id=<?php echo $linhas['id'];?>&equipamento=<?php echo $linhas['equipamento'];?>'><button title="Excluir" type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> </button></a>
 		</td>
 		<?php
 		

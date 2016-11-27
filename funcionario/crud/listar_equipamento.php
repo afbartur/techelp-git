@@ -9,7 +9,7 @@ include_once("seguranca.php");
 						<script type="text/javascript" src="javascriptpersonalizado.js"></script>
 						
 						<form method="POST" id="form-pesquisa" >
-						<input class="pesquisar" id="pesquisa" placeholder="Pesquisar" type="text" name="nome"></input>
+						<input required class="pesquisar" id="pesquisa" placeholder="Pesquisar" type="text" name="nome"></input>
 						
 						
 						
@@ -92,7 +92,7 @@ include_once("seguranca.php");
 		</button></a><a href='index.php?link=14&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
 		
 		
-		</button></a>
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=15&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		</td>
 		<?php

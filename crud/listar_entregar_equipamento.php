@@ -9,7 +9,7 @@ include_once("seguranca.php");
 						<script type="text/javascript" src="javascriptpersonalizado.js"></script>
 						
 						<form method="POST" id="form-pesquisa" >
-						<input class="pesquisar" id="pesquisa" placeholder="Pesquisar" type="text" name="nome"></input>
+						<input required class="pesquisar" id="pesquisa" placeholder="Pesquisar" type="text" name="nome"></input>
 						
 						
 						

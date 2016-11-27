@@ -7,7 +7,7 @@ include_once("seguranca.php");
 						<label ></label>
 						
 						<form method="POST">
-						<input class="pesquisar"  placeholder="Pesquisar nome"  type="text" name="usuario2"></input>
+						<input required class="pesquisar"  placeholder="Pesquisar nome"  type="text" name="usuario2"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
 						<a href="index.php?link=39"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Nova Reserva" /></a>
 						</form>

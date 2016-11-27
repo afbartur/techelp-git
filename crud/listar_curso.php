@@ -9,7 +9,7 @@ include_once("seguranca.php");
 						
 												
 						<form method="POST">
-						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
+						<input required class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
 						<a href="index.php?link=25"><input class="btn btn-lg btn-primary novocadastro" type = "button" value="+ Novo Cadastro" /></a>
 						</form>

@@ -7,7 +7,7 @@ include_once("seguranca.php");
 						<label ></label>
 						
 						<form method="POST">
-						<input class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
+						<input required class="pesquisar"  placeholder="Pesquisar"  type="text" name="nome"></input>
 						<input  class="btn btn-lg btn-primary novocadastro" type="submit" value="Pesquisar"></input>
 						<a  class="form-signin" href="index.php?link=16"><input class="btn btn-lg btn-primary novocadastro" type = "button" value=" + Novo Cadastro" /></a>
 						</form>
@@ -74,7 +74,7 @@ include_once("seguranca.php");
 		?>
 		<td><a href='index.php?link=19&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
 		</button></a><a href='index.php?link=20&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
-		</button></a>
+		</button></a><a onclick="return confirm('Deseja mesmo Excluir?');" href='index.php?link=22&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
 		</td>
 		<?php
 		

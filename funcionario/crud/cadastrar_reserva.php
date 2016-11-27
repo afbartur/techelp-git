@@ -241,7 +241,7 @@ include_once("seguranca.php");
 
 		$equipamento = $_POST['equipamento'];
 		$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE nome LIKE '%$equipamento%'" );
-		echo $linhas1 =mysqli_num_rows($resultado);
+		$linhas1 =mysqli_num_rows($resultado);
 
 		
 		$horario3 = $_POST['horariofim'];
@@ -251,18 +251,24 @@ include_once("seguranca.php");
 		$data = $_POST['data'];
 		$equipamento = $_POST['equipamento'];
 		$resultado = mysqli_query($conn, "SELECT * FROM cadreserva WHERE data LIKE '%$data%' AND turno LIKE '%$turno%' AND horariofim LIKE '%$horario3%' AND horariomeio LIKE '%$horario2%' AND horarioinicio LIKE '%$horario1%' AND equipamento LIKE '%$equipamento%' ");
-		echo $linhas2 =mysqli_num_rows($resultado);
+		$linhas2 =mysqli_num_rows($resultado);
 
+		
+		
+		
 		if($linhas1<=$linhas2){
 			if($_POST['equipamento']==null){
 				echo"";
 			}else{
+				
 				echo "<center><p style=' font-weight: bold; font-size: 20px;'>Reserva não permitida para o horário e data escolhidos</p></center>";
+				echo "<center>".($linhas1-$linhas2)."".": Disponíveis para esse horário e data!</center>";
 			}
 			
 		}else{
-			echo "<center><p style=' font-weight: bold; font-size: 20px;'>Reserva permitida salve para continuar</p></center>";
 			
+			echo "<center><p style=' font-weight: bold; font-size: 20px;'>Reserva permitida salve para continuar</p></center>";
+			echo "<center>".($linhas1-$linhas2)."".": Disponíveis para esse horário e data!</center>";
 			?>
 			
 			
@@ -348,7 +354,7 @@ include_once("seguranca.php");
 					 
 						<div class="form-group col-md-3">
 						<label >Data</label>
-						<input disabled class="form-control" name="data" value="<?php echo $_POST['data'];?>" type="text" required  />
+						<input disabled class="form-control" placeholder="aaaa-mm-dd"name="data" value="<?php echo $_POST['data'];?>" type="text"  />
 						<input class="form-control" name="data" value="<?php echo $_POST['data'];?>" type="hidden" required  />
 						</div>
 						  
