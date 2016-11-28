@@ -99,7 +99,7 @@ $data=date("d/m/Y");
             <thead>
               <tr>
                 
-                <th>Usuario do sistema:</th>
+                <th>Usuário do sistema:</th>
                 <th>Locatário</th>
 				<th>Equipamento</th>
 				<th>Local</th>
