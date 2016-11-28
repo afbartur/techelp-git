@@ -49,7 +49,7 @@ include_once("seguranca.php");
 						</div>
 						
 						<div class="form-group col-md-4">
-						<label>Corso:</label>
+						<label>Curso:</label>
 						<input class="form-control"  placeholder="Digite o Curso"  type="text" name="curso"></input>
 						
 						
