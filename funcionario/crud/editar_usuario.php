@@ -126,14 +126,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
 	
 	    <select class="form-control" name="tipousuario" required>
 		<option>Selecione</option>
-		<option value="1" 
-		<?php
-		if ($resultado['tipousuario'] == 1){
-			echo "selected";
-		}
-		?>
 		
-		>Administrador</option>
 		<option value="2" 
 		<?php if ($resultado['tipousuario'] == 2){
 			echo "selected";
