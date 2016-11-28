@@ -63,13 +63,16 @@
 				<li><a href="index.php?link=70"> Empréstimo</a></li>
               </ul>
             </li>
-           			
+           			<li>
+					<a href="index.php?link=71&id=<?php echo $_SESSION['UsuarioId']; ?>"> <i class="fa fa-lock" aria-hidden="true"></i> Trocar Senha</a>
+					</li>
           </ul>
 		  <p class="text-right">
 			<?php
 			echo "Olá " . $_SESSION['UsuarioNome'];
 			?>
 			<br>
+			
 			<a href="sair.php"><i class="fa fa-sign-in " aria-hidden="true"></i> Sair</a>
 			</p>
         </div><!--/.nav-collapse -->
