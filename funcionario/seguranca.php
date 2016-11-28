@@ -8,7 +8,7 @@ if(($_SESSION['UsuarioId'] == "") || ($_SESSION['UsuarioNome'] == "") || ($_SESS
 	
 	// Manda para a tela de Login
 	
-	header ("Location: login.php");
+	header ("Location: ../login.php");
 }
 
 ?>

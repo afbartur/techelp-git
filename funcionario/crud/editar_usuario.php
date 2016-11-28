@@ -123,7 +123,8 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
   
   <div class="form-group col-md-6 ">
     <label >Tipo de Usuário</label>
-    <select class="form-control" name="tipousuario" required>
+	
+	    <select class="form-control" name="tipousuario" required>
 		<option>Selecione</option>
 		<option value="1" 
 		<?php

@@ -124,9 +124,10 @@ include_once("seguranca.php");
 		
 		
 		</td>
-		<td><a href='index.php?link=57&id=<?php echo $linhas['id']; ?>'><button title="Visualizar" type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar</button></a>
-		
-		<a href='index.php?link=66&id=<?php echo $linhas['id']; ?>'><button title="Editar" type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> editar</button></a>
+		<td><a href='index.php?link=57&id=<?php echo $linhas['id']; ?>'><button title="Visualizar" type='buton' class='btn  btn-primary '><i class="fa fa-eye" ></i> </button></a>
+		</td>
+		<td>
+		<a href='index.php?link=66&id=<?php echo $linhas['id']; ?>'><button title="Editar" type='buton' class='btn  btn-primary '><i class="fa fa-pencil-square-o"></i> </button></a>
 		
 		
 		

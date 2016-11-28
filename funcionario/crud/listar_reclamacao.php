@@ -98,7 +98,7 @@ if (confirm ("Tem certeza que deseja excluir?"))
 </script>
 			
 		
-		<a onclick="return confirm('Deseja mesmo Excluir?');"  href='index.php?link=40&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-times-circle"></i> Excluir</button></a>
+		
 		
 		          
 	

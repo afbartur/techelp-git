@@ -34,29 +34,7 @@ include_once("seguranca.php");
 				<option><?php
 			echo $_SESSION['UsuarioNome'];
 			?></option>
-			<?php
-				//$resultado = mysqli_query($conn, "SELECT * FROM cadequipamento WHERE situacao = 1" );
-				$resultado = mysqli_query($conn, "SELECT * FROM cadusuario" );
-				$linhas=mysqli_num_rows($resultado);
-				
-				While($registro=mysqli_fetch_array($resultado))
-					{
-			?>	
-					<option> 
-					<?php
-					
-					print "$registro[nome]";
-						
-							
-					?> 
-					</option>
-				
-					<?php
-					}
-					
-					mysqli_free_result($resultado);
-
-					?>
+			
 
 			</SELECT> 
 			
