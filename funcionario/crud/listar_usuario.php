@@ -31,6 +31,8 @@ include_once("seguranca.php");
 						</form>
 						
 							<?PHP
+							
+							
 							if($_POST["qtda"]== null){
 								$qtd = "LIMIT 10";
 							}else{
@@ -40,7 +42,7 @@ include_once("seguranca.php");
 							};
 														
 							$nome = $_POST["nome"];
-							$resultado = mysqli_query($conn, "SELECT * FROM cadusuario WHERE nome LIKE '%$nome%' ORDER BY id DESC $qtd" );
+							$resultado = mysqli_query($conn, "SELECT * FROM cadusuario WHERE tipousuario != 1 AND nome LIKE '%$nome%'  ORDER BY id DESC $qtd" );
 							$linhas=mysqli_num_rows($resultado);
 							
 							?>							
@@ -56,7 +58,7 @@ include_once("seguranca.php");
                 <th>E-mail</th>
                 <th>CPF</th>
 				<th>Nivel de Acesso</th>
-				
+				<th>Ações</th>
               </tr>
             </thead>
             <tbody>
@@ -89,8 +91,15 @@ include_once("seguranca.php");
 				
 		
 		?>
+		<td><a href='index.php?link=7&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-eye" ></i> Visualizar
+		</button></a>
 		
 		
+		<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='buton' class='btn butaox btn-primary '><i class="fa fa-pencil-square-o"></i> Editar
+		</button></a>
+		
+		
+		</td>
 		<?php
 				echo "</tr>";
 	}
