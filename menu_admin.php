@@ -20,7 +20,7 @@
 	   
 	   
 	   
-        <div id="navbar" class="navbar-collapse collapse fontemenu">
+        <div id="navbar" class="navbar-collapse collapse ">
 		
           <ul class="nav navbar-nav">
 		 <div class="navbar-header">
