@@ -29,6 +29,28 @@ $resultado = mysqli_fetch_assoc($result);
 	<?php echo $resultado[sala];?>
 </div>
 
+<div class="col-xs-3 col-sm-1 ">
+	<b>Criado:</b>
+</div>
+<div class="col-xs-9 col-sm-11 ">
+	<?php echo $resultado[criado];?>
+</div>
+
+<div class="col-xs-3 col-sm-1 ">
+	<b>Alterado:</b>
+</div>
+<div class="col-xs-9 col-sm-11 ">
+	<?php echo".". $resultado[modificado];?>
+</div>
+
+
+<div class="col-xs-3 col-sm-1 ">
+	<b>Por:</b>
+</div>
+<div class="col-xs-9 col-sm-11 ">
+	<?php echo $resultado[modificadopor];?>
+</div>
+
 
 </div>
 

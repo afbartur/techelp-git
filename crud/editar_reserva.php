@@ -32,8 +32,8 @@ $resultado = mysqli_fetch_assoc($result);
   <div class="form-group col-md-3">
     <label >Horário 1</label>
 	
-	<select class="form-control" name="horarioinicio" required>
-		<option>Não selecionado</option>
+	<select class="form-control" name="horarioinicio" >
+		<option value="">Não selecionado</option>
 		<option value="ab" 
 		<?php
 		if ($resultado['horarioinicio'] == ab){
@@ -54,8 +54,8 @@ $resultado = mysqli_fetch_assoc($result);
   <div class="form-group col-md-3">
     <label >Horário 2</label>
     
-	<select class="form-control" name="horariomeio" required>
-		<option>Não selecionado</option>
+	<select class="form-control" name="horariomeio" >
+		<option value="">Não selecionado</option>
 		<option value="cd" 
 		<?php
 		if ($resultado['horariomeio'] == cd){
@@ -72,8 +72,8 @@ $resultado = mysqli_fetch_assoc($result);
   </div>
   <div class="form-group col-md-3">
     <label >Horário 3</label>
-    <select class="form-control" name="horariofim" required>
-		<option>Não selecionado</option>
+    <select class="form-control" name="horariofim" >
+		<option value="" >Não selecionado</option>
 		<option value="ef" 
 		<?php
 		if ($resultado['horariofim'] == ef){

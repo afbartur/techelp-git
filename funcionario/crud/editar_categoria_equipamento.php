@@ -9,11 +9,19 @@ $resultado = mysqli_fetch_assoc($result);
         <h1 class="text-center">Editar Categoria de Equipamento</h1>
 								
 			<form class="fume" method="POST" action="index.php?link=52">
-  <div class="form-group">
-    <label >Nome</label>
+			
+			<div class="row">
+			
+			<div class="form-group col-md-4">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
+  <div class="form-group col-md-8">
+    <label >Nome do equipamento</label>
     <input type="text" class="form-control" value= "<?php echo $resultado['nome'] ;?>" required name="nome" placeholder="Nome">
   </div>
-  
+  </div>
  
   
  

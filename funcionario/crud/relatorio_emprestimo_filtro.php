@@ -51,7 +51,7 @@ include_once("seguranca.php");
 						
 						<div class="form-group col-md-4">
 						<label>Local:</label>
-						<input class="form-control"  placeholder="Anexo ou Principal"  type="text" name="local"></input>
+						<input class="form-control"  placeholder="Anexo, Principal ou ClinicaEscola"  type="text" name="local"></input>
 						
 						
 						</div>

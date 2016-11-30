@@ -5,8 +5,9 @@ $nome = $_POST['nome'];
 $situacao = $_POST['situacao'];
 $descricao = $_POST['descricao'];
 $tombo = $_POST['tombo'];
+$modificadopor = $_POST['modificadopor'];
 
-$comando_sql = "UPDATE cadequipamento SET nome = '$nome',situacao = '$situacao', descricao = '$descricao',tombo = '$tombo', 
+$comando_sql = "UPDATE cadequipamento SET nome = '$nome',situacao = '$situacao', descricao = '$descricao',tombo = '$tombo',modificadopor = '$modificadopor', 
 modificado = NOW()  WHERE id = '$id' ";
 
 ?>

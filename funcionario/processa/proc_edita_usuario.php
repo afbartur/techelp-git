@@ -6,9 +6,10 @@ $email = $_POST['email'];
 $cpf = $_POST['cpf'];
 $senha = $_POST['senha'];
 $tipousuario = $_POST['tipousuario'];
+$modificadopor = $_POST['modificadopor'];
 
 $comando_sql = "UPDATE cadusuario SET nome = '$nome',email = '$email', cpf = '$cpf',senha = '$senha', 
-tipousuario = '$tipousuario', modificado = NOW()  WHERE id = '$id' ";
+tipousuario = '$tipousuario',modificadopor = '$modificadopor', modificado = NOW()  WHERE id = '$id' ";
 
 ?>
 

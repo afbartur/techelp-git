@@ -16,6 +16,8 @@ $resultado = mysqli_fetch_assoc($result);
 <div class="col-xs-6 col-sm-10 ">
 	<?php echo $resultado[id];?>
 </div>
+
+
 <div class="col-xs-6 col-sm-2 ">
 	<b>Nome:</b>
 </div>
@@ -50,6 +52,13 @@ $resultado = mysqli_fetch_assoc($result);
 	
 	
 	?>
+</div>
+
+<div class="col-xs-6 col-sm-2 ">
+	<b>Modificado por:</b>
+</div>
+<div class="col-xs-6 col-sm-10">
+	<?php echo $resultado[modificadopor];?>
 </div>
 
 

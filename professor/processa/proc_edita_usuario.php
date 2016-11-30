@@ -32,6 +32,6 @@ tipousuario = '$tipousuario', modificado = NOW()  WHERE id = '$id' ";
 		}
 	  ?>
 	  </h1>
-		 <a  class="form-signin" href="index.php?link=2"><input class="btn btn-lg btn-primary margin40" type = "button" value="Voltar" /></a>
+		 <a  class="form-signin" href="index.php"><input class="btn btn-lg btn-primary margin40" type = "button" value="Voltar" /></a>
 
     

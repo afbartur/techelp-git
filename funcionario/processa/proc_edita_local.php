@@ -3,9 +3,10 @@
 $id = $_POST['id'];
 $nome = $_POST['nome'];
 $sala = $_POST['sala'];
+$modificadopor = $_POST['modificadopor'];
 
 
-$comando_sql = "UPDATE cadlocal SET nome = '$nome',sala = '$sala', 
+$comando_sql = "UPDATE cadlocal SET nome = '$nome',sala = '$sala', modificadopor = '$modificadopor',
 modificado = NOW()  WHERE id = '$id' ";
 
 ?>

@@ -16,6 +16,8 @@ $resultado = mysqli_fetch_assoc($result);
 <div class="col-xs-9 col-sm-11 ">
 	<?php echo $resultado[id];?>
 </div>
+
+
 <div class="col-xs-3 col-sm-1 ">
 	<b>Nome:</b>
 </div>
@@ -51,6 +53,29 @@ $resultado = mysqli_fetch_assoc($result);
 <div class="col-xs-9 col-sm-11 ">
 	<?php echo $resultado[tombo];?>
 </div>
+
+<div class="col-xs-3 col-sm-1">
+	<b>Criado:</b>
+</div>
+<div class="col-xs-9 col-sm-11 ">
+	<?php echo $resultado[criado];?>
+</div>
+
+<div class="col-xs-3 col-sm-1">
+	<b>Modificado:</b>
+</div>
+<div class="col-xs-9 col-sm-11 ">
+	<?php echo ".".$resultado[modificado];?>
+</div>
+
+
+<div class="col-xs-3 col-sm-1 ">
+	<b>Modificado por:</b>
+</div>
+<div class="col-xs-9 col-sm-11 ">
+	<?php echo $resultado[modificadopor];?>
+</div>
+
 </div>
 
 <a href="index.php?link=12"> <button type="button"  class="btn btn-lg btn-primary margin40"><i class="fa fa-reply "></i> Voltar</button></a>

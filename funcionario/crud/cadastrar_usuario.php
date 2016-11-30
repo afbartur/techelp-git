@@ -5,6 +5,13 @@ include_once("seguranca.php");
 							
 			<form class="fume  " method="POST" action="index.php?link=6">
 			<div class="row">
+			
+			<div class="form-group col-md-6">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
+			
   <div class="form-group col-md-6">
     <label >Nome</label>
     <input type="text" class="form-control " required name="nome" placeholder="Nome">
@@ -16,7 +23,7 @@ include_once("seguranca.php");
     <div class="form-group col-md-6">
     <label >Senha</label>
 	<input id="txtSenha" class="form-control" name="senha" type="password" required placeholder="Digite uma Senha" title="Senha" />
-      </div>
+    </div>
   <div class="form-group col-md-6">
     <label >Confirmação de Senha</label>
 	 <input id="repetir_senha" class="form-control" name="repetir_senha" type="password" required  placeholder="Repetir Senha" 
@@ -144,9 +151,42 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
 			
 			<option value="2" >Professor</option>
 			<option value="3" >Funcionário</option>
-			<option value="4" >Estagiário</option>	            
+			<option value="4" >Estagiário</option>
+			<!--<option value="5" >Moitor</option>	-->		
 			</select>
   </div>
+  
+  
+  <!-- <div class="form-group col-md-6">
+    <label >Disciplina:</label>
+    <select class="form-control " name="curso" required>
+			<option >Selecione</option>
+			<option value="" >Não especificado</option>
+			
+			<?php
+//	$resultado = mysqli_query($conn,"SELECT nome FROM cadcurso" );
+//	$linhas=mysqli_num_rows($resultado);
+	
+//	While($registro=mysqli_fetch_array($resultado))
+//		{
+?>	
+		<option> 
+		<?php
+//		print "$registro[nome]"
+		?> 
+		</option>
+	
+		<?php
+//		}
+//		mysqli_free_result($resultado);
+
+		?>			
+	</select>
+	
+	
+	
+	
+  </div>-->	
   
   
   </div>

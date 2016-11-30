@@ -120,6 +120,7 @@ include_once("seguranca.php");
 				<option>Selecione</option>
 				<option value="Anexo">Anexo</option>	
 				<option value="Principal">Principal</option>
+				<option value="Principal">Clinica Escola</option>
 				</SELECT>
 			  </div>
 			  

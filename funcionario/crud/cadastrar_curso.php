@@ -4,11 +4,18 @@ include_once("seguranca.php");
         <h1 class="text-center">Cadastrar Curso</h1>
 								
 			<form class="fume" method="POST" action="index.php?link=23">
-  <div class="form-group">
-    <label >Nome</label>
+			<div class="row">
+  <div class="form-group col-md-8">
+    <label >Nome do Curso</label>
     <input type="text" class="form-control" required name="nome" placeholder="Nome">
   </div>
-   
+  
+  <div class="form-group col-md-4">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
+   </div>
     
   
   <button type="submit" class=" btn btn-lg btn-primary butao1"> <i class="fa fa-floppy-o fa-2x"></i> Salvar</button>

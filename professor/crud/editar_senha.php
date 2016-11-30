@@ -169,7 +169,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
   
 <button type="submit" class=" btn btn-lg btn-primary butao1"> <i class="fa fa-floppy-o fa-2x"></i> Salvar</button>
  
-<a href="index.php?link=2"> <button type="button"  class="btn btn-lg btn-primary butao2"><i class="fa fa-search fa-2x" ></i> Pesquisar</button></a>
+
 		
 <a href="index.php"><button  type="button" class="btn btn-lg btn-primary butao3"><i class="fa fa-reply fa-2x"></i> Voltar</button></a>
 </form>

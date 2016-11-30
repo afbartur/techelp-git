@@ -2,12 +2,13 @@
 <?php
 $nome = $_POST['nome'];
 $sala = $_POST['sala'];
+$modificadopor = $_POST['modificadopor'];
 
 
 
 $comando_sql="INSERT INTO cadlocal
-(nome,sala,criado) VALUES
-('$nome','$sala',NOW())";
+(nome,sala,modificadopor,criado) VALUES
+('$nome','$sala','$modificadopor',NOW())";
 
 
 

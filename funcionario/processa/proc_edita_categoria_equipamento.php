@@ -2,9 +2,10 @@
 <?php
 $id = $_POST['id'];
 $nome = $_POST['nome'];
+$modificadopor = $_POST['modificadopor'];
 
 
-$comando_sql = "UPDATE cadcategoriaequipamento SET nome = '$nome', 
+$comando_sql = "UPDATE cadcategoriaequipamento SET nome = '$nome', modificadopor = '$modificadopor',
 modificado = NOW()  WHERE id = '$id' ";
 
 ?>

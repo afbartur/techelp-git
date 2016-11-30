@@ -5,11 +5,12 @@ $email = $_POST['email'];
 $cpf = $_POST['cpf'];
 $senha = $_POST['senha'];
 $tipousuario = $_POST['tipousuario'];
-$criado = $_POST['criado'];
+$curso = $_POST['curso'];
+$modificadopor = $_POST['modificadopor'];
 
 $comando_sql="INSERT INTO cadusuario
-(nome,email,cpf,senha,tipousuario, criado) VALUES
-('$nome','$email','$cpf','$senha','$tipousuario',NOW())";
+(nome,email,cpf,senha,tipousuario,curso, modificadopor, criado) VALUES
+('$nome','$email','$cpf','$senha','$tipousuario','$curso', '$modificadopor',NOW())";
 
 
 

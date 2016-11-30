@@ -3,11 +3,12 @@
 $id = $_POST['id'];
 $situacao = $_POST['situacao'];
 $atendimento = $_POST['atendimento'];
+$modificadopor = $_POST['modificadopor'];
 
 
 
 
-$comando_sql = "UPDATE cadreclamacao SET situacao = '$situacao', atendimento = '$atendimento',
+$comando_sql = "UPDATE cadreclamacao SET situacao = '$situacao', atendimento = '$atendimento',modificadopor = '$modificadopor',
 modificado = NOW()  WHERE id = '$id' ";
 
 ?>

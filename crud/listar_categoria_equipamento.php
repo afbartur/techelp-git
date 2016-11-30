@@ -57,9 +57,10 @@ include_once("seguranca.php");
             <thead>
               <tr>
                 <th>ID</th>
+				
                 <th>Nome</th>
 				<th>Data de Criação</th>
-               
+				<th>Modificado por:</th>
 				<th></th>
 			</tr>
             </thead>
@@ -76,6 +77,7 @@ include_once("seguranca.php");
 		$newDate2 = date("d-m-Y  h:i:s", strtotime($linhas['criado']));
 		
 		echo"<td>".$newDate2."</td>";
+		echo"<td>".$linhas['modificadopor'] ."</td>";
 		
 		
 		?>

@@ -5,8 +5,17 @@ include_once("seguranca.php");
 								
 			<form class="fume" method="POST" action="index.php?link=48">
 			<div class="row">
-  <div class="form-group col-md-12">
-    <label >Nome</label>
+			
+			
+			<div class="form-group col-md-4">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
+			
+			
+  <div class="form-group col-md-8">
+    <label >Nome do Equipamento</label>
     <input type="text" class="form-control" required name="nome" placeholder="Nome">
   </div>
    

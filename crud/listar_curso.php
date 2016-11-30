@@ -53,7 +53,8 @@ include_once("seguranca.php");
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Nome</th>
+                <th>Nome do Curso</th>
+				<th>Modificado por:</th>
                 <th></th>
 				
                 
@@ -69,6 +70,7 @@ include_once("seguranca.php");
 		echo"<tr>";
 		echo"<td>".$linhas['id'] ."</td>";
 		echo"<td>".$linhas['nome'] ."</td>";
+		echo"<td>".$linhas['modificadopor'] ."</td>";
 		
 	
 		

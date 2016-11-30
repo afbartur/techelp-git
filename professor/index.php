@@ -27,6 +27,7 @@ include_once("conexao.php");
 </head>
   <body class="fundo">
   <?php
+  if($_SESSION['UsuarioTipousuario']==2){
 	include_once("menu_admin.php");
 	
   ?>
@@ -133,6 +134,7 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 	$pag[68]="crud/editar_entrgar_reserva2.php";
 	$pag[69]="crud/relatorio_reserva_filtro.php";
 	$pag[70]="crud/relatorio_emprestimo_filtro.php";
+	$pag[71]="crud/editar_senha.php";
 	
 	
 	if(!empty($link)){
@@ -141,6 +143,9 @@ document.write(" "+dayarray[day]+" "+daym+" de "+montharray[month]+" de "+year+"
 		
 	}else{
 		include "bemvindo.php";
+	}
+	}else{
+		echo "<center>Acesso Negado</center>";
 	}
 	
 	?>

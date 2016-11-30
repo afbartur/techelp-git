@@ -46,19 +46,19 @@ $resultado = mysqli_fetch_assoc($result);
 	<b>Horário 1:</b>
 </div>
 <div class="col-xs-6 col-sm-8 ">
-	<?php echo $resultado[horarioinicio];?>
+	<?php echo ".".$resultado[horarioinicio];?>
 </div>
 <div class="col-xs-6 col-sm-4">
 	<b>Horário 2:</b>
 </div>
 <div class="col-xs-6 col-sm-8 ">
-	<?php echo $resultado[horariomeio];?>
+	<?php echo ".". $resultado[horariomeio];?>
 </div>
 <div class="col-xs-6 col-sm-4">
 	<b>Horário 3:</b>
 </div>
 <div class="col-xs-6 col-sm-8 ">
-	<?php echo $resultado[horariofim];?>
+	<?php echo ".". $resultado[horariofim];?>
 </div>
 
 <div class="col-xs-6 col-sm-4">

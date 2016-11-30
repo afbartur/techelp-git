@@ -57,6 +57,7 @@ include_once("seguranca.php");
             <thead>
               <tr>
                 <th>ID</th>
+				<th>Modificado por</th>
                 <th>Nome</th>
                 <th>Situação</th>
                 <th>Descrição</th>
@@ -73,6 +74,7 @@ include_once("seguranca.php");
 		
 		echo "<tr>";
 		echo"<td>".$linhas['id'] ."</td>";
+		echo"<td>".$linhas['modificadopor'] ."</td>";
 		echo"<td>".$linhas['nome'] ."</td>";
 		if ($linhas['situacao'] == 1){
 			$sit = "Livre";

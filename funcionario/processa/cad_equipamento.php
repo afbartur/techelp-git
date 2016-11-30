@@ -4,11 +4,12 @@ $nome = $_POST['nome'];
 $situacao = $_POST['situacao'];
 $descricao = $_POST['descricao'];
 $tombo = $_POST['tombo'];
+$modificadopor = $_POST['modificadopor'];
 
 
 $comando_sql="INSERT INTO cadequipamento
-(nome,situacao,descricao,tombo,criado) VALUES
-('$nome','$situacao','$descricao','$tombo',NOW())";
+(nome,situacao,descricao,tombo,modificadopor,criado) VALUES
+('$nome','$situacao','$descricao','$tombo','$modificadopor',NOW())";
 
 
 

@@ -6,11 +6,12 @@ include_once("seguranca.php");
 			<form class="fume" method="POST" action="index.php?link=17">
 			<div class="row">
   <div class="form-group col-md-6">
-    <label >Nome</label>
-	<select name="nome" class="form-control" >
-	<option>Selecione</option>
-	<option>Anexo</option>
-	<option>Principal</option>
+    <label >Local:</label>
+	<select name="nome" class="form-control" required >
+	<option value="">Selecione</option>
+	<option value="Anexo">Anexo</option>
+	<option value="Principal">Principal</option>
+	<option value="ClinicaEscola">Clinica Escola</option>
 	
 	</select>
 	
@@ -18,9 +19,14 @@ include_once("seguranca.php");
   </div>
    
   <div class="form-group col-md-6">
-    <label >Sala</label>
-	<input  class="form-control" name="sala" type="text"  placeholder="Sala" />
+    <label >Sala:</label>
+	<input  required class="form-control" name="sala" type="text"  placeholder="Nome ou número da sala" />
   </div>
+  <div class="form-group col-md-6">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
     </div>
    
   

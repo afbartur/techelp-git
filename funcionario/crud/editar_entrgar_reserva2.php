@@ -139,8 +139,8 @@ $resultado = mysqli_fetch_assoc($result);
   </div>
   
   <div class="form-group col-md-3">
-    <label >Data da Prevista de Devolução</label>
-    <input type="date" class="form-control" required name="dataprevista">
+    <label >Data Prevista de Devolução</label>
+    <input type="date" class="form-control" required name="dataprevista" placeholder="aaaa-mm-dd">
   </div>
   
   <div class="form-group col-md-3">

@@ -10,36 +10,85 @@ $resultado = mysqli_fetch_assoc($result);
 </div>			
 <div class="row">
 <div class="col-md-12">
-<div class="col-xs-3 col-sm-1 ">
+<div class="col-xs-6 col-sm-6 ">
 	<b>ID:</b>
 </div>
-<div class="col-xs-9 col-sm-11 ">
+<div class="col-xs-6 col-sm-6 ">
 	<?php echo $resultado[id];?>
 </div>
-<div class="col-xs-3 col-sm-1 ">
+
+
+<div class="col-xs-6 col-sm-6 ">
 	<b>Nome:</b>
 </div>
-<div class="col-xs-9 col-sm-11">
+<div class="col-xs-6 col-sm-6">
 	<?php echo $resultado[nome];?>
 </div>
-<div class="col-xs-3 col-sm-1 ">
+<div class="col-xs-6 col-sm-6 ">
 	<b>CPF:</b>
 </div>
-<div class="col-xs-9 col-sm-11 ">
+<div class="col-xs-6 col-sm-6 ">
 	<?php echo $resultado[cpf];?>
 </div>
-<div class="col-xs-3 col-sm-1 ">
+<div class="col-xs-6 col-sm-6 ">
 	<b>E-mail:</b>
 </div>
-<div class="col-xs-9 col-sm-11 ">
+<div class="col-xs-6 col-sm-6 ">
 	<?php echo $resultado[email];?>
 </div>
-<div class="col-xs-3 col-sm-1">
-	<b>Tipo de Usuário:</b>
+<div class="col-xs-6 col-sm-6">
+	<b>Tipo:</b>
 </div>
-<div class="col-xs-9 col-sm-11 ">
-	<?php echo $resultado[tipousuario];?>
+<div class="col-xs-6 col-sm-6 ">
+	<?php 
+	if($resultado[tipousuario]==1){
+		echo "Administrador";
+	}
+	if($resultado[tipousuario]==2){
+		echo "Professor";
+	}
+	if($resultado[tipousuario]==3){
+		echo "Funcionario";
+	}
+	if($resultado[tipousuario]==4){
+		echo "Estagiário";
+	}
+	if($resultado[tipousuario]==5){
+		echo "Monitor";
+	}
+	
+	
+	?>
 </div>
+<!--<div class="col-xs-6 col-sm-6">
+	<b>Curso:</b>
+</div>
+<div class="col-xs-6 col-sm-6 ">
+	<?php echo $resultado[curso];?>
+</div>-->
+
+<div class="col-xs-6 col-sm-6">
+	<b>Criado:</b>
+</div>
+<div class="col-xs-6 col-sm-6 ">
+	<?php echo $resultado[criado];?>
+</div>
+
+<div class="col-xs-6 col-sm-6">
+	<b>Alterado:</b>
+</div>
+<div class="col-xs-6 col-sm-6 ">
+	<?php echo".". $resultado[modificado];?>
+</div>
+
+<div class="col-xs-6 col-sm-6 ">
+	<b>Modificado por:</b>
+</div>
+<div class="col-xs-6 col-sm-6">
+	<?php echo $resultado[modificadopor];?>
+</div>
+
+
 </div>
 
 <a href="index.php?link=2"> <button type="button"  class="btn btn-lg btn-primary margin40"><i class="fa fa-reply "></i> Voltar</button></a>

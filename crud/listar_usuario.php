@@ -52,10 +52,12 @@ include_once("seguranca.php");
             <thead>
               <tr>
                 <th>ID</th>
+				<th>Modificado por</th>
                 <th>Nome</th>
                 <th>E-mail</th>
                 <th>CPF</th>
 				<th>Nivel de Acesso</th>
+				<!--<th>Disciplina</th>-->
 				<th>Ações</th>
               </tr>
             </thead>
@@ -68,6 +70,7 @@ include_once("seguranca.php");
 		
 				echo "<tr>";
 				echo"<td>".$linhas['id'] ."</td>";
+				echo"<td>".$linhas['modificadopor'] ."</td>";
 				echo"<td>".$linhas['nome'] ."</td>";
 				echo"<td>".$linhas['email'] ."</td>";
 				echo"<td>".$linhas['cpf'] ."</td>";
@@ -83,7 +86,11 @@ include_once("seguranca.php");
 				if ($linhas['tipousuario'] == 4){
 					$sit = "Estagiário";
 				};
+				if ($linhas['tipousuario'] == 5){
+					$sit = "Monitor";
+				};
 				echo"<td>".$sit ."</td>";
+				//echo"<td>".$linhas['curso'] ."</td>";
 				
 				
 				

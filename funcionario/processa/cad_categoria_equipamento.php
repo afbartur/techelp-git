@@ -1,12 +1,13 @@
 
 <?php
 $nome = $_POST['nome'];
+$modificadopor = $_POST['modificadopor'];
 
 
 
 $comando_sql="INSERT INTO cadcategoriaequipamento
-(nome, criado) VALUES
-('$nome',NOW())";
+(nome, modificadopor, criado) VALUES
+('$nome', '$modificadopor', NOW())";
 
 
 

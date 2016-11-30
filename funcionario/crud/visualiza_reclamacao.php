@@ -99,6 +99,17 @@ $resultado = mysqli_fetch_assoc($result);
 	 </input>
 </div>
 
+<div class="col-xs-4 col-sm-2 ">
+	<b>Modificado por:</b>
+	
+</div>
+<div class="col-xs-4 col-sm-4">
+	 <input disabled type="text" class="form-control"   value= "<?php echo $resultado['modificadopor'] ;?>" name="modificadopor">
+	 </input>
+	 <input  type="hidden" class="form-control"   value= "<?php echo $_SESSION['UsuarioNome'];?>" name="modificadopor">
+	 </input>
+</div>
+
 </div>
 </div>
 </div>

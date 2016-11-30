@@ -53,6 +53,11 @@ $resultado = mysqli_fetch_assoc($result);
     <label >Tombo</label>
     <input type="text" class="form-control" value= "<?php echo $resultado['tombo'] ;?>"required name="tombo" placeholder="Tombo">
   </div>
+  <div class="form-group col-md-6">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
   </div>
  
   <input type="hidden" class="form-control" value= "<?php echo $resultado['id'] ;?>" name="id">

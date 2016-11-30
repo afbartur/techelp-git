@@ -33,7 +33,18 @@ $resultado = mysqli_fetch_assoc($result);
 		}
 		?>
 		
-		>Principal</option>>
+		>Principal</option>
+		
+		<option value="ClinicaEscola" 
+		<?php
+		if ($resultado['nome'] == ClinicaEscola){
+			echo "selected";
+		}
+		?>
+		
+		>Clinica Escola</option>
+		
+		
 	
 	</select>
 	
@@ -44,6 +55,12 @@ $resultado = mysqli_fetch_assoc($result);
     <label >Sala</label>
     <input type="text" class="form-control" value= "<?php echo $resultado['sala'] ;?>"required name="sala" placeholder="Sala">
   </div>
+  
+  <div class="form-group col-md-6">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
 
  </div>
   <input type="hidden" class="form-control" value= "<?php echo $resultado['id'] ;?>" name="id">

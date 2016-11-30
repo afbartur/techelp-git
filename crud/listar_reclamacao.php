@@ -53,6 +53,7 @@ include_once("seguranca.php");
 				<th>Data</th>
                 <th>Título</th>
 				<th>Situação</th>
+				<th>Modificado por:</th>
                 <th></th>
                 
 			</tr>
@@ -82,6 +83,7 @@ include_once("seguranca.php");
 			$sit = "Resolvido";
 		};
 		echo"<td>".$sit ."</td>";
+		echo"<td>".$linhas['modificadopor'] ."</td>";
 		
 		
 		

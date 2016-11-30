@@ -9,15 +9,22 @@ $resultado = mysqli_fetch_assoc($result);
         <h1 class="text-center">Editar curso</h1>
 								
 			<form class="fume" method="POST" action="index.php?link=28">
-  <div class="form-group">
+			<div class="row">
+  <div class="form-group col-md-8">
     <label >Nome</label>
     <input type="text" class="form-control" value= "<?php echo $resultado['nome'] ;?>" required name="nome" placeholder="Nome">
   </div>
 
+  <div class="form-group col-md-4">
+			<label >Usuário do Sistema</label>
+			<input disabled type="text" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			<input type="hidden" value="<?php echo $_SESSION['UsuarioNome'];?>" class="form-control" required name="modificadopor" placeholder="Usuario do Sistema">
+			</div>
+			</div>
  
   <input type="hidden" class="form-control" value= "<?php echo $resultado['id'] ;?>" name="id">
   
-  
+ 
   
   <button type="submit" class=" btn btn-lg btn-primary butao1"> <i class="fa fa-floppy-o fa-2x"></i> Salvar</button>
  

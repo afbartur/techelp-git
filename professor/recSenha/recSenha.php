@@ -49,7 +49,7 @@ echo '<script type="text/javascript">
   { 
 	echo '<script type="text/javascript">
 	alert("Dados inválidos!");
-	window.location="email.php";	
+	window.location="../email.php";	
 	</script>';
   }
 
