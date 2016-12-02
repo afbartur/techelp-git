@@ -25,7 +25,7 @@ $resultado = mysqli_fetch_assoc($result);
 
 
 <div class="col-xs-4 col-sm-2 ">
-	<b>Data da Reclamação:</b>
+	<b>Data:</b>
 </div>
 <div class="col-xs-8 col-sm-10 ">
 	<?php 

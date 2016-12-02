@@ -11,7 +11,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="imagens/favicon.ico">
-    <title>Realizar Reclamação - Tec Help</title>
+    <title>Tec Help</title>
  
     <link href="css/bootstrap.min.css" rel="stylesheet">
 

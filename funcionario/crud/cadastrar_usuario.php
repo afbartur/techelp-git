@@ -150,7 +150,7 @@ onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
 			<option >Selecione</option>
 			
 			<option value="2" >Professor</option>
-			<option value="3" >Funcionário</option>
+			
 			<option value="4" >Estagiário</option>
 			<!--<option value="5" >Moitor</option>	-->		
 			</select>
